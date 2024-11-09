@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5ede9">
+
+<!--
+<pre>
+                                                ..                   ▄■▀▀▀▀■
+ ▄██████▄                                   –▀▀▀▀▀ ▀▀––            .▀        ▀
+█▀  ▀████ ░  ████ ███▄ ░███▄ █████▄   ▄█████████▄▄███████████▄ ▄██████▄ ▄██▄ ░
+█    ████ ░ ████ ░████ ░█████ ░████ ░████▀▀▀▀██▀ ░  ████ ░   ████▀     ▀████ ░
+ ▀   █▓▓█ ░█▓▓█ ░ █▓▓█ ░█▓▓█ ░ █▓▓█ ░▓▓█▀ ░   ▀     █▓▓█ ░  █▓▓█ ░      █▓▓█ ░
+ . ┌─█▓▓█ █▓▓█ ░──█▒▒█─░█▒▒█─░─█▒▒█─░▀▒▒▒▒▒▒▒█▄──░──█▒▒█─░─█▒▒█ ░ ──────█▒▒█ ░
+   : █░░█ ░█░░█ ░ █░░█ ░█░░█ ░ █░░█ ░  ▀░░░░░░░█ ░  █░░█ ░ █░░█ ░       █░░█ ░
+   . █..█ ░ █..█ ░█..█ ░█..█ ░ █..█ ░     .  █..█ ░ █..█ ░  █..█ ░      █..█ ░
+   | █  █ ░  █  █ █  █ ░█  █ ░ █  █ ░  ▄▀     █  █ ░█  █▄ ░  █  █▄    ▄██  █ ░
+   └ ▀███ ░───████████ ░███▀ ░─████ ░ ██──────████ ░▀███▓▀ ░  ▀██████▀ ▀██▀ ░
+      ░░░░░      ▀███▀  ░░░░░░ ████ ░ ███▄  ▄████ ░   ░░░░      ░░░░░░   ░░
+           ▄                   ▀███ ░  ▀███████▀          .
+   ┌──────▀▀▀▀ ▀▀─────────────── ██ ──────────────────────▀▀▄▄▄  ▄▄▄──────┐
+   : ░                            ▀█▄    ▄                      ▀▀       ░ :
+   |                                ▀––▀                                   |
+   |        We're building a world-class hosting platform at Kinsta.       |
+   |                                                                       |
+   |        🌎 Remote             🧕 Diverse             💪 Kick-ass      |
+   |                                                                       |
+   |                                                                       |
+   |        https://kinsta.com/careers/                     Join us!       |
+   |                                                                       |
+   |                                                                       |
+   | ░                                                                   ░ |
+   └───────▀▀▀▀ ▀▀───────────────────────────────────────────▀▀ ▀▀─────────┘
+</pre>
+-->
+
+<link rel='preload' href='https://kinsta.com/fr/wp-content/themes/kinsta/fonts/pathway-extreme-variable.woff2' as='font' type='font/woff2' crossorigin='anonymous' />
+<link rel='preload' href='https://kinsta.com/fr/wp-content/themes/kinsta/fonts/reckless-neue-light.woff2' as='font' type='font/woff2' crossorigin='anonymous' />
+<link rel='preload' href='https://kinsta.com/fr/wp-content/themes/kinsta/fonts/reckless-neue-regular.woff2' as='font' type='font/woff2' crossorigin='anonymous' />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v17.1.2 (Yoast SEO v17.1) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Comment choisir le bon port SMTP (port 25, 587, 465 ou 2525)</title>
+	<meta name="description" content="Vous essayez de choisir le bon port SMTP ? Ce guide vous explique ce qu&#039;est un port SMTP, lequel utiliser et la différence entre les ports 25, 587, 465 ou 2525." />
+	<link rel="canonical" href="https://kinsta.com/fr/blog/port-smtp/" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Comment choisir le bon port SMTP (port 25, 587, 465 ou 2525)" />
+	<meta property="og:description" content="Vous essayez de choisir le bon port SMTP ? Ce guide vous explique ce qu&#039;est un port SMTP, lequel utiliser et la différence entre les ports 25, 587, 465 ou 2525." />
+	<meta property="og:url" content="https://kinsta.com/fr/blog/port-smtp/" />
+	<meta property="og:site_name" content="Kinsta®" />
+	<meta property="article:publisher" content="https://www.facebook.com/kinstafrance/" />
+	<meta property="article:published_time" content="2020-02-17T09:06:49+00:00" />
+	<meta property="article:modified_time" content="2023-08-22T13:33:55+00:00" />
+	<meta property="og:image" content="https://kinsta.com/fr/wp-content/uploads/sites/4/2020/02/smtp-port.jpg" />
+	<meta property="og:image:width" content="1460" />
+	<meta property="og:image:height" content="730" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:description" content="Vous essayez de choisir le bon port SMTP ? Ce guide vous explique ce qu&#039;est un port SMTP, lequel utiliser et la différence entre les ports 25, 587, 465 ou 2525." />
+	<meta name="twitter:image" content="https://kinsta.com/fr/wp-content/uploads/sites/4/2020/02/smtp-port.jpg" />
+	<meta name="twitter:creator" content="@matteoduo" />
+	<meta name="twitter:site" content="@kinsta_fr" />
+	<meta name="twitter:label1" content="Écrit par" />
+	<meta name="twitter:data1" content="Matteo Duò" />
+	<meta name="twitter:label2" content="Durée de lecture est." />
+	<meta name="twitter:data2" content="8 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://kinsta.com/fr/#organization","name":"Kinsta","url":"https://kinsta.com/fr/","sameAs":["https://www.facebook.com/kinstafrance/","https://www.instagram.com/kinstahosting/","https://www.linkedin.com/company/kinsta/","https://www.youtube.com/c/Kinsta","https://www.pinterest.com/kinstahosting/","https://twitter.com/kinsta_fr"],"logo":{"@type":"ImageObject","@id":"https://kinsta.com/fr/#logo","inLanguage":"fr-FR","url":"https://kinsta.com/fr/wp-content/uploads/sites/4/2023/12/kinsta-logo.jpeg","contentUrl":"https://kinsta.com/fr/wp-content/uploads/sites/4/2023/12/kinsta-logo.jpeg","width":500,"height":500,"caption":"Kinsta"},"image":{"@id":"https://kinsta.com/fr/#logo"}},{"@type":"WebSite","@id":"https://kinsta.com/fr/#website","url":"https://kinsta.com/fr/","name":"Kinsta\u00ae","description":"Solutions d&#039;h\u00e9bergement premium, rapides et s\u00e9curis\u00e9es","publisher":{"@id":"https://kinsta.com/fr/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://kinsta.com/fr/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"fr-FR"},{"@type":"ImageObject","@id":"https://kinsta.com/fr/blog/port-smtp/#primaryimage","inLanguage":"fr-FR","url":"https://kinsta.com/fr/wp-content/uploads/sites/4/2020/02/smtp-port.jpg","contentUrl":"https://kinsta.com/fr/wp-content/uploads/sites/4/2020/02/smtp-port.jpg","width":1460,"height":730,"caption":"Comment choisir le bon port SMTP (port 25, 587, 465 ou 2525)"},{"@type":"WebPage","@id":"https://kinsta.com/fr/blog/port-smtp/#webpage","url":"https://kinsta.com/fr/blog/port-smtp/","name":"Comment choisir le bon port SMTP (port 25, 587, 465 ou 2525)","isPartOf":{"@id":"https://kinsta.com/fr/#website"},"primaryImageOfPage":{"@id":"https://kinsta.com/fr/blog/port-smtp/#primaryimage"},"datePublished":"2020-02-17T09:06:49+00:00","dateModified":"2023-08-22T13:33:55+00:00","description":"Vous essayez de choisir le bon port SMTP ? Ce guide vous explique ce qu'est un port SMTP, lequel utiliser et la diff\u00e9rence entre les ports 25, 587, 465 ou 2525.","breadcrumb":{"@id":"https://kinsta.com/fr/blog/port-smtp/#breadcrumb"},"inLanguage":"fr-FR","potentialAction":[{"@type":"ReadAction","target":["https://kinsta.com/fr/blog/port-smtp/"]}]},{"@type":"BreadcrumbList","@id":"https://kinsta.com/fr/blog/port-smtp/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kinsta.com/fr/"},{"@type":"ListItem","position":2,"name":"Centre de ressources","item":"https://kinsta.com/fr/ressources/"},{"@type":"ListItem","position":3,"name":"Blog","item":"https://kinsta.com/fr/blog/"},{"@type":"ListItem","position":4,"name":"SMTP","item":"https://kinsta.com/fr/sujets/smtp/"},{"@type":"ListItem","position":5,"name":"Comment choisir le bon port SMTP (port 25, 587, 465 ou 2525)"}]},{"@type":"Article","@id":"https://kinsta.com/fr/blog/port-smtp/#article","isPartOf":{"@id":"https://kinsta.com/fr/blog/port-smtp/#webpage"},"author":{"@id":"https://kinsta.com/fr/#/schema/person/9d811e805493f00205e6409451055174"},"headline":"Comment choisir le bon port SMTP (port 25, 587, 465 ou 2525)","datePublished":"2020-02-17T09:06:49+00:00","dateModified":"2023-08-22T13:33:55+00:00","mainEntityOfPage":{"@id":"https://kinsta.com/fr/blog/port-smtp/#webpage"},"wordCount":1591,"commentCount":1,"publisher":{"@id":"https://kinsta.com/fr/#organization"},"image":{"@id":"https://kinsta.com/fr/blog/port-smtp/#primaryimage"},"thumbnailUrl":"https://kinsta.com/fr/wp-content/uploads/sites/4/2020/02/smtp-port.jpg","keywords":["emailmarketing","smtp"],"articleSection":["Meilleurs Tutoriels WordPress"],"inLanguage":"fr-FR","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://kinsta.com/fr/blog/port-smtp/#respond"]}]},{"@type":"Person","@id":"https://kinsta.com/fr/#/schema/person/9d811e805493f00205e6409451055174","name":"Matteo Du\u00f2","image":{"@type":"ImageObject","@id":"https://kinsta.com/fr/#personlogo","inLanguage":"fr-FR","url":"https://kinsta.com/avatar/78636e34d9c125b93efb7e0893a776f8?s=96&d=mm&r=g","contentUrl":"https://kinsta.com/avatar/78636e34d9c125b93efb7e0893a776f8?s=96&d=mm&r=g","caption":"Matteo Du\u00f2"},"description":"Head of Content at Kinsta and Content Marketing Consultant for WordPress plugin developers. Connect with Matteo on Twitter.","sameAs":["https://www.matteoduo.com","https://www.linkedin.com/in/matteoduo/","https://twitter.com/matteoduo"],"url":"https://kinsta.com/fr/blog/author/matteoduo/"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Kinsta® &raquo; Flux" href="https://kinsta.com/fr/feed/" />
+<link rel='stylesheet' id='kinsta-css-style-css' href='https://kinsta.com/fr/wp-content/themes/kinsta/dist/style.css?ver=5696b2d1feb9e2b1a5de' type='text/css' media='all' />
+<script type='text/javascript' src='https://kinsta.com/fr/wp-content/plugins/novashare/js/novashare.min.js?ver=1.2.1' id='novashare-js-js'></script>
+<link rel="https://api.w.org/" href="https://kinsta.com/fr/wp-json/" /><link rel="alternate" type="application/json" href="https://kinsta.com/fr/wp-json/wp/v2/posts/36859" /><link rel='shortlink' href='https://kinsta.com/fr/?p=36859' />
+<link rel="alternate" type="application/json+oembed" href="https://kinsta.com/fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkinsta.com%2Ffr%2Fblog%2Fport-smtp%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://kinsta.com/fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkinsta.com%2Ffr%2Fblog%2Fport-smtp%2F&#038;format=xml" />
+
+<link rel="alternate" href="https://kinsta.com/blog/smtp-port/" hreflang="x-default" />
+<link rel="alternate" href="https://kinsta.com/blog/smtp-port/" hreflang="en" />
+<link rel="alternate" href="https://kinsta.com/pt/blog/porta-smtp/" hreflang="pt" />
+<link rel="alternate" href="https://kinsta.com/es/blog/puerto-smtp/" hreflang="es" />
+<link rel="alternate" href="https://kinsta.com/fr/blog/port-smtp/" hreflang="fr" />
+<link rel="alternate" href="https://kinsta.com/it/blog/porta-smtp/" hreflang="it" />
+<link rel="alternate" href="https://kinsta.com/de/blog/smtp-port-waehlen/" hreflang="de" />
+<link rel="alternate" href="https://kinsta.com/jp/blog/smtp-port/" hreflang="ja" />
+<link rel="alternate" href="https://kinsta.com/dk/blog/smtp-port/" hreflang="da" />
+<link rel="alternate" href="https://kinsta.com/se/blog/smtp-port/" hreflang="sv" />
+<script>window.$kinsta = {"env":"production","maintenanceMode":false,"siteURL":"https:\/\/kinsta.com\/fr\/","siteCode":"fr","languageCode":"fr","restBaseURL":"https:\/\/kinsta.com\/fr\/wp-json\/","adminAjaxURL":"https:\/\/kinsta.com\/fr\/wp-admin\/admin-ajax.php","themeDirURL":"https:\/\/kinsta.com\/fr\/wp-content\/themes\/kinsta\/","uploadDirBaseURL":"https:\/\/kinsta.com\/fr\/wp-content\/uploads\/sites\/4\/","postURL":{"\/legal\/privacy-policy":"\/","\/legal\/terms-service":"https:\/\/kinsta.com\/fr\/mentions-legales\/conditions-utilisation\/","\/pricing":"https:\/\/kinsta.com\/fr\/tarifs\/","\/signup":"https:\/\/kinsta.com\/fr\/inscription\/","\/contact-us":"https:\/\/kinsta.com\/fr\/nous-contacter\/","\/pricing-calculator":"https:\/\/kinsta.com\/fr\/calculateur-prix\/","\/wordpress-hosting\/pricing":"https:\/\/kinsta.com\/fr\/hebergement-wordpress\/tarifs\/","\/application-hosting\/pricing":"https:\/\/kinsta.com\/fr\/hebergement-application\/tarifs\/","\/database-hosting\/pricing":"https:\/\/kinsta.com\/fr\/hebergement-bases-de-donnees\/tarifs\/"},"stripe":{"publicKey":"pk_live_r16EiSaRITiPDMKQjLeoOviT"},"isSingular":true,"wpPost":{"id":36859,"title":"Comment choisir le bon port SMTP (port 25, 587, 465 ou 2525)","type":"post"}}</script>
+            <link rel="icon" href="https://kinsta.com/fr/wp-content/uploads/sites/4/2023/12/cropped-kinsta-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://kinsta.com/fr/wp-content/uploads/sites/4/2023/12/cropped-kinsta-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://kinsta.com/fr/wp-content/uploads/sites/4/2023/12/cropped-kinsta-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://kinsta.com/fr/wp-content/uploads/sites/4/2023/12/cropped-kinsta-favicon-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			
+/* Hack to make buttons white on static page */
+body.page-id-73793 .wp-block-kinsta-button.has-primary-color {
+  --color-primary: white;
+}
+body.page-id-73793 .wp-block-kinsta-button.has-primary-color:not(:hover):not(:focus) {
+  --wp--preset--color--primary: var(--color-dark);
+}
+
+@media (min-width: 66em) {
+  body.page-id-73793 .site-menu--theme-light:not(.is-scrolled) .button {
+    background-color: white;
+  }
+
+  body.page-id-73793 .site-menu--theme-light:not(.is-scrolled) .button:hover,
+  body.page-id-73793 .site-menu--theme-light:not(.is-scrolled) .button:focus {
+    border-color: white;
+    color: white;
+  }
+}		</style>
+		</head>
+
+<body class="post-template-default single single-post postid-36859 single-format-standard wp-embed-responsive object-36859">
+
+<a class="skip-to-content" href="#main">
+  Aller au contenu</a>
+
+<script  type="text/javascript" src="https://kinsta.com/fr/wp-content/themes/kinsta/dist/early-load.js?ver=f6d096393233220838f5"></script>
+<div class="site-header">
+    <div  id="kinsta-global-banner" class="kinsta-global-banner kinsta-global-banner--link is-theme-default" data-hash="ecc09212949667717f1c1d14ef135df1" data-event-label="deployez-votre-a">
+            <p>
+            <a  href="https://kinsta.com/fr/hebergement-application/tarifs/niveau-hobby/">
+                Déployez votre application rapidement et évoluez au fur et à mesure de votre croissance avec notre niveau Hobby.            </a>
+        </p>
+    </div>
+
+<header id="nav" class="topbar-container theme--dark spectra-variables">
+    <div class="topbar" data-state-search="collapsed">
+        <div class="topbar__inner">
+            <div class="topbar__homebar">
+    <a  href="https://kinsta.com/fr/" class="topbar__logo" rel="home">
+        <svg  class="icon icon--logo" aria-hidden="true" focusable="false" title="Kinsta®"><use xlink:href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#logo" /></svg><span class="screen-reader-text">Kinsta®</span>    </a>
+
+    <a  href="#nav" id="nav-toggle" class="topbar__burger" aria-label="Menu hamburger" aria-haspopup="true" aria-expanded="false">
+        <svg  class="icon icon--hamburger" aria-hidden="true" focusable="false" title="Navigation"><use xlink:href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#hamburger" /></svg><span class="screen-reader-text">Navigation</span>    </a>
+</div>
+<nav class="megamenu" aria-label="Menu principal">
+    <ul class="megamenu__ul">
+                                <li class="megamenu__li megamenu__li--has-children">
+                <a  id="megamenu-item-0" tabindex="0" href="#megamenu-item-0__child" class="megamenu__item button button--small button--tertiary megamenu__item--has-children js-megamenu-toggle-button">
+                    <span class="megamenu__item__title">
+                        Services d’hébergement                    </span>
+                </a>
+                
+<div  id="megamenu-item-0__child" class="megamenu__dropdown">
+    <div class="megamenu__dropdown__inner">
+        <div  class="megamenu__dropdown__container">
+    <div class="megamenu__dropdown__columns">
+                    <div class="megamenu__dropdown__column">
+    <h6 class="megamenu__dropdown__column__title">Produits</h6>
+    <ul class="megamenu__dropdown__column__list">
+        <li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/hebergement-wordpress/" class="megamenu__dropdown__item button button--tertiary button--small">
+                    <div  class="megamenu__dropdown__item__prefix" aria-hidden="true">
+                <img  class="megamenu__dropdown__item__icon" width="32" height="32" aria-hidden="true" src="https://kinsta.com/fr/wp-content/themes/kinsta/images/components/megamenu/icon-wp.png" />            </div>
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Hébergement WordPress infogéré            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/hebergement-application/" class="megamenu__dropdown__item button button--tertiary button--small">
+                    <div  class="megamenu__dropdown__item__prefix" aria-hidden="true">
+                <img  class="megamenu__dropdown__item__icon" width="32" height="32" aria-hidden="true" src="https://kinsta.com/fr/wp-content/themes/kinsta/images/components/megamenu/icon-app.png" />            </div>
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Hébergement d&#039;application web            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/hebergement-bases-de-donnees/" class="megamenu__dropdown__item button button--tertiary button--small">
+                    <div  class="megamenu__dropdown__item__prefix" aria-hidden="true">
+                <img  class="megamenu__dropdown__item__icon" width="32" height="32" aria-hidden="true" src="https://kinsta.com/fr/wp-content/themes/kinsta/images/components/megamenu/icon-db.png" />            </div>
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Hébergement infogéré de bases de données            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/hebergement-site-statique/" class="megamenu__dropdown__item button button--tertiary button--small">
+                    <div  class="megamenu__dropdown__item__prefix" aria-hidden="true">
+                <img  class="megamenu__dropdown__item__icon" width="32" height="32" aria-hidden="true" src="https://kinsta.com/fr/wp-content/themes/kinsta/images/components/megamenu/icon-static.png" />            </div>
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Hébergement de site statique            </span>
+                    </div>
+    </a>
+</li>
+    </ul>
+</div>
+                    <div class="megamenu__dropdown__column">
+    <h6 class="megamenu__dropdown__column__title">Points forts de la plateforme</h6>
+    <ul class="megamenu__dropdown__column__list">
+        <li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/integration-cloudflare/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Intégration Cloudflare            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/docs/kinsta-api/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                API            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/support-kinsta/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Support expert            </span>
+                    </div>
+    </a>
+</li>
+    </ul>
+</div>
+                    <div class="megamenu__dropdown__column">
+    <h6 class="megamenu__dropdown__column__title">Points forts de WordPress</h6>
+    <ul class="megamenu__dropdown__column__list">
+        <li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/outil-apm/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Outil APM            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/devkinsta/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                DevKinsta            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/hebergement-wordpress/migration/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Migrations de site gratuites            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/cache-edge/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Cache edge            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/modules/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Modules            </span>
+                    </div>
+    </a>
+</li>
+    </ul>
+</div>
+            </div>
+</div>
+    </div>
+</div>
+            </li>
+                                <li class="megamenu__li megamenu__li--has-children">
+                <a  id="megamenu-item-1" tabindex="0" href="#megamenu-item-1__child" class="megamenu__item button button--small button--tertiary megamenu__item--has-children js-megamenu-toggle-button">
+                    <span class="megamenu__item__title">
+                        Solutions                    </span>
+                </a>
+                
+<div  id="megamenu-item-1__child" class="megamenu__dropdown">
+    <div class="megamenu__dropdown__inner">
+        <div  class="megamenu__dropdown__container">
+    <div class="megamenu__dropdown__columns">
+                    <div class="megamenu__dropdown__column">
+    <h6 class="megamenu__dropdown__column__title">Nous propulsons votre</h6>
+    <ul class="megamenu__dropdown__column__list">
+        <li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/hebergement-wordpress/entreprise/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Entreprise            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/hebergement-wordpress/agences/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Agence            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/hebergement-wordpress/woocommerce/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Boutique WooCommerce            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/hebergement-wordpress/petites-entreprises/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Petite entreprise            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/hebergement-wordpress/organisations-but-non-lucratif/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Organisation caritative            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/hebergement-wordpress/sites-uniques/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Site unique à ressources élevées            </span>
+                    </div>
+    </a>
+</li>
+    </ul>
+</div>
+                    <div class="megamenu__dropdown__column megamenu__dropdown__column--wide">
+    <h6 class="megamenu__dropdown__column__title">Étude de cas</h6>
+    <ul class="megamenu__dropdown__column__list">
+        <li class="megamenu__dropdown__li">
+    <div class="posts-grid posts-grid--2-cols megamenu__dropdown__item-query">
+<div class="post-preview post-76667 case_studies type-case_studies status-publish has-post-thumbnail hentry segment-agence">
+    <a class="post-preview__thumbnail" aria-hidden="true" tabindex="-1" href="https://kinsta.com/fr/clients/torro-media/">
+                        <img width="400" height="200" src="https://kinsta.com/fr/wp-content/uploads/sites/4/2024/04/case-study-torro-media-400x200.png" class="attachment-kinsta-thumbnail size-kinsta-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" aria-hidden="true" tabindex="-1" />            </a>
+
+    <div class="post-preview__content">
+        
+<div class="post-preview__title-excerpt">
+    <h2 class="post-preview__title">
+                <a  href="https://kinsta.com/fr/clients/torro-media/" class="post-preview__link">
+            Comment Torro Media obtient régulièrement des scores Google PageSpeed de plus de 90 pour tous les sites de ses clients ?        </a>
+    </h2>
+
+    </div>
+    </div>
+</div>
+
+<div class="post-preview post-76436 case_studies type-case_studies status-publish has-post-thumbnail hentry segment-affilies">
+    <a class="post-preview__thumbnail" aria-hidden="true" tabindex="-1" href="https://kinsta.com/fr/clients/shoutmeloud/">
+                        <img width="400" height="200" src="https://kinsta.com/fr/wp-content/uploads/sites/4/2024/03/case-study-shoutmeloud-400x200.png" class="attachment-kinsta-thumbnail size-kinsta-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" aria-hidden="true" tabindex="-1" />            </a>
+
+    <div class="post-preview__content">
+        
+<div class="post-preview__title-excerpt">
+    <h2 class="post-preview__title">
+                <a  href="https://kinsta.com/fr/clients/shoutmeloud/" class="post-preview__link">
+            Comment ShoutMeLoud a atteint la croissance et la liberté financière avec Kinsta        </a>
+    </h2>
+
+    </div>
+    </div>
+</div>
+</div></li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/clients/" class="megamenu__dropdown__item button button--tertiary button--small megamenu__dropdown__item--more">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Plus d&#039;études de cas            </span>
+                    </div>
+    </a>
+</li>
+    </ul>
+</div>
+            </div>
+</div>
+    </div>
+</div>
+            </li>
+                                <li class="megamenu__li">
+                <a  id="megamenu-item-2" tabindex="0" href="https://kinsta.com/fr/tarifs/" class="megamenu__item button button--small button--tertiary">
+                    <span class="megamenu__item__title">
+                        Prix                    </span>
+                </a>
+                            </li>
+                                <li class="megamenu__li">
+                <a  id="megamenu-item-3" tabindex="0" href="https://kinsta.com/fr/docs/" class="megamenu__item button button--small button--tertiary">
+                    <span class="megamenu__item__title">
+                        Docs                    </span>
+                </a>
+                            </li>
+                                <li class="megamenu__li megamenu__li--has-children">
+                <a  id="megamenu-item-4" tabindex="0" href="#megamenu-item-4__child" class="megamenu__item button button--small button--tertiary megamenu__item--has-children js-megamenu-toggle-button">
+                    <span class="megamenu__item__title">
+                        Aide                    </span>
+                </a>
+                
+<div  id="megamenu-item-4__child" class="megamenu__dropdown">
+    <div class="megamenu__dropdown__inner">
+        <div  class="megamenu__dropdown__container">
+    <div class="megamenu__dropdown__columns">
+                    <div class="megamenu__dropdown__column megamenu__dropdown__column--dual">
+    <h6 class="megamenu__dropdown__column__title">Ressources</h6>
+    <ul class="megamenu__dropdown__column__list">
+        <li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/blog/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Blog            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/changelog/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Journal des changements            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://status.kinsta.com/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                État du système            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/base-de-connaissances/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Base de connaissances            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/alternatives-kinsta/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Comparez Kinsta à la concurrence            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/outils/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Outils de développement            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/ressources/" class="megamenu__dropdown__item button button--tertiary button--small megamenu__dropdown__item--more">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Toutes les ressources            </span>
+                    </div>
+    </a>
+</li>
+    </ul>
+</div>
+                    <div class="megamenu__dropdown__column">
+    <h6 class="megamenu__dropdown__column__title">Contactez-nous</h6>
+    <ul class="megamenu__dropdown__column__list">
+        <li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/nous-contacter/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Posez-nous une question            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="tel:+18886102915" class="megamenu__dropdown__item button button--tertiary button--small kinsta-tel">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Contacter un commercial            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://kinsta.com/fr/planifier-demo/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Demandez une démo en direct            </span>
+                    </div>
+    </a>
+</li>
+<li class="megamenu__dropdown__li">
+    <a  href="https://community.kinsta.com/" class="megamenu__dropdown__item button button--tertiary button--small">
+                <div class="megamenu__dropdown__item__text">
+            <span class="megamenu__dropdown__item__title">
+                Demandez à la communauté            </span>
+                    </div>
+    </a>
+</li>
+    </ul>
+</div>
+            </div>
+</div>
+    </div>
+</div>
+            </li>
+            </ul>
+</nav>
+
+<div class="topbar__actions">
+            <!-- <div class="topbar__search" id="search-form-container"> -->
+            <form
+                class="topbar__search"
+                method='get' action='https://kinsta.com/fr'            >
+                <label>
+                    <span class="screen-reader-text">Rechercher</span>
+                    <input name='s' type='text' required='required' value='' placeholder='Rechercher&hellip;' />                </label>
+                <button class="button button--tertiary button--small topbar__search__icon" aria-label="Rechercher">
+                    <svg  class="icon icon--search" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#search" /></svg>                </button>
+            </form>
+        <!-- </div> -->
+    
+                    <a  href="https://my.kinsta.com/login/?lang=fr" class="topbar__actions__item button button--small topbar__hidden-small button--tertiary">
+            Connexion        </a>
+                    <a  href="https://kinsta.com/fr/inscription/wp/" class="topbar__actions__item button button--small button--primary">
+            Inscrivez-vous        </a>
+    </div>
+        </div>
+    </div>
+</header>
+
+</div>
+
+<main id="main">
+
+
+<link rel="stylesheet" href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/templates/article-dual-sidebar.css?ver=14f91c597ecb6533349b" /><article class="post-36859 post type-post status-publish format-standard has-post-thumbnail hentry tag-emailmarketing tag-smtp topic-conseils-marketing-e-mail topic-smtp">
+            
+<div class="article-title container container--narrow">
+            
+    <nav  class="breadcrumbs breadcrumbs--only-last" aria-label="Fils d&#039;Ariane">
+        <ol>
+                                            <li  class="breadcrumbs__li">
+                                            <a  href="https://kinsta.com/fr/" class="breadcrumbs__link">
+                            Home                        </a>
+                                    </li>
+                                            <li  class="breadcrumbs__li">
+                                            <a  href="https://kinsta.com/fr/ressources/" class="breadcrumbs__link">
+                            Centre de ressources                        </a>
+                                    </li>
+                                            <li  class="breadcrumbs__li">
+                                            <a  href="https://kinsta.com/fr/blog/" class="breadcrumbs__link">
+                            Blog                        </a>
+                                    </li>
+                                            <li  class="breadcrumbs__li is-parent">
+                                            <a  href="https://kinsta.com/fr/sujets/smtp/" class="breadcrumbs__link">
+                            SMTP                        </a>
+                                    </li>
+                                            <li  class="breadcrumbs__li is-current">
+                                            <span class="breadcrumbs__link" aria-current="true">
+                            Comment choisir le bon port SMTP (port 25, 587, 465 ou 2525)                        </span>
+                                    </li>
+                    </ol>
+    </nav>
+    
+            <h1 class="article-title__title">
+            Comment choisir le bon port SMTP (port 25, 587, 465 ou 2525)        </h1>
+    
+    
+            <div class="article-title__meta">
+                            <a href="https://kinsta.com/fr/blog/author/matteoduo/" title="Articles par Matteo Duò" rel="author">Matteo Duò</a>,
+                                        <time class="article-title__meta__date" datetime="2023-08-22T14:33:55+01:00">
+                    22 août 2023                </time>
+                    </div>
+    
+    
+            <img width="1024" height="512" src="https://kinsta.com/fr/wp-content/uploads/sites/4/2020/02/smtp-port-1024x512.jpg" class="article-title__featured-image wp-post-image" alt="Comment choisir le bon port SMTP (port 25, 587, 465 ou 2525)" decoding="async" loading="eager" srcset="https://kinsta.com/fr/wp-content/uploads/sites/4/2020/02/smtp-port-1024x512.jpg 1024w, https://kinsta.com/fr/wp-content/uploads/sites/4/2020/02/smtp-port-300x150.jpg 300w, https://kinsta.com/fr/wp-content/uploads/sites/4/2020/02/smtp-port-768x384.jpg 768w, https://kinsta.com/fr/wp-content/uploads/sites/4/2020/02/smtp-port.jpg 1460w" sizes="(max-width: 1024px) 100vw, 1024px" />    </div>
+    
+    <div class="article-dual-sidebar has-cta has-toc has-download">
+        <div class="article-dual-sidebar__before">
+            <div class="sidebar"><div class="sidebar-section sidebar-section--grow"><kinsta-sidebar-toc  show-download-post-form="true" json-auto-toc-props="{&quot;exclude&quot;:&quot;last&quot;}"></kinsta-sidebar-toc>
+</div></div>        </div>
+
+        <div class="user-content post-content js-anchor-hashes article-dual-sidebar__content" id="post-content-36859">
+            <p>Vous avez du mal à trouver le bon port SMTP à utiliser ?</p>
+<p>Si vous utilisez un client de messagerie comme Apple Mail ou Outlook pour envoyer des emails, ce client de messagerie utilise probablement aussi le<em> protocole</em> SMTP pour téléverser vos emails sortants sur votre serveur de messagerie (<em>bien que les clients utilisent généralement d’autres protocoles comme IMAP ou POP3 pour téléverser les emails entrants sur l’application</em>).</p>
+<p>En outre, si vous êtes de ceux <a href="https://kinsta.com/fr/blog/non-envoi-email-wordpress/">qui se débattent avec la délivrabilité des emails</a> sur <a href="https://kinsta.com/fr/base-de-connaissances/qu-est-ce-que-wordpress/" target="_blank" rel="noopener noreferrer">WordPress</a>, l’un des meilleurs moyens de résoudre le problème est d’utiliser <a href="https://kinsta.com/fr/blog/serveur-smtp-gratuit/">un service d’envoi SMTP</a> comme <a href="https://kinsta.com/fr/base-de-connaissances/sendgrid-wordpress/">SendGrid</a>, ou <a href="https://kinsta.com/fr/blog/google-workspace/">Google Workspace</a>.</p>
+<p>Mais si vous essayez de configurer le SMTP avec votre client de messagerie ou votre site web WordPress, vous vous poserez probablement la question de savoir quel port SMTP utiliser.</p>
+<p>Pour vous aider à choisir le bon port SMTP en fonction de vos besoins, nous allons examiner dans cet article tout ce qui concerne le port SMTP.</p>
+<p><div></div><kinsta-auto-toc heading="Table des matières" exclude="last" list-style="arrow" selector="h2" count-number="-1"></kinsta-auto-toc><br>
+<strong>Consultez notre <a href="https://www.youtube.com/watch?v=5lkLFGfb0G8">guide vidéo sur la manière de choisir le bon numéro de port SMTP</a> :</strong><br>
+<kinsta-video src="https://www.youtube.com/watch?v=5lkLFGfb0G8"></kinsta-video></p>
+<link rel="stylesheet" href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/patterns/featured-snippet.css?ver=d4c7aff280ab7584547e" />
+<div  class="featured-snippet" id="featuredSnippet">
+    <div class="featured-snippet__content">
+        <h2>Qu&#039;est-ce qu&#039;un port SMTP ?</h2>
+        <div><p>Un port SMTP est un point de terminaison de la communication qui gère les transferts d&rsquo;informations d&rsquo;un serveur à un autre. Alors que le protocole SMTP (Simple Mail Transfer Protocol) garantit que la plupart des e-mails sont envoyés sur le web, un port assure que les bonnes données d&rsquo;e-mail sont envoyées au bon endroit.</p>
+</div>
+    </div>
+    <div class="featured-snippet__footer">
+        <div class="arrow-down"></div>
+        <div class="featured-snippet__footer--content row nocol middle-xs between-xs reverse">
+            <div style="margin-left: auto; position: relative; top: -1px" class="row nocol middle-xs">
+                <div class="color--mediumGray" style="font-size: 14px; vertical-align: middle;">
+                    <svg  class="icon icon--logo display--block" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#logo" /></svg>                </div>
+                <div class="text--bold color--mediumGray" style="padding-left: 3px;">Support</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>Comprenons ce processus plus en détail.</p>
+<p>Comme nous l’avons dit, SMTP est le protocole standard de transmission des e-mails sur le web. C’est ce que les serveurs de messagerie utilisent pour envoyer et recevoir des e-mails sur Internet.</p>
+<p>Par exemple, lorsque vous envoyez un e-mail, votre client de messagerie a besoin d’un moyen de téléverser l’e-mail sur le serveur de courrier sortant. Ensuite, le serveur de courrier sortant a besoin d’un moyen pour transférer votre courrier électronique au serveur de courrier entrant du destinataire.</p>
+<p>Les serveurs de courrier électronique ressemblent beaucoup aux serveurs de sites web en ce sens que, même s’il peut y avoir une interface de <a href="https://kinsta.com/fr/blog/combien-coute-un-nom-de-domaine/">nom de domaine</a> conviviale la communication proprement dite se fait par l’intermédiaire d’adresses IP, comme 222.501.285.45 (pour en savoir plus sur la manière dont cela se passe, <a href="https://kinsta.com/fr/base-de-connaissances/que-sont-les-dns/">consultez notre introduction au système des noms de domaine (DNS</a>).</p>
+<p>Un « port » est un autre moyen d’aider les ordinateurs (<em>comme deux serveurs de messagerie</em>) à communiquer entre eux :</p>
+<ul>
+<li>Une adresse IP permet d’identifier un ordinateur.</li>
+<li>Un port identifie une application/service spécifique s’exécutant sur cet ordinateur, comme le SMTP.</li>
+</ul>
+<p>Voici une analogie pour rendre le tout un peu plus humain :</p>
+<p>Une adresse IP est l’adresse physique d’un complexe commercial. Un port est le numéro d’une entreprise spécifique dans ce complexe commercial.</p>
+<p>Si vous voulez livrer quelque chose à cette entreprise, vous ne pouvez pas seulement l’adresser au complexe commercial, vous devez aussi vous assurer qu’il arrive au bon endroit à l’intérieur du complexe commercial.</p>
+<p><a href="https://www.iana.org/">L’IANA</a>, l’organisation responsable de l’attribution des adresses IP mondiales et d’autres tâches, est également chargée d’enregistrer les numéros de port pour les services Internet communs, dont le SMTP.</p>
+<h2 id="why">Pourquoi votre port SMTP est-il important ?</h2>
+<p>Si vous souhaitez vous connecter à un serveur SMTP (comme le <a href="https://kinsta.com/fr/blog/serveur-smtp-gmail/">serveur SMTP Gmail</a>), vous devez saisir à la fois son adresse IP et son numéro de port.</p>
+<p>Cependant, il existe de nombreux ports SMTP communs (voir plus loin) et ils ne fonctionnent pas tous dans toutes les situations.</p>
+<p>Par exemple, le port 25, le port SMTP standard pour le transfert des messages entre les serveurs de messagerie, est souvent bloqué par les FAI et les fournisseurs d’accès au cloud (y compris Google Cloud Platform, que Kinsta utilise).</p>
+<p>Ainsi, si vous essayez de vous connecter à un serveur SMTP via le port 25, vous rencontrerez souvent des problèmes car de nombreux services bloquent le port 25.</p>
+<h3>Des ports différents pour des objectifs différents</h3>
+<p>Au-delà des implications ci-dessus, les différents ports SMTP ont également des objectifs différents.</p>
+<p>La transmission SMTP comporte deux grandes étapes :</p>
+<ul>
+<li><strong>Soumission</strong> – soumission d’un message électronique à un serveur de courrier sortant. Par exemple, lorsque vous envoyez un e-mail dans Apple Mail, ce message doit être soumis au serveur de courrier sortant.</li>
+<li><strong>Relais </strong>– le processus de transmission du message entre deux serveurs. Ainsi, après qu’un e-mail a été « soumis » au serveur de courrier sortant, celui-ci « relaie » ce message au serveur de courrier du destinataire.</li>
+</ul>
+<p>Si vous configurez votre client de messagerie ou votre site WordPress, vous êtes surtout concerné par la partie « soumission » du processus.</p>
+<p>Bien que le « relais » soit certainement une partie importante du SMTP, la plupart des gens n’ont pas besoin de configurer leur propre serveur de courrier électronique.</p>
+<h2 id="ports">Quel est le port utilisé par SMTP ?</h2>
+<p>Sur le web moderne, il n’y a pas un seul port SMTP. Au lieu de cela, il existe quatre ports SMTP communs :</p>
+<ul>
+<li>25</li>
+<li>587</li>
+<li>465</li>
+<li>2525</li>
+</ul>
+<p>Passons-les en revue.</p>
+<h3>À quoi sert le port 25 ?</h3>
+<p>Le port 25 a été établi dès 1982, ce qui en fait le plus ancien port SMTP.</p>
+<p>Le port 25 est toujours connu comme le port SMTP standard et il est surtout utilisé pour le <strong>relais SMTP.</strong></p>
+<p>Toutefois, si vous configurez votre site WordPress ou votre client de messagerie avec le protocole SMTP, généralement vous <strong>ne voulez pas</strong> utiliser le port 25 car la plupart des FAI résidentiels et des hébergeurs du cloud bloquent le port 25.</p>
+<p>Pourquoi ? Parce que le port 25 est couramment utilisé pour envoyer du spam à partir d’ordinateurs compromis.</p>
+<p>N’oubliez pas : il y a une différence entre la soumission SMTP et le relais. Ainsi, si le port 25 est parfait pour le relais SMTP, il n’est pas une bonne option pour la soumission SMTP.</p>
+<h3>À quoi sert le port 587 ?</h3>
+<p>Le port 587 est le port par défaut pour la soumission SMTP sur le web moderne. Bien que vous puissiez utiliser d’autres ports pour la soumission (plus d’informations plus loin), vous devez toujours commencer par le port 587 par défaut et n’utiliser un port différent que si les circonstances l’exigent (comme votre hôte qui bloque le port 587 pour une raison quelconque).</p>
+<p>Le port 587 prend également en charge <a href="https://kinsta.com/fr/base-de-connaissances/tls-vs-ssl/">TLS</a>, ce qui signifie que vous pouvez envoyer du courrier en toute sécurité.</p>
+<aside data-f-="RHI3ZDlNb0k4UFFHNkVlS1lYT3Q=" data-xiy="OGhWRjVLdWVmSWNOcA==" id="MzY4NTk=" data-u2ch73a="dzlhU0xwWGJuR29ZQnFf" data-jb="NzZFVGVPQXlr" data-08v7lto="cG1vRk81dlFneENHTg==" data-hmjeo="VXJXdi5YeXM5Y24wd3BWdE8=" class="Wzk2OCwxMDA5XQ==" data-r3koi="Im1pZGRsZSI=|ImZyX0ZSIg=="></aside><h3>À quoi sert le port 465 ?</h3>
+<p>Le port 465 était à l’origine enregistré pour le SMTPS (SMTP over SSL). Après un bref passage dans cette fonction, le port 465 a été réaffecté à un autre usage et déprécié.</p>
+<p>Malgré cela, de nombreux FAI et fournisseurs d’hébergement du cloud supportent toujours le port 465 pour la soumission SMTP.</p>
+<h3>À quoi sert le port 2525 ?</h3>
+<p>Le port 2525 n’est pas un port SMTP officiel (tel que reconnu par l’IETF ou l’IANA). Toutefois, il est encore couramment utilisé comme alternative au port 587 pour la soumission SMTP et la plupart des FAI et des fournisseurs d’hébergement du cloud prennent en charge le port 2525 pour le SMTP.</p>
+<p>Si le port 587 est bloqué, le port 2525 constitue une bonne alternative.</p>
+<h2 id="which">Quel port SMTP devez-vous utiliser ?</h2>
+<p>Nous avons abordé ce point ci-dessus, mais récapitulons comment choisir le bon port SMTP, car il est important de prendre la bonne décision.</p>
+<p>Si vous configurez votre site WordPress ou votre client de messagerie pour envoyer des e-mails par SMTP (soumission), vous voudrez presque toujours utiliser le <strong>port 587</strong>. Là encore, il s’agit du port SMTP par défaut pour la soumission et il prend en charge la transmission sécurisée via TLS.</p>
+<p>Si le port 587 est bloqué pour une raison quelconque, le <strong>port 2525 </strong>est une alternative courante. Là encore, il ne s’agit pas d’un port SMTP officiellement reconnu, mais il est couramment utilisé et soutenu par la plupart des fournisseurs.</p>
+<p>Bien que de nombreux fournisseurs prennent encore en charge le <strong>port 465</strong> pour le SMTP, ce n’est plus une norme acceptée et vous devriez toujours essayer d’utiliser les ports 587 et 2525 avant d’utiliser le port 465.</p>
+<p>Enfin, si le <strong>port 25 </strong>est couramment utilisé pour le relais SMTP, vous ne devez pas l’utiliser lors de la configuration d’un client de messagerie ou d’un site web WordPress car la plupart des FAI et des hébergeurs du cloud bloquent le port 25.</p>
+<h3>Quels ports SMTP pouvez-vous utiliser chez Kinsta ?</h3>
+<p>Chez Kinsta, vous pouvez utiliser les ports :</p>
+<ul>
+<li>587</li>
+<li>465</li>
+<li>2525</li>
+</ul>
+<p>Vous ne pouvez pas utiliser le port 25 car Kinsta utilise l’infrastructure de la plateforme Google Cloud et <a href="https://cloud.google.com/compute/docs/tutorials/sending-mail/">la plateforme Google Cloud bloque le port 25</a>.</p>
+
+<h2>Résumé</h2>
+<p>Le SMTP joue un rôle important dans la circulation des emails sur Internet.</p>
+<p>Pour améliorer la délivrabilité de votre site WordPress <a href="https://kinsta.com/docs/wordpress-hosting/mykinsta-tools/email">les e-mails transactionnels</a>, vous pouvez configurer votre site WordPress pour envoyer des e-mails via SMTP. De plus, si vous utilisez un client de messagerie comme Apple Mail ou <a href="https://kinsta.com/fr/blog/reglages-smtp-outlook/">Outlook</a>, votre client de messagerie utilise le SMTP pour soumettre les e-mails sortants au serveur de messagerie.</p>
+<p>Afin de connecter votre site WordPress ou votre client de messagerie au serveur SMTP, vous devez saisir un port SMTP spécifique.</p>
+<p>Il existe quatre ports SMTP communs :</p>
+<ul>
+<li>25</li>
+<li>587</li>
+<li>465</li>
+<li>2525</li>
+</ul>
+<p>Le port 25 est couramment utilisé pour le relais SMTP, mais vous ne devez pas l’utiliser pour la soumission SMTP car la plupart des fournisseurs le bloquent.</p>
+<p>Si vous souhaitez configurer votre site WordPress ou votre client de messagerie pour utiliser le SMTP, vous devez commencer par le port 587 comme premier choix, car c’est le port standard pour la soumission SMTP.</p>
+<p>Et si le port 587 ne fonctionne pas, vous pouvez essayer le port 2525. Bien que ce ne soit pas un port SMTP officiellement reconnu, il est largement soutenu et il supporte le TLS pour une transmission sécurisée.</p>
+<aside class="user-content mt--40">
+<hr class="mini-divider">
+<p>Obtenez toutes vos <a data-track-ga-category="single-post" data-track-ga-label="bottom-cta" href="https://kinsta.com/fr/hebergement-application/tarifs/">applications</a>, <a data-track-ga-category="single-post" data-track-ga-label="bottom-cta" href="https://kinsta.com/fr/hebergement-bases-de-donnees/tarifs/">bases de données</a> et <a data-track-ga-category="single-post" data-track-ga-label="bottom-cta" href="https://kinsta.com/fr/hebergement-wordpress/tarifs/">Sites WordPress</a> en ligne et sous un même toit. Notre plateforme cloud haute performance et pleine de fonctionnalités comprend :</p>
+<ul>
+<li>Configuration et gestion faciles dans le tableau de bord MyKinsta</li>
+<li>Support expert 24/7</li>
+<li>Le meilleur matériel et réseau de la plateforme Google Cloud, propulsé par Kubernetes pour une évolutivité maximale</li>
+<li>Une intégration Cloudflare au niveau de l’entreprise pour la vitesse et la sécurité</li>
+<li>Une audience mondiale avec jusqu’à 37 centres de données et 260 PoP dans le monde</li>
+</ul>
+<p>Obtenez un essai gratuit de notre <a data-track-ga-category="single-post" data-track-ga-label="bottom-cta" href="https://kinsta.com/fr/hebergement-application/tarifs/">Hébergement d’application</a> ou <a data-track-ga-category="single-post" data-track-ga-label="bottom-cta" href="https://kinsta.com/fr/hebergement-bases-de-donnees/tarifs/">Hébergement de base de données</a>. Explorez nos <a data-track-ga-category="single-post" data-track-ga-label="bottom-cta" href="https://kinsta.com/fr/hebergement-wordpress/tarifs/">plans</a> ou <a data-track-ga-category="single-post" data-track-ga-label="bottom-cta" href="https://kinsta.com/fr/nous-contacter/">contactez nous</a> pour trouver ce qui vous convient le mieux.</p>
+</aside><link rel="stylesheet" href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/components/author-info.css?ver=e87035f2df442c687ea3" />
+<div class="author-info">
+    <link rel="stylesheet" href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/patterns/person.css?ver=7aaa1d138d0feac50c66" /><div class="person js-disable-anchor-hashes person--with-description">
+                    <div class="person__avatar">
+            <img  aria-hidden="true" src="https://kinsta.com/avatar/78636e34d9c125b93efb7e0893a776f8?s=160&amp;d=mm&amp;r=g" width="150" height="150" loading="lazy" />
+        </div>
+        <div class="person__details">
+        <span class="person__name">Matteo Duò</span>
+                    <span class="person__job"><a href="https://kinsta.com/fr" target="_blank" rel="noopener noreferrer" class="person__company">Kinsta</a></span>
+                            <p class="person__description">Rédacteur en chef chez Kinsta et consultant en marketing de contenu pour les développeurs de plugins WordPress. Connectez-vous avec <a href="https://twitter.com/matteoduo">Matteo sur Twitter</a>.</p>
+                            <ul class="person__links">
+                                                        <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.matteoduo.com">
+                            <span class="screen-reader-text">Site Web</span>
+                            <svg  class="icon icon--globe" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#globe" /></svg>                        </a>
+                    </li>
+                                                        <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/matteoduo/">
+                            <span class="screen-reader-text">LinkedIn</span>
+                            <svg  class="icon icon--linkedin" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#linkedin" /></svg>                        </a>
+                    </li>
+                                                        <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/matteoduo">
+                            <span class="screen-reader-text">Twitter</span>
+                            <svg  class="icon icon--twitter" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#twitter" /></svg>                        </a>
+                    </li>
+                            </ul>
+            </div>
+</div>
+</div>
+        </div>
+
+        <div class="article-dual-sidebar__after">
+            <div class="sidebar" style="--sidebar-padding:20%;"><div class="sidebar-section sidebar-section--grow"><link rel="stylesheet" href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/components/ctas/cta-mini.css?ver=d6666c2299c37d0bbd27" />
+<aside class="sidebar-cta" data-nosnippet>
+    <div class="sidebar-cta__inner">
+        <div class="cta-mini">
+            <div  class="cta-mini__content cta-mini__content--basic cta-mini__content--basic--perf-audit-wp">
+    <h3>Votre site WordPress est lent ?</h3>
+            <p>Découvrez les goulets d&#039;étranglement des performances de votre site web pour offrir une meilleure expérience utilisateur.</p>
+        <a  class="button button--green" href="https://kinsta.com/fr/audits-performance/" data-track-ga-category="sidebar-cta" data-track-ga-label="perf-audit-wp">
+        Audit gratuit    </a>
+</div>
+
+        </div>
+    </div>
+</aside>
+</div></div>        </div>
+    </div>
+</article>
+<link rel="stylesheet" href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/patterns/related.css?ver=eab3fd4da8653b8b242f" /><div class="related-posts container related-posts--with-topics">
+    <h2 class="related-posts__title">
+        Articles similaires et sujets    </h2>
+
+    <div class="related-posts__inner">
+        <div class="posts-grid posts-grid--3-cols related-posts__list">
+<div class="post-preview post-34360 post type-post status-publish format-standard has-post-thumbnail hentry tag-emailmarketing tag-outreach">
+    <a class="post-preview__thumbnail" aria-hidden="true" tabindex="-1" href="https://kinsta.com/fr/blog/trouver-adresses-email/">
+                        <img width="400" height="200" src="https://kinsta.com/fr/wp-content/uploads/sites/4/2019/11/trouver-adresses-email.jpg" class="attachment-kinsta-thumbnail size-kinsta-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" aria-hidden="true" tabindex="-1" srcset="https://kinsta.com/fr/wp-content/uploads/sites/4/2019/11/trouver-adresses-email.jpg 1460w, https://kinsta.com/fr/wp-content/uploads/sites/4/2019/11/trouver-adresses-email-300x150.jpg 300w, https://kinsta.com/fr/wp-content/uploads/sites/4/2019/11/trouver-adresses-email-768x384.jpg 768w, https://kinsta.com/fr/wp-content/uploads/sites/4/2019/11/trouver-adresses-email-1024x512.jpg 1024w" sizes="(max-width: 400px) 100vw, 400px" />            </a>
+
+    <div class="post-preview__content">
+        
+<div class="post-preview__title-excerpt">
+    <h2 class="post-preview__title">
+                <a  href="https://kinsta.com/fr/blog/trouver-adresses-email/" class="post-preview__link">
+            13 façons de trouver l&rsquo;adresse e-mail de quelqu&rsquo;un (améliorez votre jeu de sensibilisation)        </a>
+    </h2>
+
+            <div class="post-preview__excerpt">
+            Vous avez besoin de trouver l&#039;adresse e-mail d&#039;une personne, mais vous ne savez pas par où commencer ? Ce guide vous montrera 13 méthodes et outils&hellip;        </div>
+    </div>
+<dl class="post-preview__meta">
+            <dt><span class="screen-reader-text">Temps de lecture</span></dt>
+        <dd>13 min de lecture</dd>
+            <dt><span class="screen-reader-text">Date de mise à jour</span></dt>
+        <dd>28 avril 2023</dd>
+            <dt><span class="screen-reader-text">Type de publication</span></dt>
+        <dd>Blog</dd>
+    </dl>
+    </div>
+</div>
+
+<div class="post-preview post-29814 post type-post status-publish format-standard has-post-thumbnail hentry tag-emailmarketing tag-marketing topic-conseils-marketing-e-mail topic-hebergement-wordpress">
+    <a class="post-preview__thumbnail" aria-hidden="true" tabindex="-1" href="https://kinsta.com/fr/blog/logiciels-marketing-email/">
+                        <img width="400" height="200" src="https://kinsta.com/fr/wp-content/uploads/sites/4/2019/08/recommandations-marketing-email.png" class="attachment-kinsta-thumbnail size-kinsta-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" aria-hidden="true" tabindex="-1" srcset="https://kinsta.com/fr/wp-content/uploads/sites/4/2019/08/recommandations-marketing-email.png 1460w, https://kinsta.com/fr/wp-content/uploads/sites/4/2019/08/recommandations-marketing-email-300x150.png 300w, https://kinsta.com/fr/wp-content/uploads/sites/4/2019/08/recommandations-marketing-email-768x384.png 768w, https://kinsta.com/fr/wp-content/uploads/sites/4/2019/08/recommandations-marketing-email-1024x512.png 1024w, https://kinsta.com/fr/wp-content/uploads/sites/4/2019/08/recommandations-marketing-email-610x305.png 610w" sizes="(max-width: 400px) 100vw, 400px" />            </a>
+
+    <div class="post-preview__content">
+        
+<div class="post-preview__title-excerpt">
+    <h2 class="post-preview__title">
+                <a  href="https://kinsta.com/fr/blog/logiciels-marketing-email/" class="post-preview__link">
+            Recommandations sur les logiciels de marketing par email (Pourquoi ne pas utiliser votre hébergeur)        </a>
+    </h2>
+
+            <div class="post-preview__excerpt">
+            Un serveur d&#039;hébergement n&#039;est pas censé être un serveur de messagerie. Si vous l&#039;utilisez en tant que tel, vous pouvez nuire à vos campagnes. Jete&hellip;        </div>
+    </div>
+<dl class="post-preview__meta">
+            <dt><span class="screen-reader-text">Temps de lecture</span></dt>
+        <dd>18 min de lecture</dd>
+            <dt><span class="screen-reader-text">Date de mise à jour</span></dt>
+        <dd>3 novembre 2023</dd>
+            <dt><span class="screen-reader-text">Type de publication</span></dt>
+        <dd>Blog</dd>
+            <dt><span class="screen-reader-text">Sujet</span></dt>
+        <dd>Conseils pour le marketing par e-mail</dd>
+            <dt><span class="screen-reader-text">Sujet</span></dt>
+        <dd>Hébergement WordPress</dd>
+    </dl>
+    </div>
+</div>
+</div>
+                    <div class="related-posts__topics">
+                <link rel="stylesheet" href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/patterns/tag-cloud.css?ver=2024-04-03" /><ul class="kinsta-tag-cloud">
+            <li>
+            <a href="https://kinsta.com/fr/systeme-gestion-contenu/" class="kinsta-tag-cloud-link">
+                Systèmes de gestion de contenu                            </a>
+        </li>
+            <li>
+            <a href="https://kinsta.com/fr/navigateurs/" class="kinsta-tag-cloud-link">
+                Navigateurs                            </a>
+        </li>
+            <li>
+            <a href="https://kinsta.com/fr/hebergement/" class="kinsta-tag-cloud-link">
+                Hébergement                            </a>
+        </li>
+            <li>
+            <a href="https://kinsta.com/fr/ecommerce/" class="kinsta-tag-cloud-link">
+                eCommerce                            </a>
+        </li>
+    </ul>
+            </div>
+            </div>
+</div>
+<link rel="stylesheet" href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/templates/comments.css?ver=dfd807f7acbf18bcc64a" />
+<div class="container container--narrow mt--60">
+    <div class="row">
+        <div class="pb--60 col-xs-12">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row nocol between-xs middle-xs mb--40">
+                        <h3 class="mt--0 mb--0">
+                            Commentaires                        </h3>
+
+                        <div>
+                            <a href="#commentform" class="button button--secondary button--small">
+                                Laissez un commentaire                            </a>
+                        </div>
+                    </div>
+                                            <ol class="comment-list">
+                                <li  class="comment even thread-even depth-1" id="comment-11287">
+                    <div  class="comment-body" id="div-comment-11287">
+                <div class="row nocol xs-all-12-centered">
+            <div class="comment-inner">
+                <div class="comment-header">
+                    <div class="comment-meta">
+                        <div class="comment-avatar">
+                            <img alt='Gravatar for this comment&#039;s author' src='https://kinsta.com/avatar/738708d158c5c31f290cc4ba02ce4602?s=32&#038;d=mm&#038;r=g' srcset='https://kinsta.com/avatar/738708d158c5c31f290cc4ba02ce4602?s=64&#038;d=mm&#038;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' loading='lazy' decoding='async'/>                        </div>
+                        <span class="comment-author text--bold">
+                            <span class="comment-author__name">
+                                Zodi Gérard                            </span>
+                                                                                </span>
+                        <span class="comment-date">
+                            16 mai 2020 à 10:37                          </span>
+                    </div>
+                    <div class="comment-reply-container">
+                        <a rel='nofollow' class='comment-reply-link' href='#comment-11287' data-commentid="11287" data-postid="36859" data-belowelement="div-comment-11287" data-respondelement="respond" data-replyto="Répondre à Zodi Gérard" aria-label='Répondre à Zodi Gérard'>Répondre</a>                    </div>
+                </div>
+                <div class="comment-content"><p>Merci<br />
+Explications claires, bravo.</p>
+</div>
+            </div>
+        </div>
+                    </div>
+            </li><!-- #comment-## -->
+                        </ol>
+
+                                            
+                    
+                    	<div id="respond" class="comment-respond">
+		<h4 class="mt--0 mb--0">Laisser un commentaire <small><a rel="nofollow" id="cancel-comment-reply-link" href="/fr/blog/port-smtp/#respond" style="display:none;">Annuler la réponse</a></small></h4><form action="https://kinsta.com/fr/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>  <div class="mt--10 text--small mb--40"><strong>Politique des commentaires :</strong> nous aimons les commentaires et apprécions le temps que les lecteurs passent pour partager des idées et donner des commentaires. Cependant, tous les commentaires sont modérés manuellement et ceux réputés pour être du spam ou uniquement promotionnels seront effacés.</div>
+        <p class="comment-form-comment"><label for="comment">Commentaire</label><textarea required="required" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p><div class="row gutter--small mt--20"><div class="col-xs-12 col-sm-6"><p class="comment-form-author"><label for="author">Nom</label> <input id="author" required="required" name="author" type="text" value="" size="30" /></p></div>
+<div class="col-xs-12 col-sm-6 mb--20"><p class="comment-form-email"><label for="email">Email</label> <input id="email" required="required" name="email" type="email" value="" size="30" /></p></div></div>
+                                <div class="form-control mt--15 terms-checkbox" data-state="neutral">
+  <div class="control-container">
+          <p><small>En envoyant ce formulaire : Vous acceptez le traitement des données personnelles soumises conformément à la <a class="unslidelink--text" target="_blank" href="https://kinsta.com/fr/mentions-legales/politique-confidentialite/">Politique de Confidentialité</a> de Kinsta, y compris le transfert de données vers les États-Unis.</small></p>
+              <label class="checkbox-label row nocol js-marketing-optin">
+        <span class="checkbox mr--8">
+          <input name="marketing_opt_in" type="checkbox" checked />
+          <span class="indicator"></span>
+        </span>
+                  <p class="mt--0 mb--0"><small>Vous acceptez également de recevoir des informations de Kinsta relatives à nos services, événements et promotions. Vous pouvez vous désabonner à tout moment en suivant les instructions figurant dans les communications reçues.</small></p>
+              </label>
+      </div>
+</div>
+
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Laisser un commentaire" /> <input type='hidden' name='comment_post_ID' value='36859' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="386d765634" /></p><input type="hidden" id="ak_js" name="ak_js" value="249"/><textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100" style="display: none !important;"></textarea></form>	</div><!-- #respond -->
+	                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<aside data-r3koi="ImJvdHRvbSI=|ImZyX0ZSIg==" data-6w="eUNhUnpRbG0=" data-sevd="c0hWVzZPU2ItMnhxN2Qz" data-4aX="U0JPTWwxUlZ2" data-S.PDngv="NS1oVmNqTXExTFVRQ2tTX2J5" data-Y="d0JkRlF6Ni0=" data-0eIVwK="ZXcxVVlMYnlNanR1Zg==" data-2XGw="WmhKTllUUDlzYV95R0h1M2dq" class="Wzk2OCwxMDA5XQ==" data-nt="WlFTVTQzVmNMajBOZ0VuNw==" id="MzY4NTk="></aside></main>
+<footer class="site-footer container spectra-variables">
+    <nav class="site-footer__nav" aria-label="Navigation de pied de page"><ul id="menu-footer-rebrand" class="menu"><li id="menu-item-75030" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-75030"><h3 >Produits</h3>
+<ul class="sub-menu">
+	<li id="menu-item-75031" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75031"><a href="https://kinsta.com/fr/hebergement-wordpress/">Hébergement WordPress infogéré</a></li>
+	<li id="menu-item-75032" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75032"><a href="https://kinsta.com/fr/hebergement-application/">Hébergement d&rsquo;application web</a></li>
+	<li id="menu-item-75033" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75033"><a href="https://kinsta.com/fr/hebergement-bases-de-donnees/">Hébergement de base de données infogéré</a></li>
+	<li id="menu-item-75034" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75034"><a href="https://kinsta.com/fr/hebergement-site-statique/">Hébergement de site statique</a></li>
+	<li id="menu-item-75035" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75035"><a href="https://kinsta.com/fr/tarifs/">Tarifs</a></li>
+</ul>
+</li>
+<li id="menu-item-75036" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-75036"><h3 >Faits marquants</h3>
+<ul class="sub-menu">
+	<li id="menu-item-75037" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75037"><a href="https://kinsta.com/fr/integration-cloudflare/">Intégration Cloudflare</a></li>
+	<li id="menu-item-75038" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75038"><a href="https://kinsta.com/fr/docs/api/">API Kinsta</a></li>
+	<li id="menu-item-75039" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75039"><a href="https://kinsta.com/fr/support-kinsta/">Support expert</a></li>
+	<li id="menu-item-75040" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75040"><a href="https://kinsta.com/fr/hebergement-wordpress/migration/">Migrations gratuites</a></li>
+	<li id="menu-item-75041" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75041"><a href="https://kinsta.com/fr/outil-apm/">Outil APM</a></li>
+	<li id="menu-item-75042" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75042"><a href="https://kinsta.com/fr/devkinsta/">DevKinsta</a></li>
+	<li id="menu-item-75043" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75043"><a href="https://kinsta.com/fr/cache-edge/">Cache Edge</a></li>
+	<li id="menu-item-75044" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75044"><a href="https://kinsta.com/fr/modules/">Plans de modules</a></li>
+</ul>
+</li>
+<li id="menu-item-75045" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-75045"><h3 >Cas d&rsquo;utilisation</h3>
+<ul class="sub-menu">
+	<li id="menu-item-75046" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75046"><a href="https://kinsta.com/fr/hebergement-wordpress/entreprise/">Entreprises</a></li>
+	<li id="menu-item-75047" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75047"><a href="https://kinsta.com/fr/hebergement-wordpress/agences/">Agences</a></li>
+	<li id="menu-item-75048" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75048"><a href="https://kinsta.com/fr/hebergement-wordpress/woocommerce/">Boutiques WooCommerce</a></li>
+	<li id="menu-item-75049" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75049"><a href="https://kinsta.com/fr/hebergement-wordpress/petites-entreprises/">Petites entreprises</a></li>
+	<li id="menu-item-75050" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75050"><a href="https://kinsta.com/fr/hebergement-wordpress/organisations-but-non-lucratif/">Organisations caritatives</a></li>
+	<li id="menu-item-75051" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75051"><a href="https://kinsta.com/fr/hebergement-wordpress/sites-uniques/">Sites uniques critiques</a></li>
+	<li id="menu-item-75052" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75052"><a href="https://kinsta.com/fr/clients/">Études de cas</a></li>
+</ul>
+</li>
+<li id="menu-item-75053" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-75053"><h3 >Ressources</h3>
+<ul class="sub-menu">
+	<li id="menu-item-75054" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75054"><a href="https://kinsta.com/fr/docs/">Documentation</a></li>
+	<li id="menu-item-75055" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75055"><a href="https://kinsta.com/fr/changelog/">Journal des changements</a></li>
+	<li id="menu-item-75056" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75056"><a href="https://kinsta.com/fr/blog/">Blog</a></li>
+	<li id="menu-item-75057" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75057"><a href="https://kinsta.com/fr/newsletter-wordpress/">Newsletter</a></li>
+	<li id="menu-item-75058" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75058"><a href="https://kinsta.com/fr/base-de-connaissances/">Base de connaissances</a></li>
+	<li id="menu-item-75059" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75059"><a href="https://kinsta.com/fr/outils/">Outils de développement</a></li>
+	<li id="menu-item-75060" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75060"><a href="https://kinsta.com/fr/alternatives-kinsta/">Kinsta et la concurrence</a></li>
+	<li id="menu-item-75061" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75061"><a href="https://kinsta.com/fr/repertoire-agences/">Annuaire d&rsquo;agences</a></li>
+	<li id="menu-item-75062" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75062"><a href="https://status.kinsta.com/">État du système</a></li>
+	<li id="menu-item-75063" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75063"><a href="https://kinsta.com/fr/ressources/">Toutes les ressources</a></li>
+</ul>
+</li>
+<li id="menu-item-75064" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-75064"><h3 >Entreprise</h3>
+<ul class="sub-menu">
+	<li id="menu-item-75065" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75065"><a href="https://kinsta.com/fr/a-propos-de-nous/">À propos de nous</a></li>
+	<li id="menu-item-75066" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75066"><a href="https://kinsta.com/fr/pourquoi-nous/">Pourquoi choisir Kinsta</a></li>
+	<li id="menu-item-75067" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75067"><a href="https://kinsta.com/fr/carrieres/">Carrières</a></li>
+	<li id="menu-item-75068" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75068"><a href="https://kinsta.com/fr/partenaires/">Partenaires</a></li>
+	<li id="menu-item-75069" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75069"><a href="https://kinsta.com/fr/affiliation/">Programme d&rsquo;affiliation</a></li>
+	<li id="menu-item-75070" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75070"><a href="https://kinsta.com/fr/presse/">Presse</a></li>
+	<li id="menu-item-75071" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75071"><a href="https://trust.kinsta.com/">Sécurité et confiance</a></li>
+	<li id="menu-item-75072" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75072"><a href="https://kinsta.com/fr/nous-contacter/">Nous contacter</a></li>
+</ul>
+</li>
+</ul></nav><div class="site-footer__security">
+    <div class="site-footer__security__text">
+        <h4>Nous prenons la sécurité et la protection de la vie privée au sérieux</h4>
+        <a href="https://trust.kinsta.com/" aria-label="">En savoir plus</a>
+    </div>
+    <ul class="site-footer__security__badges">
+        <li>SOC2 Type II</li>
+        <li>GDPR</li>
+        <li>CCPA</li>
+    </ul>
+</div>
+<div class="site-footer__footbar theme--dark spectra-variables">
+    <div class="site-footer__footbar__start-group">
+        <div class='site-footer__logo'>
+            <svg  class="icon icon--logo" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#logo" /></svg>        </div>
+        <nav class="site-footer__social">
+    <ul>
+                                <li>
+                <a  class="site-footer__social__link" href="https://github.com/kinsta/" target="_blank" rel="noopener noreferrer">
+                    <svg  class="icon icon--github" aria-hidden="true" focusable="false" title="Kinsta sur GitHub"><use xlink:href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#github" /></svg><span class="screen-reader-text">Kinsta sur GitHub</span>                </a>
+            </li>
+                                <li>
+                <a  class="site-footer__social__link" href="https://twitter.com/kinsta_fr" target="_blank" rel="noopener noreferrer">
+                    <svg  class="icon icon--twitter" aria-hidden="true" focusable="false" title="Kinsta sur Twitter"><use xlink:href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#twitter" /></svg><span class="screen-reader-text">Kinsta sur Twitter</span>                </a>
+            </li>
+                                <li>
+                <a  class="site-footer__social__link" href="https://www.youtube.com/kinsta" target="_blank" rel="noopener noreferrer">
+                    <svg  class="icon icon--youtube" aria-hidden="true" focusable="false" title="Kinsta sur YouTube"><use xlink:href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#youtube" /></svg><span class="screen-reader-text">Kinsta sur YouTube</span>                </a>
+            </li>
+                                <li>
+                <a  class="site-footer__social__link" href="https://www.facebook.com/kinstafr" target="_blank" rel="noopener noreferrer">
+                    <svg  class="icon icon--facebook" aria-hidden="true" focusable="false" title="Kinsta sur Facebook"><use xlink:href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#facebook" /></svg><span class="screen-reader-text">Kinsta sur Facebook</span>                </a>
+            </li>
+                                <li>
+                <a  class="site-footer__social__link" href="https://www.linkedin.com/company/kinsta/" target="_blank" rel="noopener noreferrer">
+                    <svg  class="icon icon--linkedin" aria-hidden="true" focusable="false" title="Kinsta sur LinkedIn"><use xlink:href="https://kinsta.com/fr/wp-content/themes/kinsta/dist/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#linkedin" /></svg><span class="screen-reader-text">Kinsta sur LinkedIn</span>                </a>
+            </li>
+            </ul>
+</nav>
+    </div>
+            <div class="site-footer__language">
+            <label class="language-select-label"><span class="screen-reader-text">Changer de langue</span><select class="language-select site-footer__language__options"><option lang="da" value="https://kinsta.com/dk/blog/smtp-port/">Dansk</option><option lang="de" value="https://kinsta.com/de/blog/smtp-port-waehlen/">Deutsch</option><option lang="en" value="https://kinsta.com/blog/smtp-port/">English</option><option lang="es" value="https://kinsta.com/es/blog/puerto-smtp/">Español</option><option lang="fr" value="https://kinsta.com/fr/blog/port-smtp/" selected='selected'>Français</option><option lang="it" value="https://kinsta.com/it/blog/porta-smtp/">Italiano</option><option lang="ja" value="https://kinsta.com/jp/blog/smtp-port/">日本語</option><option lang="pt" value="https://kinsta.com/pt/blog/porta-smtp/">Português</option><option lang="sv" value="https://kinsta.com/se/blog/smtp-port/">Svenska</option></select></label>        </div>
+    </div>
+<p class="site-footer__footnote">
+    <small>&copy; 2013 - 2024 Kinsta Inc. Tous droits réservés.</small>
+    <small>Kinsta &reg; et WordPress &reg; sont des marques déposées.</small>
+    <small><a href="https://kinsta.com/fr/mentions-legales/">Mentions légales.</a></small>
+</p>
+
+</footer>
+<script type='text/javascript' src='https://kinsta.com/fr/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://kinsta.com/fr/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://kinsta.com/fr/wp-includes/js/jquery/jquery.form.min.js?ver=4.3.0' id='jquery-form-js'></script>
+<script type='text/javascript' src='https://kinsta.com/fr/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='https://kinsta.com/fr/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' src='https://kinsta.com/fr/wp-includes/js/dist/hooks.min.js?ver=4169d3cf8e8d95a3d6d5' id='wp-hooks-js'></script>
+<script type='text/javascript' src='https://kinsta.com/fr/wp-includes/js/dist/i18n.min.js?ver=9e794f35a71bb98672ae' id='wp-i18n-js'></script>
+<script type='text/javascript' id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type='text/javascript' id='kinsta-js-main-js-extra'>
+/* <![CDATA[ */
+var kinsta = {"ajaxurl":"https:\/\/kinsta.com\/fr\/wp-admin\/admin-ajax.php","apiUrl":"https:\/\/kinsta.com\/fr\/wp-json\/","kinstanonce":"ca96e908d6","stripe_public_key":"pk_live_r16EiSaRITiPDMKQjLeoOviT","sentry_key":null,"env":"production","chevronRight":"<svg  class=\"icon icon--chevron color--purple\" aria-hidden=\"true\" focusable=\"false\"><use xlink:href=\"https:\/\/kinsta.com\/fr\/wp-content\/themes\/kinsta\/dist\/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#chevron\" \/><\/svg>","chevronLeft":"<svg  class=\"icon icon--chevron color--purple icon--reverse\" aria-hidden=\"true\" focusable=\"false\"><use xlink:href=\"https:\/\/kinsta.com\/fr\/wp-content\/themes\/kinsta\/dist\/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#chevron\" \/><\/svg>","check_m":"<svg  class=\"icon icon--check color--purple\" aria-hidden=\"true\" focusable=\"false\"><use xlink:href=\"https:\/\/kinsta.com\/fr\/wp-content\/themes\/kinsta\/dist\/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c#check\" \/><\/svg>","translations":{"thanksForSubscribing":"Merci pour votre abonnement !","validationRequired":"Veuillez remplir ce champ","validationEmail":"Veuillez fournir une adresse email valide","validationPassword":"Le mot de passe doit contenir au moins 6 caract\u00e8res, et au moins une lettre minuscule et majuscule ainsi qu'un chiffre","validationDuplicate":"Les deux champs ne correspondent pas","validationVatInvalidCountry":"Le code pays de votre num\u00e9ro de TVA ne correspond pas \u00e0 votre pays","validationVatInvalidFormat":"Le num\u00e9ro de TVA entr\u00e9 est invalide","validationVatInvalidVies":"Le num\u00e9ro de TVA entr\u00e9 ne peut pas \u00eatre v\u00e9rifi\u00e9 par le syst\u00e8me VIES EU","validationCard":"Les informations sur votre carte ne sont pas correctes","validationFreeEmail":"Adresse email d\u00e9j\u00e0 utilis\u00e9e"},"svg_sprite":"https:\/\/kinsta.com\/fr\/wp-content\/themes\/kinsta\/dist\/sprite.svg?v=6cb16b7fa7a708a3f0b573e29c744e5c","urls":{"api":"https:\/\/kinsta.com\/fr\/wp-json\/","ajax":"https:\/\/kinsta.com\/fr\/wp-admin\/admin-ajax.php","terms":"https:\/\/kinsta.com\/fr\/mentions-legales\/conditions-utilisation\/","privacy":"https:\/\/kinsta.com\/fr\/mentions-legales\/politique-confidentialite\/","home":"https:\/\/kinsta.com\/fr\/","theme":"https:\/\/kinsta.com\/fr\/wp-content\/themes\/kinsta","cookieSettings":"https:\/\/kinsta.com\/fr\/parametres-cookies\/"},"contact_terms_html":"<div class=\"form-control mt--15 terms-checkbox\" data-state=\"neutral\">\n  <div class=\"control-container\">\n          <p><small>En envoyant ce formulaire : Vous acceptez le traitement des donn\u00e9es personnelles soumises conform\u00e9ment \u00e0 la <a class=\"unslidelink--text\" target=\"_blank\" href=\"https:\/\/kinsta.com\/fr\/mentions-legales\/politique-confidentialite\/\">Politique de Confidentialit\u00e9<\/a> de Kinsta, y compris le transfert de donn\u00e9es vers les \u00c9tats-Unis.<\/small><\/p>\n              <label class=\"checkbox-label row nocol js-marketing-optin\">\n        <span class=\"checkbox mr--8\">\n          <input name=\"marketing_opt_in\" type=\"checkbox\" checked \/>\n          <span class=\"indicator\"><\/span>\n        <\/span>\n                  <p class=\"mt--0 mb--0\"><small>Vous acceptez \u00e9galement de recevoir des informations de Kinsta relatives \u00e0 nos services, \u00e9v\u00e9nements et promotions. Vous pouvez vous d\u00e9sabonner \u00e0 tout moment en suivant les instructions figurant dans les communications re\u00e7ues.<\/small><\/p>\n              <\/label>\n      <\/div>\n<\/div>\n","maintenanceMode":"","timeFormat":"g:i a","dateFormat":"j F Y","defaultPlan":"visits-pro","defaultPlanInterval":"year","cookiesBar":{"isOpen":false},"globalBanner":{"text":"D\u00e9ployez votre application rapidement et \u00e9voluez au fur et \u00e0 mesure de votre croissance avec notre niveau Hobby.","link":"https:\/\/kinsta.com\/fr\/hebergement-application\/tarifs\/niveau-hobby\/","theme":"default","email":false,"event_label":"deployez-votre-a","success_message":"","hash":"ecc09212949667717f1c1d14ef135df1","isOpen":false}};
+var kinstaVatRates = {"AT":"0.2","BE":"0.21","BG":"0.2","HR":"0.25","CY":"0.19","CZ":"0.21","DK":"0.25","EE":"0.22","FI":"0.24","FR":"0.2","DE":"0.19","GR":"0.24","HU":"0.27","IE":"0.23","IT":"0.22","LV":"0.21","LT":"0.21","LU":"0.17","MT":"0.18","NL":"0.21","PL":"0.23","PT":"0.23","RO":"0.19","SK":"0.2","SI":"0.22","ES":"0.21","SE":"0.25","GB":"0.2"};
+var kinstaFloatingContactText = {"termsHtml":"<div class=\"form-control mt--15 terms-checkbox\" data-state=\"neutral\">\n  <div class=\"control-container\">\n          <p><small>En envoyant ce formulaire : Vous acceptez le traitement des donn\u00e9es personnelles soumises conform\u00e9ment \u00e0 la <a class=\"unslidelink--text\" target=\"_blank\" href=\"https:\/\/kinsta.com\/fr\/mentions-legales\/politique-confidentialite\/\">Politique de Confidentialit\u00e9<\/a> de Kinsta, y compris le transfert de donn\u00e9es vers les \u00c9tats-Unis.<\/small><\/p>\n              <label class=\"checkbox-label row nocol js-marketing-optin\">\n        <span class=\"checkbox mr--8\">\n          <input name=\"marketing_opt_in\" type=\"checkbox\" checked \/>\n          <span class=\"indicator\"><\/span>\n        <\/span>\n                  <p class=\"mt--0 mb--0\"><small>Vous acceptez \u00e9galement de recevoir des informations de Kinsta relatives \u00e0 nos services, \u00e9v\u00e9nements et promotions. Vous pouvez vous d\u00e9sabonner \u00e0 tout moment en suivant les instructions figurant dans les communications re\u00e7ues.<\/small><\/p>\n              <\/label>\n      <\/div>\n<\/div>\n"};
+/* ]]> */
+</script>
+<script type='text/javascript' id='kinsta-js-main-js-translations'>
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "kinsta-theme", {"translation-revision-date":"2024-01-23 20:01","generator":"WP-CLI\/2.6.0","source":"dist\/main.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"fr_FR","plural-forms":"nplurals=2; plural=(n > 1);"},"Name":["Nom"],"Email":["Email"],"Thanks for subscribing!":["Merci pour votre abonnement !"],"Company":["Entreprise"],"Website":["Site Web"],"Number of websites":["Nombre de sites"],"Message":["Message"],"Enter your email":["Entrez votre adresse email"],"Search":["Rechercher"],"Thanks!":["Merci !"],"Description":["Description"],"Previous":["Pr\u00e9c\u00e9dent"],"Next":["Suivant"],"Pricing or plans":["Prix ou Plans"],"Affiliate marketing program":["Programme de marketing d'affiliation"],"Thanks for your message!":["Merci pour votre message !"],"We will get back to you as soon as possible.":["Nous reviendrons vers vous d\u00e8s que possible."],"Monthly visits":["Visites mensuelles"],"Keep an eye out for our next newsletter.":["Gardez un \u0153il sur notre prochaine newsletter."],"Sign Up Now":["Inscrivez-vous maintenant"],"Signing Up":["S'inscrire"],"Signing Up...":["S'inscrire..."],"or":["ou"],"Hope you enjoy it \ud83d\ude42":["J'esp\u00e8re que vous l'appr\u00e9cierez \ud83d\ude42"],"Download it now!":["T\u00e9l\u00e9charger-le maintenant !"],"Monthly":["Mensuel"],"Play video":["Lire la vid\u00e9o"],"Privacy Policy":["Politique de Confidentialit\u00e9"],"By submitting this form I agree to the %1$s and %2$s, including the transfer of data to the United States. By sharing your email, you also agree to receive occasional information related to services, events, and promotions from Kinsta. You're free to unsubscribe at any time.":["En soumettant ce formulaire, j'accepte les %1$s et la %2$s, y compris le transfert de donn\u00e9es vers les \u00c9tats-Unis. En partageant votre e-mail, vous acceptez \u00e9galement de recevoir des informations occasionnelles li\u00e9es a des services, des \u00e9v\u00e9nements et des promotions de Kinsta. Vous \u00eates libre de vous d\u00e9sabonner \u00e0 tout moment."],"Terms and Conditions":["Termes et Conditions"],"By submitting this form: You agree to the processing of the submitted personal data in accordance with Kinsta's %s, including the transfer of data to the United States.":["En envoyant ce formulaire : Vous acceptez le traitement des donn\u00e9es personnelles soumises conform\u00e9ment \u00e0 la %s de Kinsta, y compris le transfert de donn\u00e9es vers les \u00c9tats-Unis."],"You also agree to receive information from Kinsta related to our services, events, and promotions. You may unsubscribe at any time by following the instructions in the communications received.":["Vous acceptez \u00e9galement de recevoir des informations de Kinsta relatives \u00e0 nos services, \u00e9v\u00e9nements et promotions. Vous pouvez vous d\u00e9sabonner \u00e0 tout moment en suivant les instructions figurant dans les communications re\u00e7ues."],"Cookie Settings":["Param\u00e8tres des cookies"],"WordPress Theme Detector":["D\u00e9tecteur de th\u00e8me WordPress"],"Because you want to check for unnecessary redirects to make it easier for users and crawlers to follow your links.":["Parce que vous voulez v\u00e9rifier les redirections inutiles pour faciliter le suivi de vos liens par les utilisateurs et les crawlers."],"Version":["La version"],"Author":["L'auteur"],"Ever wondered what WordPress theme a site is using? No more guessing! Use Kinsta\u2019s free WordPress Theme Detector to discover what theme is being used, along with other key info about it.":["Vous vous \u00eates d\u00e9j\u00e0 demand\u00e9 quel th\u00e8me WordPress un site utilisait ? Plus besoin de deviner ! Utilisez le d\u00e9tecteur de th\u00e8me WordPress gratuit de Kinsta pour d\u00e9couvrir quel th\u00e8me est utilis\u00e9, ainsi que d'autres informations cl\u00e9s \u00e0 son sujet."],"Table of Contents":["Table des mati\u00e8res"],"Testing new string":["Test de la nouvelle cha\u00eene"],"Watch Video":["Voir la Vid\u00e9o"],"Start Playlist":["D\u00e9marrer la liste de lecture"],"Support requests":["Demandes de support"],"To contact the Kinsta support team, log in to your %s and send us a message with the chat box. If you are unable to access MyKinsta, you can contact our support team by sending an email to support@kinsta.com from the email address associated with your MyKinsta account.":["Pour contacter l'\u00e9quipe de support de Kinsta, connectez-vous \u00e0 votre %s et envoyez-nous un message avec la bo\u00eete de discussion. Si vous ne pouvez pas acc\u00e9der \u00e0 MyKinsta, vous pouvez contacter notre \u00e9quipe de support en envoyant un e-mail \u00e0 support@kinsta.com \u00e0 partir de l'adresse e-mail associ\u00e9e \u00e0 votre compte MyKinsta."],"MyKinsta account":["Compte MyKinsta"],"optional":["facultatif"],"Phone":["T\u00e9l\u00e9phone"],"Select an option":["S\u00e9lectionnez une option"],"contact form monthly visits option\u00040 - 25K":["0 - 25K"],"contact form monthly visits option\u000425K - 50K":["25K - 50K"],"contact form monthly visits option\u000450K - 250K":["50K - 250K"],"contact form monthly visits option\u0004250K - 1 Million":["250K - 1 Million"],"contact form monthly visits option\u00041 Million +":["+ de 1 Million"],"Combined disk space requirement":["Espace disque combin\u00e9 n\u00e9cessaire"],"contact form disk space option\u0004< 10GB":["< 10\u00a0Go"],"contact form disk space option\u000410GB - 20GB":["10\u00a0Go - 20\u00a0Go"],"contact form disk space option\u000420GB - 60GB":["20 Go - 60 Go"],"contact form disk space option\u000460GB - 100GB":["60 Go - 100 Go"],"contact form disk space option\u0004100+ GB":["+ de 100 Go"],"Sending Message":["Envoi du message"],"Send Message":["Envoyer le message"],"There was an error sending your message. Please try again later on.":["Il y a eu une erreur dans l'envoi de votre message. Veuillez r\u00e9essayer plus tard."],"The website is currently under maintenance, we'll be back up and running soon.":["Le site web est actuellement en cours de maintenance, nous serons bient\u00f4t de nouveau op\u00e9rationnels."],"Back to select a type of message":["Revenir en arri\u00e8re pour s\u00e9lectionner un type de message"],"The hash url to popup the live chat, must be url safe (lowercase, dashes instead of spaces)\u0004live-chat":["live-tchat"],"Close Form":["Fermer le formulaire"],"Latest from the Kinsta Blog":["Derni\u00e8res nouvelles du blog Kinsta"],"What do you need help with?":["En quoi pouvons-nous vous aider ?"],"We'll get back to you within one business day.":["Nous vous r\u00e9pondrons dans un d\u00e9lai d'un jour ouvrable."],"If your download doesn\u2019t start automatically please click below.":["Si votre t\u00e9l\u00e9chargement ne d\u00e9marre pas automatiquement, veuillez cliquer ci-dessous."],"To download for other platforms please click below.":["Pour t\u00e9l\u00e9charger pour d'autres plateformes, veuillez cliquer ci-dessous."],"Email inbox":["Bo\u00eete de r\u00e9ception"],"HTTPS":["HTTPS"],"Database manager":["Gestionnaire de base de donn\u00e9es"],"Logging":["Enregistrement"],"Windows":["Windows"],"Ubuntu":["Ubuntu"],"Mac":["Mac"],"Mac with Intel chip":["Mac avec puce Intel"],"Mac with Apple chip":["Mac avec puce Apple"],"Download for":["T\u00e9l\u00e9charger pour"],"Select your version":["S\u00e9lectionnez votre version"],"Not sure which version you should get? <a>Find out more information about your Mac here<\/a>.":["Vous n'\u00eates pas s\u00fbr de la version que vous devriez obtenir ? <a>D\u00e9couvrez plus d'informations sur votre Mac ici<\/a>."],"https:\/\/kinsta.com\/knowledgebase\/devkinsta\/installation\/#how-to-check-your-mac-processor-type":["https:\/\/kinsta.com\/fr\/base-de-connaissances\/devkinsta\/installation\/"],"Here's your ebook!":["Voici votre ebook !"],"Uh oh!":["Uh oh!"],"There was an error submitting your details, please try again later on.":["Il y a eu une erreur lors de l'envoi de vos informations, veuillez r\u00e9essayer plus tard."],"Your message has been sent":["Votre message a \u00e9t\u00e9 envoy\u00e9"],"Submitting":["Envoi"],"Show Less":["Afficher Moins"],"Read More":["Lire La Suite"],"Screen reader label to expand long client quotes\u0004Expand to show this full quote":["D\u00e9veloppez pour afficher cette citation compl\u00e8te"],"Screen reader label to collapse long client quotes\u0004Collapse this quote":["R\u00e9duire cette citation"],"day":["jour","jours"],"hour":["heure","heures"],"minute":["minute","minutes"],"min":["min","mins"],"second":["seconde","secondes"],"sec":["sec","secs"],"Now":["Maintenant"],"Show Section Navigation":["Afficher la section de navigation"],"Hide Section Navigation":["Masquer la section de navigation"],"Show %s submenu":["Afficher le sous-menu %s"],"Hide %s submenu":["Masquer le sous-menu %s"],"Thank you for your feedback!":["Merci pour votre avis !"],"Sending Feedback":["Envoyer un retour d'informations"],"We and our partners use cookies for functionality, analytics, and marketing. You have choices.":["Nous et nos partenaires utilisons des cookies pour la fonctionnalit\u00e9, les statistiques et le marketing. Vous avez le choix."],"Thanks, we've saved your settings.":["Merci, nous avons enregistr\u00e9 vos r\u00e9glages."],"Accept All":["Tout accepter"],"Decline all Marketing\/Third-Party":["D\u00e9cliner toutes les activit\u00e9s de marketing\/tierces"],"Accepting":["Acceptation"],"Declining":["D\u00e9cliner"],"Enable all necessary cookies":["Activer tous les cookies n\u00e9cessaires"],"Details":["D\u00e9tails"],"Necessary cookies":["Cookies n\u00e9cessaires"],"These cookies are needed for our website to function providing payment gateway security and other essentials. Therefore they are always on but they do not contain personally identifiable information (PII).":["Ces cookies sont n\u00e9cessaires pour que notre site web fonctionne en assurant la s\u00e9curit\u00e9 de la passerelle de paiement et ses fonctionnalit\u00e9s. Ils sont donc toujours actifs, mais ne contiennent pas d'informations personnelles identifiables (PII)."],"Purpose":["Objectif"],"Enable all marketing cookies":["Activer tous les cookies commerciaux"],"Marketing cookies":["Cookies de marketing"],"Marketing cookies help us target our ads better. We mainly use them to target ads to users who have visited Kinsta.":["Les cookies de marketing nous aident \u00e0 mieux cibler nos publicit\u00e9s. Nous les utilisons principalement pour cibler les annonces pour les utilisateurs qui ont visit\u00e9 Kinsta."],"Provider":["Fournisseur"],"Enable %s":["Activer %s"],"Saving settings":["Sauvegarde des param\u00e8tres"],"Save settings":["Sauvegarder les param\u00e8tres"],"Settings saved":["R\u00e9glages enregistr\u00e9s"],"Close":["Fermer"],"Loading...":["Chargement..."],"Was this article helpful?":["Cet article vous a \u00e9t\u00e9 utile ?"],"There was an error sending your feedback. Please try again later on.":["Il y a eu une erreur dans l'envoi de votre message. Veuillez r\u00e9essayer plus tard."],"Yes, it was fine!":["Oui, c'\u00e9tait bien !"],"No, or there was something off":["Non, ou il manquait quelque chose"],"Please, let us know what you think!":["S'il vous pla\u00eet, laissez-nous savoir ce que vous pensez !"],"Share your feedback here":["Partagez vos commentaires ici"],"Send Feedback":["Envoyer des commentaires"],"month":["mois"],"annual":["annuel"],"Annualy":["Annuellement"],"Select the plan timeline":["S\u00e9lectionner la chronologie du plan"],"Next available Monday %s":["Prochain lundi disponible \u00e0 %s"],"Support hours by language":["Horaires du support par langue"],"Available support by language":["Support disponible par langue"],"Filters":["Filtres"],"Clear All Filters":["Effacer tous les filtres"],"Search by name":["Rechercher par nom"],"Agency Name":["Nom de l'agence"],"Additional site information":["Informations compl\u00e9mentaires sur le site"],"Screenshot":["Capture d'\u00e9cran"],"theme":["th\u00e8me"],"child theme":["th\u00e8me enfant"],"parent theme":["th\u00e8me parent"],"free theme":["th\u00e8me gratuit"],"premium theme":["th\u00e8me premium"],"Theme Screenshot":["Capture d'\u00e9cran du th\u00e8me"],"IP":["IP"],"URL":["URL"],"Home":["Accueil"],"Downloaded":["T\u00e9l\u00e9charg\u00e9"],"Last updated":["Derni\u00e8re mise \u00e0 jour"],"Creation time":["Temps de cr\u00e9ation"],"License":["Licence"],"Required PHP":["PHP n\u00e9cessaire"],"Required WordPress":["WordPress n\u00e9cessaire"],"Visit site":["Aller sur le site"],"Preview theme":["Aper\u00e7u du th\u00e8me"],"WordPress name":["Nom WordPress"],"WordPress description":["Description WordPress"],"Meta description":["M\u00e9ta description"],"Meta generators":["G\u00e9n\u00e9rateur m\u00e9ta"],"Tags":["\u00c9tiquettes"],"show less":["afficher moins"],"show more":["afficher plus"],"Search again":["Rechercher \u00e0 nouveau"],"Please enter a URL or domain name.":["Veuillez saisir une URL ou un nom de domaine valide."],"What WordPress Theme is That?":["Quel th\u00e8me WordPress est-ce ?"],"Oops. It looks like %s can\u2019t be found or may be running a custom theme.":["Oups. Il semble que %s soit introuvable ou qu'il utilise un th\u00e8me personnalis\u00e9."],"Oops. It looks like %s is not using WordPress.":["Oups. Il semble que %s n'utilise pas WordPress."],"Oops, it looks like you\u2019re moving too quickly.":["Oups, on dirait que vous allez trop vite."],"Please wait a minute and give it another try.":["Veuillez attendre une minute et r\u00e9essayer."],"Let\u2019s try another URL.":["Essayons une autre URL."],"Hi Kinsta! My Node.js application returns a 500 error, are you able to help?":["Bonjour Kinsta ! Mon application Node.js renvoie une erreur 500, pouvez-vous m'aider ?"],"Hi there! Let me take a quick look for you!":["Bonjour ! Laissez-moi jeter un coup d'\u0153il pour vous !"],"Thank you for your patience, reviewing your logs I'm able to see an error related to the index.js file":["Merci pour votre patience, en v\u00e9rifiant vos journaux, je vois une erreur li\u00e9e au fichier index.js"],"The API_KEY Environment Variable is not currently set which may be required by your application":["La variable d'environnement API_KEY n'est pas actuellement configur\u00e9e, ce qui peut \u00eatre n\u00e9cessaire pour votre application"],"Thanks, you were right - adding that worked great and fixed the error.":["Merci, vous aviez raison - ajouter cela a bien fonctionn\u00e9 et a corrig\u00e9 l'erreur."],"Hey there! How can I help you?":["Bonjour ! Comment puis-je vous aider ?"],"Video player accessible aria label\u0004Video player":["Lecteur vid\u00e9o"],"Next Session":["Session suivante"],"Next session starts in":["La prochaine session commence dans"],"Register Now":["S'inscrire maintenant"],"Choose a timeslot":["Choisissez un cr\u00e9neau horaire"],"Previous Tab":["Onglet pr\u00e9c\u00e9dent"],"Next Tab":["Onglet suivant"],"Dismiss banner":["Rejeter la banni\u00e8re"],"Subscribing":["Abonnement"],"An error occurred. Please check your email and try again later.":["Une erreur s'est produite. Veuillez v\u00e9rifier votre e-mail et r\u00e9essayer plus tard."],"Response headers":["En-t\u00eates de r\u00e9ponse"],"Redirect overview":["Aper\u00e7u de la redirection"],"Status code":["Code d'\u00e9tat"],"Scheme":["Sch\u00e9ma"],"Status Message":["Message d'\u00e9tat"],"There was an error processing your website":["Il y a eu une erreur dans le traitement de votre site web"],"Enter your URL":["Entrez votre URL"],"Check":["V\u00e9rifier"],"www-authenticate http header definition\u0004Defines the authentication method that should be used to access a resource.":["D\u00e9finit la m\u00e9thode d'authentification qui doit \u00eatre utilis\u00e9e pour acc\u00e9der \u00e0 une ressource."],"authorization http header definition\u0004Contains the credentials to authenticate a user-agent with a server.":["Contient les donn\u00e9es d'identification permettant d'authentifier un agent utilisateur aupr\u00e8s d'un serveur."],"proxy-authenticate http header definition\u0004Defines the authentication method that should be used to access a resource behind a proxy server.":["D\u00e9finit la m\u00e9thode d'authentification qui doit \u00eatre utilis\u00e9e pour acc\u00e9der \u00e0 une ressource derri\u00e8re un serveur proxy."],"proxy-authorization http header definition\u0004Contains the credentials to authenticate a user agent with a proxy server.":["Contient les identifiants permettant d'authentifier un agent utilisateur aupr\u00e8s d'un serveur proxy."],"age http header definition\u0004The time, in seconds, that the object has been in a proxy cache.":["Le temps, en secondes, pendant lequel l'objet a \u00e9t\u00e9 dans un cache de proxy."],"cache-control http header definition\u0004Directives for caching mechanisms in both requests and responses.":["Directives relatives aux m\u00e9canismes de mise en cache tant dans les requ\u00eates que dans les r\u00e9ponses."],"clear-site-data http header definition\u0004Clears browsing data (e.g. cookies, storage, cache) associated with the requesting website.":["Efface les donn\u00e9es de navigation (par exemple, les cookies, le stockage, le cache) associ\u00e9es au site web demandeur."],"expires http header definition\u0004The date\/time after which the response is considered stale.":["La date\/heure apr\u00e8s laquelle la r\u00e9ponse est consid\u00e9r\u00e9e comme p\u00e9rim\u00e9e."],"pragma http header definition\u0004Implementation-specific header that may have various effects anywhere along the request-response chain. Used for backwards compatibility with HTTP\/1.0 caches where the Cache-Control header is not yet present.":["En-t\u00eate sp\u00e9cifique \u00e0 la mise en \u0153uvre qui peut avoir divers effets tout au long de la cha\u00eene requ\u00eate-r\u00e9ponse. Utilis\u00e9 pour la r\u00e9trocompatibilit\u00e9 avec les caches HTTP\/1.0 o\u00f9 l'en-t\u00eate Cache-Control n'est pas encore pr\u00e9sent."],"warning http header definition\u0004General warning information about possible problems.":["Informations g\u00e9n\u00e9rales d'avertissement sur les probl\u00e8mes \u00e9ventuels."],"accept-ch http header definition\u0004Servers can advertise support for Client Hints using the Accept-CH header field or an equivalent HTML <meta> element with http-equiv attribute ([HTML5]).":["Les serveurs peuvent annoncer la prise en charge des Client Hints en utilisant le champ d'en-t\u00eate Accept-CH ou un \u00e9l\u00e9ment HTML <meta> \u00e9quivalent avec l'attribut http-equiv ([HTML5])."],"accept-ch-lifetime http header definition\u0004Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server\u2019s origin ([RFC6454]).":["Les serveurs peuvent demander au client de se souvenir de la s\u00e9rie de Client Hints que le serveur prend en charge pendant une p\u00e9riode d\u00e9termin\u00e9e, afin de permettre la fourniture d'Indices de client lors de demandes ult\u00e9rieures \u00e0 l'origine du serveur ([RFC6454])."],"early-data http header definition\u0004Indicates that the request has been conveyed in early data.":["Indique que la demande a \u00e9t\u00e9 transmise dans les premi\u00e8res donn\u00e9es."],"content-dpr http header definition\u0004A number that indicates the ratio between physical pixels over CSS pixels of the selected image response.":["Un nombre qui indique le rapport entre les pixels physiques sur les pixels CSS de la r\u00e9ponse de l'image s\u00e9lectionn\u00e9e."],"dpr http header definition\u0004A number that indicates the client\u2019s current Device Pixel Ratio (DPR), which is the ratio of physical pixels over CSS pixels (Section 5.2 of [CSSVAL]) of the layout viewport (Section 9.1.1 of [CSS2]) on the device.":["Un nombre qui indique le Device Pixel Ratio (DPR) actuel du client, qui est le rapport entre les pixels physiques et les pixels CSS (section 5.2 de [CSSVAL]) de la fen\u00eatre de pr\u00e9sentation (section 9.1.1 de [CSS2]) sur l'appareil."],"device-memory http header definition\u0004Technically a part of Device Memory API, this header represents an approximate amount of RAM client has.":["Techniquement, cet en-t\u00eate fait partie de la Device Memory API et repr\u00e9sente une quantit\u00e9 approximative de RAM dont dispose le client."],"save-data http header definition\u0004A boolean that indicates the user agent's preference for reduced data usage.":["Un bool\u00e9en qui indique la pr\u00e9f\u00e9rence de l'agent utilisateur pour une utilisation r\u00e9duite des donn\u00e9es."],"viewport-width http header definition\u0004A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value). If Viewport-Width occurs in a message more than once, the last value overrides all previous occurrences.":["Un nombre qui indique la largeur de la fen\u00eatre de mise en page en pixels CSS. La valeur du pixel fournie est un nombre arrondi au plus petit nombre entier suivant (c'est-\u00e0-dire la valeur plafond). Si la largeur de la fen\u00eatre d'affichage appara\u00eet plus d'une fois dans un message, la derni\u00e8re valeur remplace toutes les occurrences pr\u00e9c\u00e9dentes."],"width http header definition\u0004The Width request header field is a number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image). The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value). If the desired resource width is not known at the time of the request or the resource does not have a display width, the Width header field can be omitted. If Width occurs in a message more than once, the last value overrides all previous occurrences":["Le champ d'en-t\u00eate de la requ\u00eate Width est un nombre qui indique la largeur de la ressource souhait\u00e9e en pixels physiques (c'est-\u00e0-dire la taille intrins\u00e8que d'une image). La valeur du pixel fournie est un nombre arrondi au plus petit nombre entier suivant (c'est-\u00e0-dire la valeur plafond). Si la largeur de la ressource souhait\u00e9e n'est pas connue au moment de la requ\u00eate ou si la ressource n'a pas de largeur d'affichage, le champ d'en-t\u00eate Width peut \u00eatre omis. Si la largeur appara\u00eet plus d'une fois dans un message, la derni\u00e8re valeur remplace toutes les occurrences pr\u00e9c\u00e9dentes."],"last-modified http header definition\u0004The last modification date of the resource, used to compare several versions of the same resource. It is less accurate than ETag, but easier to calculate in some environments. Conditional requests using If-Modified-Since and If-Unmodified-Since use this value to change the behavior of the request.":["La date de derni\u00e8re modification de la ressource, utilis\u00e9e pour comparer plusieurs versions d'une m\u00eame ressource. Elle est moins pr\u00e9cise que l'ETag, mais plus facile \u00e0 calculer dans certains environnements. Les requ\u00eates conditionnelles utilisant If-Modified-Since et If-Unmodified-Since utilisent cette valeur pour modifier le comportement de la requ\u00eate."],"etag http header definition\u0004A unique string identifying the version of the resource. Conditional requests using If-Match and If-None-Match use this value to change the behavior of the request.":["Une cha\u00eene unique identifiant la version de la ressource. Les requ\u00eates conditionnelles utilisant les fonctions If-Match et If-None-Match utilisent cette valeur pour modifier le comportement de la requ\u00eate."],"if-match http header definition\u0004Makes the request conditional, and applies the method only if the stored resource matches one of the given ETags.":["Rend la requ\u00eate conditionnelle, et n'applique la m\u00e9thode que si la ressource stock\u00e9e correspond \u00e0 l'un des ETags donn\u00e9s."],"if-none-match http header definition\u0004Makes the request conditional, and applies the method only if the stored resource doesn't match any of the given ETags. This is used to update caches (for safe requests), or to prevent to upload a new resource when one already exists.":["Rend la requ\u00eate conditionnelle, et n'applique la m\u00e9thode que si la ressource stock\u00e9e ne correspond \u00e0 aucun des ETags donn\u00e9s. Cette m\u00e9thode est utilis\u00e9e pour mettre \u00e0 jour les caches (pour les requ\u00eates s\u00fbres), ou pour emp\u00eacher le t\u00e9l\u00e9chargement d'une nouvelle ressource lorsqu'elle existe d\u00e9j\u00e0."],"if-modified-since http header definition\u0004Makes the request conditional, and expects the entity to be transmitted only if it has been modified after the given date. This is used to transmit data only when the cache is out of date.":["Rend la requ\u00eate conditionnelle, et s'attend \u00e0 ce que l'entit\u00e9 ne soit transmise que si elle a \u00e9t\u00e9 modifi\u00e9e apr\u00e8s la date donn\u00e9e. Cette fonction est utilis\u00e9e pour transmettre des donn\u00e9es uniquement lorsque le cache est p\u00e9rim\u00e9."],"if-unmodified-since http header definition\u0004Makes the request conditional, and expects the entity to be transmitted only if it has not been modified after the given date. This ensures the coherence of a new fragment of a specific range with previous ones, or to implement an optimistic concurrency control system when modifying existing documents.":["Rend la requ\u00eate conditionnelle, et s'attend \u00e0 ce que l'entit\u00e9 ne soit transmise que si elle n'a pas \u00e9t\u00e9 modifi\u00e9e apr\u00e8s la date donn\u00e9e. Cela permet d'assurer la coh\u00e9rence d'un nouveau fragment d'une gamme sp\u00e9cifique avec les pr\u00e9c\u00e9dents, ou de mettre en place un syst\u00e8me de contr\u00f4le de simultan\u00e9it\u00e9 optimiste lors de la modification de documents existants."],"vary http header definition\u0004Determines how to match request headers to decide whether a cached response can be used rather than requesting a fresh one from the origin server.":["D\u00e9termine comment faire correspondre les en-t\u00eates de requ\u00eate pour d\u00e9cider si une r\u00e9ponse en cache peut \u00eatre utilis\u00e9e plut\u00f4t que de demander une nouvelle r\u00e9ponse au serveur d'origine."],"connection http header definition\u0004Controls whether the network connection stays open after the current transaction finishes.":["Contr\u00f4le si la connexion au r\u00e9seau reste ouverte apr\u00e8s la fin de la transaction en cours."],"keep-alive http header definition\u0004Controls how long a persistent connection should stay open.":["Contr\u00f4le la dur\u00e9e pendant laquelle une connexion persistante doit rester ouverte."],"accept http header definition\u0004Informs the server about the types of data that can be sent back.":["Informe le serveur sur les types de donn\u00e9es qui peuvent \u00eatre renvoy\u00e9es."],"accept-charset http header definition\u0004Which character encodings the client understands.":["D\u00e9finie les codages de caract\u00e8res que le client comprend."],"accept-encoding http header definition\u0004The encoding algorithm, usually a compression algorithm, that can be used on the resource sent back.":["L'algorithme de codage, g\u00e9n\u00e9ralement un algorithme de compression, qui peut \u00eatre utilis\u00e9 sur la ressource renvoy\u00e9e."],"accept-language http header definition\u0004informs the server about the human language the server is expected to send back. this is a hint and is not necessarily under the full control of the user: the server should always pay attention not to override an explicit user choice (like selecting a language from a dropdown).":["informe le serveur sur la langue humaine que le serveur est cens\u00e9 renvoyer. Ceci est un indice et n'est pas n\u00e9cessairement sous le contr\u00f4le total de l'utilisateur : le serveur doit toujours faire attention \u00e0 ne pas outrepasser un choix explicite de l'utilisateur (comme la s\u00e9lection d'une langue dans un menu d\u00e9roulant)."],"expect http header definition\u0004Indicates expectations that need to be fulfilled by the server to properly handle the request.":["Indique les attentes qui doivent \u00eatre satisfaites par le serveur pour traiter correctement la requ\u00eate."],"cookie http header definition\u0004Contains stored HTTP cookies previously sent by the server with the Set-Cookie header.":["Contient des cookies HTTP stock\u00e9s envoy\u00e9s pr\u00e9c\u00e9demment par le serveur avec l'en-t\u00eate Set-Cookie."],"set-cookie http header definition\u0004Send cookies from the server to the user-agent.":["Envoyer des cookies du serveur \u00e0 l'agent-utilisateur."],"cookie2 http header definition\u0004Contains an HTTP cookie previously sent by the server with the Set-Cookie2 header, but has been obsoleted. Use Cookie instead.":["Contient un cookie HTTP envoy\u00e9 pr\u00e9c\u00e9demment par le serveur avec l'en-t\u00eate Set-Cookie2, mais il a \u00e9t\u00e9 rendu obsol\u00e8te. Utilisez plut\u00f4t Cookie."],"set-cookie2 http header definition\u0004Sends cookies from the server to the user-agent, but has been obsoleted. Use Set-Cookie instead.":["Envoie des cookies du serveur \u00e0 l'agent-utilisateur, mais a \u00e9t\u00e9 obsol\u00e8te. Utilisez plut\u00f4t Set-Cookie."],"access-control-allow-origin http header definition\u0004Indicates whether the response can be shared.":["Indique si la r\u00e9ponse peut \u00eatre partag\u00e9e."],"access-control-allow-credentials http header definition\u0004Indicates whether the response to the request can be exposed when the credentials flag is true.":["Indique si la r\u00e9ponse \u00e0 la requ\u00eate peut \u00eatre expos\u00e9e lorsque le drapeau des identifiants est sur true."],"access-control-allow-headers http header definition\u0004Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request.":["Utilis\u00e9 en r\u00e9ponse \u00e0 une demande pr\u00e9alable au vol pour indiquer quels en-t\u00eates HTTP peuvent \u00eatre utilis\u00e9s lors de la requ\u00eate actuelle."],"access-control-allow-methods http header definition\u0004Specifies the methods allowed when accessing the resource in response to a preflight request.":["Pr\u00e9cise les m\u00e9thodes autoris\u00e9es lors de l'acc\u00e8s \u00e0 la ressource en r\u00e9ponse \u00e0 une requ\u00eate preflight."],"access-control-expose-headers http header definition\u0004Indicates which headers can be exposed as part of the response by listing their names.":["Indique quels en-t\u00eates peuvent \u00eatre expos\u00e9s dans le cadre de la r\u00e9ponse en \u00e9num\u00e9rant leurs noms."],"access-control-max-age http header definition\u0004Indicates how long the results of a preflight request can be cached.":["Indique la dur\u00e9e pendant laquelle les r\u00e9sultats d'une requ\u00eate preflight peuvent \u00eatre mis en cache."],"access-control-request-headers http header definition\u0004Used when issuing a preflight request to let the server know which HTTP headers will be used when the actual request is made.":["Utilis\u00e9 lors de l'\u00e9mission d'une requ\u00eate preflight pour faire savoir au serveur quels en-t\u00eates HTTP seront utilis\u00e9s lorsque la requ\u00eate est faite."],"access-control-request-method http header definition\u0004Used when issuing a preflight request to let the server know which HTTP method will be used when the actual request is made.":["Utilis\u00e9 lors de l'\u00e9mission d'une requ\u00eate preflight pour faire savoir au serveur quelle m\u00e9thode HTTP sera utilis\u00e9e lorsque la requ\u00eate est faite."],"origin http header definition\u0004Indicates where a fetch originates from.":["Indique l'origine d'une recherche."],"service-worker-allowed http header definition\u0004Used to remove the path restriction by including this header in the response of the Service Worker script.":["Utilis\u00e9 pour supprimer la restriction du chemin d'acc\u00e8s en incluant cet en-t\u00eate dans la r\u00e9ponse du script Service Worker."],"timing-allow-origin http header definition\u0004Specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.":["Sp\u00e9cifie les origines qui sont autoris\u00e9es \u00e0 voir les valeurs des attributs r\u00e9cup\u00e9r\u00e9s via les fonctionnalit\u00e9s de l'API Resource Timing, qui seraient autrement signal\u00e9es comme \u00e9tant nulles en raison des restrictions cross-origin."],"x-permitted-cross-domain-policies http header definition\u0004Specifies if a cross-domain policy file (crossdomain.xml) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player, Adobe Acrobat, Microsoft Silverlight, or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the Same-Origin Policy. See the Cross-domain Policy File Specification for more information.":["Sp\u00e9cifie si un fichier de politique interdomaine (crossdomain.xml) est autoris\u00e9. Le fichier peut d\u00e9finir une politique pour accorder aux clients, tels que Flash Player d'Adobe, Adobe Acrobat, Microsoft Silverlight ou Apache Flex, la permission de traiter des donn\u00e9es \u00e0 travers des domaines qui seraient autrement limit\u00e9s en raison de la politique Same-Origin. Voir la sp\u00e9cification du fichier de politique Cross-domain pour plus d'informations."],"dnt http header definition\u0004Expresses the user's tracking preference.":["Exprime la pr\u00e9f\u00e9rence de l'utilisateur en mati\u00e8re de suivi."],"tk http header definition\u0004Indicates the tracking status of the corresponding response.":["Indique l'\u00e9tat de suivi de la r\u00e9ponse correspondante."],"content-disposition http header definition\u0004Indicates if the resource transmitted should be displayed inline (default behavior without the header), or if it should be handled like a download and the browser should present a \u201cSave As\u201d dialog.":["Indique si la ressource transmise doit \u00eatre affich\u00e9e en ligne (comportement par d\u00e9faut sans l'en-t\u00eate), ou si elle doit \u00eatre trait\u00e9e comme un t\u00e9l\u00e9chargement et que le navigateur doit pr\u00e9senter un dialogue \"Enregistrer sous\"."],"content-length http header definition\u0004The size of the resource, in decimal number of bytes.":["La taille de la ressource, en nombre d\u00e9cimal d'octets."],"content-type http header definition\u0004Indicates the media type of the resource.":["Indique le type de m\u00e9dia de la ressource."],"content-encoding http header definition\u0004Used to specify the compression algorithm.":["Utilis\u00e9 pour sp\u00e9cifier l'algorithme de compression."],"content-language http header definition\u0004Describes the human language(s) intended for the audience, so that it allows a user to differentiate according to the users' own preferred language.":["Describes the human language(s) intended for the audience, so that it allows a user to differentiate according to the users' own preferred language."],"content-location http header definition\u0004Indicates an alternate location for the returned data.":["Indique un emplacement alternatif pour les donn\u00e9es renvoy\u00e9es."],"forwarded http header definition\u0004Contains information from the client-facing side of proxy servers that is altered or lost when a proxy is involved in the path of the request.":["Contient des informations provenant du c\u00f4t\u00e9 client des serveurs proxy qui sont alt\u00e9r\u00e9es ou perdues lorsqu'un proxy est impliqu\u00e9 dans le chemin de la requ\u00eate."],"x-forwarded-for http header definition\u0004Identifies the originating IP addresses of a client connecting to a web server through an HTTP proxy or a load balancer.":["Identifie les adresses IP d'origine d'un client se connectant \u00e0 un serveur web via un proxy HTTP ou un \u00e9quilibreur de charge."],"x-forwarded-host http header definition\u0004Identifies the original host requested that a client used to connect to your proxy or load balancer.":["Identifie l'h\u00f4te initial demand\u00e9 par un client pour se connecter \u00e0 votre proxy ou \u00e0 votre \u00e9quilibreur de charge."],"x-forwarded-proto http header definition\u0004Identifies the protocol (HTTP or HTTPS) that a client used to connect to your proxy or load balancer.":["Identifie le protocole (HTTP ou HTTPS) qu'un client a utilis\u00e9 pour se connecter \u00e0 votre proxy ou \u00e9quilibreur de charge."],"via http header definition\u0004Added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers.":["Ajout\u00e9 par des proxies, tant en avant qu'en arri\u00e8re, et peut appara\u00eetre dans les en-t\u00eates de requ\u00eate et de r\u00e9ponse."],"location http header definition\u0004Indicates the URL to redirect a page to.":["Indique l'URL vers laquelle rediriger une page."],"from http header definition\u0004Contains an Internet email address for a human user who controls the requesting user agent.":["Contient une adresse email Internet pour un utilisateur humain qui contr\u00f4le l'agent utilisateur demandeur."],"host http header definition\u0004Specifies the domain name of the server (for virtual hosting), and (optionally) the TCP port number on which the server is listening.":["Sp\u00e9cifie le nom de domaine du serveur (pour l'h\u00e9bergement virtuel), et (en option) le num\u00e9ro de port TCP sur lequel le serveur \u00e9coute."],"referer http header definition\u0004The address of the previous web page from which a link to the currently requested page was followed.":["L'adresse de la page web pr\u00e9c\u00e9dente \u00e0 partir de laquelle un lien vers la page actuellement demand\u00e9e a \u00e9t\u00e9 suivi."],"referrer-policy http header definition\u0004Governs which referrer information sent in the Referer header should be included with requests made.":["R\u00e9git quelles informations sur le r\u00e9f\u00e9rent envoy\u00e9es dans l'en-t\u00eate Referer doivent \u00eatre incluses avec les requ\u00eates faites."],"user-agent http header definition\u0004Contains a characteristic string that allows the network protocol peers to identify the application type, operating system, software vendor or software version of the requesting software user agent. See also the Firefox user agent string reference.":["Contient une cha\u00eene caract\u00e9ristique qui permet aux pairs du protocole r\u00e9seau d'identifier le type d'application, le syst\u00e8me d'exploitation, le fournisseur de logiciels ou la version du logiciel de l'agent utilisateur du logiciel demandeur. Voir aussi la r\u00e9f\u00e9rence de la cha\u00eene de l'agent utilisateur Firefox."],"allow http header definition\u0004Lists the set of HTTP request methods support by a resource.":["Liste l'ensemble des m\u00e9thodes de requ\u00eate HTTP support\u00e9es par une ressource."],"server http header definition\u0004Contains information about the software used by the origin server to handle the request.":["Contient des informations sur le logiciel utilis\u00e9 par le serveur d'origine pour traiter la requ\u00eate."],"accept-ranges http header definition\u0004Indicates if the server supports range requests, and if so in which unit the range can be expressed.":["Indique si le serveur prend en charge les requ\u00eates de plage, et si oui, dans quelle unit\u00e9 la plage peut \u00eatre exprim\u00e9e."],"range http header definition\u0004Indicates the part of a document that the server should return.":["Indique la partie d'un document que le serveur doit renvoyer."],"if-range http header definition\u0004Creates a conditional range request that is only fulfilled if the given etag or date matches the remote resource. Used to prevent downloading two ranges from incompatible version of the resource.":["Cr\u00e9e une requ\u00eate de plage conditionnelle qui n'est satisfaite que si l'\u00e9tiquette ou la date donn\u00e9e correspond \u00e0 la ressource distante. Utilis\u00e9 pour emp\u00eacher le t\u00e9l\u00e9chargement de deux plages \u00e0 partir d'une version incompatible de la ressource."],"content-range http header definition\u0004Indicates where in a full body message a partial message belongs.":["Indique l'emplacement d'un message partiel dans un corps de message complet."],"cross-origin-opener-policy http header definition\u0004Prevents other domains from opening\/controlling a window.":["Emp\u00eache les autres domaines d'ouvrir\/contr\u00f4ler une fen\u00eatre."],"cross-origin-resource-policy http header definition\u0004Prevents other domains from reading the response of the resources to which this header is applied.":["Emp\u00eache les autres domaines de lire la r\u00e9ponse des ressources auxquelles cet en-t\u00eate est appliqu\u00e9."],"content-security-policy http header definition\u0004Controls resources the user agent is allowed to load for a given page.":["Contr\u00f4le les ressources que l'agent utilisateur est autoris\u00e9 \u00e0 charger pour une page donn\u00e9e."],"content-security-policy-report-only http header definition\u0004Allows web developers to experiment with policies by monitoring, but not enforcing, their effects. These violation reports consist of JSON documents sent via an HTTP POST request to the specified URI.":["Permet aux d\u00e9veloppeurs web d'exp\u00e9rimenter des politiques en surveillant leurs effets, mais sans les faire appliquer. Ces rapports de violation consistent en des documents JSON envoy\u00e9s via une requ\u00eate HTTP POST \u00e0 l'URI sp\u00e9cifi\u00e9."],"expect-ct http header definition\u0004Allows sites to opt in to reporting and\/or enforcement of Certificate Transparency requirements, which prevents the use of misissued certificates for that site from going unnoticed. When a site enables the Expect-CT header, they are requesting that Chrome check that any certificate for that site appears in public CT logs.":["Permet aux sites d'opter pour la notification et\/ou l'application des exigences de transparence des certificats, ce qui emp\u00eache que l'utilisation de certificats mal \u00e9mis pour ce site ne passe inaper\u00e7ue. Lorsqu'un site active l'en-t\u00eate Expect-CT, il demande \u00e0 Chrome de v\u00e9rifier que tout certificat pour ce site appara\u00eet dans les journaux CT publics."],"feature-policy http header definition\u0004Provides a mechanism to allow and deny the use of browser features in its own frame, and in iframes that it embeds.":["Fournit un m\u00e9canisme permettant d'autoriser ou de refuser l'utilisation des fonctions du navigateur dans son propre cadre et dans les iframes qu'il int\u00e8gre."],"public-key-pins http header definition\u0004Associates a specific cryptographic public key with a certain web server to decrease the risk of MITM attacks with forged certificates.":["Associe une cl\u00e9 publique cryptographique sp\u00e9cifique \u00e0 un certain serveur web pour diminuer le risque d'attaques MITM avec de faux certificats."],"public-key-pins-report-only http header definition\u0004Sends reports to the report-uri specified in the header and does still allow clients to connect to the server even if the pinning is violated.":["Envoie les rapports \u00e0 l'url de rapport sp\u00e9cifi\u00e9e dans l'en-t\u00eate et permet toujours aux clients de se connecter au serveur m\u00eame si le brochage est viol\u00e9."],"strict-transport-security http header definition\u0004Force communication using HTTPS instead of HTTP.":["Forcer la communication en utilisant HTTPS au lieu de HTTP."],"upgrade-insecure-requests http header definition\u0004Sends a signal to the server expressing the client\u2019s preference for an encrypted and authenticated response, and that it can successfully handle the upgrade-insecure-requests directive.":["Envoie un signal au serveur exprimant la pr\u00e9f\u00e9rence du client pour une r\u00e9ponse crypt\u00e9e et authentifi\u00e9e, et qu'il peut g\u00e9rer avec succ\u00e8s la directive \"upgrade-insecure-requests\"."],"x-content-type-options http header definition\u0004Disables MIME sniffing and forces browser to use the type given in Content-Type.":["D\u00e9sactive le sniffing de MIME et force le navigateur \u00e0 utiliser le type donn\u00e9 dans Content-Type."],"x-frame-options http header definition\u0004Indicates whether a browser should be allowed to render a page in a <frame>, <iframe>, <embed> or <object>.":["Indique si un navigateur doit \u00eatre autoris\u00e9 \u00e0 afficher une page dans un <frame>, <iframe>, <embed> ou <object>."],"x-powered-by http header definition\u0004May be set by hosting environments or other frameworks and contains information about them while not providing any usefulness to the application or its visitors. Unset this header to avoid exposing potential vulnerabilities.":["Peut \u00eatre d\u00e9fini par des environnements d'h\u00e9bergement ou d'autres cadres et contient des informations \u00e0 leur sujet sans pour autant fournir une quelconque utilit\u00e9 \u00e0 l'application ou \u00e0 ses visiteurs. D\u00e9sactivez cet en-t\u00eate pour \u00e9viter d'exposer des vuln\u00e9rabilit\u00e9s potentielles."],"x-xss-protection http header definition\u0004Enables cross-site scripting filtering.":["Permet le filtrage des scripts cross-site."],"nel http header definition\u0004Defines a mechanism that enables developers to declare a network error reporting policy.":["D\u00e9finit un m\u00e9canisme qui permet aux d\u00e9veloppeurs de d\u00e9clarer une politique de signalement des erreurs sur le r\u00e9seau."],"report-to http header definition\u0004Used to specify a server endpoint for the browser to send warning and error reports to.":["Utilis\u00e9 pour sp\u00e9cifier un point terminal du serveur auquel le navigateur envoie des rapports d'avertissement et d'erreur."],"transfer-encoding http header definition\u0004Specifies the form of encoding used to safely transfer the entity to the user.":["Sp\u00e9cifie la forme de codage utilis\u00e9e pour transf\u00e9rer l'entit\u00e9 \u00e0 l'utilisateur en toute s\u00e9curit\u00e9."],"te http header definition\u0004Specifies the transfer encodings the user agent is willing to accept.":["Sp\u00e9cifie les codages de transfert que l'agent utilisateur est pr\u00eat \u00e0 accepter."],"trailer http header definition\u0004Allows the sender to include additional fields at the end of chunked message.":["Permet \u00e0 l'exp\u00e9diteur d'inclure des champs suppl\u00e9mentaires \u00e0 la fin du message \u201cchunked\u201d."],"accept-push-policy http header definition\u0004A client can express the desired push policy for a request by sending an Accept-Push-Policy header field in the request.":["Un client peut exprimer la politique de push souhait\u00e9e pour une requ\u00eate en envoyant un champ d'en-t\u00eate Accept-Push-Policy dans la requ\u00eate."],"accept-signature http header definition\u0004A client can send the Accept-Signature header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.":["Un client peut envoyer le champ d'en-t\u00eate Accept-Signature pour indiquer son intention de tirer parti de toutes les signatures disponibles et pour pr\u00e9ciser les types de signatures qu'il prend en charge."],"alt-svc http header definition\u0004Used to list alternate ways to reach this service.":["Utilis\u00e9 pour \u00e9num\u00e9rer les autres moyens de joindre ce service."],"date http header definition\u0004Contains the date and time at which the message was originated.":["Contient la date et l'heure \u00e0 laquelle le message a \u00e9t\u00e9 envoy\u00e9."],"large-allocation http header definition\u0004Tells the browser that the page being loaded is going to want to perform a large allocation.":["Tells the browser that the page being loaded is going to want to perform a large allocation."],"link http header definition\u0004The Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML <link> element.":["Le champ Link entity-header permet de s\u00e9rialiser un ou plusieurs liens dans les en-t\u00eates HTTP. Il est s\u00e9mantiquement \u00e9quivalent \u00e0 l'\u00e9l\u00e9ment HTML <link>."],"push-policy http header definition\u0004A Push-Policy defines the server behaviour regarding push when processing a request.":["Une politique de push d\u00e9finit le comportement du serveur en mati\u00e8re de push lors du traitement d'une requ\u00eate."],"retry-after http header definition\u0004Indicates how long the user agent should wait before making a follow-up request.":["Indique combien de temps l'agent utilisateur doit attendre avant de faire une requ\u00eate de suivi."],"signature http header definition\u0004The Signature header field conveys a list of signatures for an exchange, each one accompanied by information about how to determine the authority of and refresh that signature.":["Le champ d'en-t\u00eate Signature transmet une liste de signatures pour un \u00e9change, chacune accompagn\u00e9e d'informations sur la mani\u00e8re de d\u00e9terminer l'autorit\u00e9 de cette signature et de la rafra\u00eechir."],"signed-headers http header definition\u0004The Signed-Headers header field identifies an ordered list of response header fields to include in a signature.":["Le champ d'en-t\u00eate Signed-Headers identifie une liste ordonn\u00e9e de champs d'en-t\u00eate de r\u00e9ponse \u00e0 inclure dans une signature."],"server-timing http header definition\u0004Communicates one or more metrics and descriptions for the given request-response cycle.":["communique une ou plusieurs mesures et descriptions pour le cycle request-response donn\u00e9."],"sourcemap http header definition\u0004Links generated code to a source map.":["Lie le code g\u00e9n\u00e9r\u00e9 \u00e0 la carte source."],"upgrade http header definition\u0004The relevant RFC document for the Upgrade header field is RFC 7230, section 6.7. The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the Upgrade header field. Neither party is required to accept the terms specified in the Upgrade header field. It can be used in both client and server headers. If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified. For details on the Connection header field please see section 6.1 of the aforementioned RFC.":["Le document RFC pertinent pour le champ d'en-t\u00eate de la mise \u00e0 niveau est le RFC 7230, section 6.7. La norme \u00e9tablit des r\u00e8gles pour la mise \u00e0 niveau ou le passage \u00e0 un protocole diff\u00e9rent sur la connexion actuelle du client, du serveur, du protocole de transport. Par exemple, cette norme d'en-t\u00eate permet \u00e0 un client de passer de HTTP 1.1 \u00e0 HTTP 2.0, en supposant que le serveur d\u00e9cide d'accuser r\u00e9ception et de mettre en \u0153uvre le champ d'en-t\u00eate Upgrade. Aucune des parties n'est tenue d'accepter les conditions sp\u00e9cifi\u00e9es dans le champ d'en-t\u00eate Upgrade. Il peut \u00eatre utilis\u00e9 dans les en-t\u00eates du client et du serveur. Si le champ d'en-t\u00eate Upgrade est sp\u00e9cifi\u00e9, l'exp\u00e9diteur DOIT \u00e9galement envoyer le champ d'en-t\u00eate Connection avec l'option de mise \u00e0 niveau sp\u00e9cifi\u00e9e. Pour plus de d\u00e9tails sur le champ En-t\u00eate de connexion, veuillez consulter la section 6.1 de la RFC susmentionn\u00e9e."],"x-dns-prefetch-control http header definition\u0004Controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.":["Contr\u00f4le la pr\u00e9extraction DNS, une fonction par laquelle les navigateurs effectuent de mani\u00e8re proactive la r\u00e9solution du nom de domaine sur les liens que l'utilisateur peut choisir de suivre ainsi que sur les URLs des \u00e9l\u00e9ments r\u00e9f\u00e9renc\u00e9s par le document, y compris les images, CSS, JavaScript, etc."],"x-ua-compatible http header definition\u0004Used by Internet Explorer to signal which document mode to use.":["Utilis\u00e9 par Internet Explorer pour signaler le mode de document \u00e0 utiliser."],"MyKinsta dashboard screenshot":["Capture d'\u00e9cran du tableau de bord MyKinsta"],"Watch demo":["Voir la d\u00e9mo"],"Recent Activity example\u0004Connect GitHub repo 'sopha_p4'":["Connecter le d\u00e9p\u00f4t GitHub \u00ab sopha_p4 \u00bb"],"Recent Activity example\u0004Deploy Application":["D\u00e9ployer l'application"],"Recent Activity example\u0004Invite User 'TomParker'":["Inviter l'utilisateur \u00ab TomParker \u00bb"],"Recent Activity example\u0004Enable Image Optimization":["Activer l'optimisation d'image"],"Recent Activity example\u0004Create Environment 'Staging'":["Cr\u00e9er l'environnement de \u00ab Staging \u00bb"],"Recent Activity example\u0004Enable HTTPS":["Activer HTTPS"],"Set and used by Google Ads for remarketing, personalization, and targeting advertisements to users who have visited kinsta.com. (%s)":["D\u00e9fini et utilis\u00e9 par Google Ads pour le remarketing, la personnalisation et le ciblage des publicit\u00e9s pour les utilisateurs qui ont visit\u00e9 kinsta.com. (%s)"],"Google Ads Settings":["R\u00e9glages de Google Ads"],"Screen reader mobile menu toggle label - close\u0004Close hamburger menu":["Fermer le menu hamburger"]}}} );
+</script>
+<script type='text/javascript' id='kinsta-js-main-js-before'>
+var singularState = {"postId":36859,"postSlug":"port-smtp","postType":"post","languages":["it","pt","fr","de","jp","es","se","dk"],"currentLanguage":"fr"}
+var kinstaContactFormState = {"userId":36859,"userAge":1712165113,"recentPosts":[{"title":"Comment utiliser le cache Edge pour am\u00e9liorer les performances de WordPress","thumbnail":"https:\/\/kinsta.com\/fr\/wp-content\/uploads\/sites\/4\/2024\/03\/wp-how-to-use-edge-caching-to-improve-wordpress-performance-400x200.jpg","permalink":"https:\/\/kinsta.com\/fr\/blog\/cache-edge-wordpress\/"},{"title":"Construire un site statique avec WordPress et Astro","thumbnail":"https:\/\/kinsta.com\/fr\/wp-content\/uploads\/sites\/4\/2024\/03\/wp-build-a-static-site-with-wordpress-and-astro-400x200.jpg","permalink":"https:\/\/kinsta.com\/fr\/blog\/site-statique-wordpress-astro\/"}],"nonce":"652a93ef99","isEnabled":true,"isFloatingEnabled":false,"isContactFormPage":false}
+var siteState = {"adminAjaxUrl":"https:\/\/kinsta.com\/fr\/wp-admin\/admin-ajax.php","restBaseUrl":"https:\/\/kinsta.com\/fr\/wp-json\/kinsta\/v1","restNonce":"652a93ef99","siteEnv":"production"}
+</script>
+<script type='text/javascript' src='https://kinsta.com/fr/wp-content/themes/kinsta/dist/main.js?ver=9ff82071481dd503ca98' id='kinsta-js-main-js'></script>
+<script defer type='text/javascript' src='https://kinsta.com/fr/wp-content/plugins/akismet/_inc/form.js?ver=4.1.12' id='akismet-form-js'></script>
+<script id="9508-js-translations">
+( function( domain, translations ) {
+    let localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+    localeData[""].domain = domain;
+    wp.i18n.setLocaleData( localeData, domain );
+} )( "DownloadPostForm", {"translation-revision-date":"2023-07-21 20:00","generator":"WP-CLI\/2.6.0","source":"9508.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"fr_FR","plural-forms":"nplurals=2; plural=(n > 1);"},"The download has started. If you have any problems downloading the PDF from your browser, click the download button to save the file.":["Le t\u00e9l\u00e9chargement a commenc\u00e9. Si vous avez des probl\u00e8mes pour t\u00e9l\u00e9charger le PDF \u00e0 partir de votre navigateur, cliquez sur le bouton de t\u00e9l\u00e9chargement pour enregistrer le fichier."],"Download PDF":["T\u00e9l\u00e9charger la PDF"],"An unexpected error has occured":["Une erreur inattendue s'est produite"],"Download a PDF version.":["T\u00e9l\u00e9charger une version PDF."],"Bummer!":["C'est la poisse !"],"Download now":["T\u00e9l\u00e9charger maintenant"],"In a hurry? Save this article as a PDF.":["Vous \u00eates press\u00e9 ? Enregistrez cet article en PDF."],"Tired of scrolling? Download a PDF version for easier offline reading and sharing with coworkers.":["Fatigu\u00e9 de faire d\u00e9filer les pages ? T\u00e9l\u00e9chargez une version PDF pour faciliter la lecture hors ligne et partager avec vos coll\u00e8gues."],"Download":["T\u00e9l\u00e9charger"],"Download the article":["T\u00e9l\u00e9charger l'article"]}}} );
+</script>
+<script id="8763-js-translations">
+( function( domain, translations ) {
+    let localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+    localeData[""].domain = domain;
+    wp.i18n.setLocaleData( localeData, domain );
+} )( "DownloadPostForm", {"translation-revision-date":"2024-01-22 20:01","generator":"WP-CLI\/2.6.0","source":"8763.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"fr_FR","plural-forms":"nplurals=2; plural=(n > 1);"},"The download has started. If you have any problems downloading the PDF from your browser, click the download button to save the file.":["Le t\u00e9l\u00e9chargement a commenc\u00e9. Si vous avez des probl\u00e8mes pour t\u00e9l\u00e9charger le PDF \u00e0 partir de votre navigateur, cliquez sur le bouton de t\u00e9l\u00e9chargement pour enregistrer le fichier."],"Download PDF":["T\u00e9l\u00e9charger la PDF"],"An unexpected error has occured":["Une erreur inattendue s'est produite"],"Download a PDF version.":["T\u00e9l\u00e9charger une version PDF."],"Bummer!":["C'est la poisse !"],"Download now":["T\u00e9l\u00e9charger maintenant"],"In a hurry? Save this article as a PDF.":["Vous \u00eates press\u00e9 ? Enregistrez cet article en PDF."],"Tired of scrolling? Download a PDF version for easier offline reading and sharing with coworkers.":["Fatigu\u00e9 de faire d\u00e9filer les pages ? T\u00e9l\u00e9chargez une version PDF pour faciliter la lecture hors ligne et partager avec vos coll\u00e8gues."],"Download":["T\u00e9l\u00e9charger"]}}} );
+</script>
+<script id="9550-js-translations">
+( function( domain, translations ) {
+    let localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+    localeData[""].domain = domain;
+    wp.i18n.setLocaleData( localeData, domain );
+} )( "DownloadPostForm", {"translation-revision-date":"2024-01-22 20:01","generator":"WP-CLI\/2.6.0","source":"9550.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"fr_FR","plural-forms":"nplurals=2; plural=(n > 1);"},"The download has started. If you have any problems downloading the PDF from your browser, click the download button to save the file.":["Le t\u00e9l\u00e9chargement a commenc\u00e9. Si vous avez des probl\u00e8mes pour t\u00e9l\u00e9charger le PDF \u00e0 partir de votre navigateur, cliquez sur le bouton de t\u00e9l\u00e9chargement pour enregistrer le fichier."],"Download PDF":["T\u00e9l\u00e9charger la PDF"],"An unexpected error has occured":["Une erreur inattendue s'est produite"],"Download a PDF version.":["T\u00e9l\u00e9charger une version PDF."],"Bummer!":["C'est la poisse !"],"Download now":["T\u00e9l\u00e9charger maintenant"],"In a hurry? Save this article as a PDF.":["Vous \u00eates press\u00e9 ? Enregistrez cet article en PDF."],"Tired of scrolling? Download a PDF version for easier offline reading and sharing with coworkers.":["Fatigu\u00e9 de faire d\u00e9filer les pages ? T\u00e9l\u00e9chargez une version PDF pour faciliter la lecture hors ligne et partager avec vos coll\u00e8gues."],"Download":["T\u00e9l\u00e9charger"],"Download article as PDF":["T\u00e9l\u00e9charger l'article en PDF"]}}} );
+</script>
+<script id="7574-js-translations">
+( function( domain, translations ) {
+    let localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+    localeData[""].domain = domain;
+    wp.i18n.setLocaleData( localeData, domain );
+} )( "DownloadPostForm", {"translation-revision-date":"2024-01-22 20:01","generator":"WP-CLI\/2.6.0","source":"7574.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"fr_FR","plural-forms":"nplurals=2; plural=(n > 1);"},"The download has started. If you have any problems downloading the PDF from your browser, click the download button to save the file.":["Le t\u00e9l\u00e9chargement a commenc\u00e9. Si vous avez des probl\u00e8mes pour t\u00e9l\u00e9charger le PDF \u00e0 partir de votre navigateur, cliquez sur le bouton de t\u00e9l\u00e9chargement pour enregistrer le fichier."],"Download PDF":["T\u00e9l\u00e9charger la PDF"],"An unexpected error has occured":["Une erreur inattendue s'est produite"],"Download a PDF version.":["T\u00e9l\u00e9charger une version PDF."],"Bummer!":["C'est la poisse !"],"Download now":["T\u00e9l\u00e9charger maintenant"],"In a hurry? Save this article as a PDF.":["Vous \u00eates press\u00e9 ? Enregistrez cet article en PDF."],"Tired of scrolling? Download a PDF version for easier offline reading and sharing with coworkers.":["Fatigu\u00e9 de faire d\u00e9filer les pages ? T\u00e9l\u00e9chargez une version PDF pour faciliter la lecture hors ligne et partager avec vos coll\u00e8gues."],"Download":["T\u00e9l\u00e9charger"],"Download the article":["T\u00e9l\u00e9charger l'article"]}}} );
+</script>
+<script id="3306-js-translations">
+( function( domain, translations ) {
+    let localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+    localeData[""].domain = domain;
+    wp.i18n.setLocaleData( localeData, domain );
+} )( "DownloadPostForm", {"translation-revision-date":"2024-01-22 20:01","generator":"WP-CLI\/2.6.0","source":"3306.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"fr_FR","plural-forms":"nplurals=2; plural=(n > 1);"},"The download has started. If you have any problems downloading the PDF from your browser, click the download button to save the file.":["Le t\u00e9l\u00e9chargement a commenc\u00e9. Si vous avez des probl\u00e8mes pour t\u00e9l\u00e9charger le PDF \u00e0 partir de votre navigateur, cliquez sur le bouton de t\u00e9l\u00e9chargement pour enregistrer le fichier."],"Download PDF":["T\u00e9l\u00e9charger la PDF"],"An unexpected error has occured":["Une erreur inattendue s'est produite"],"Download a PDF version.":["T\u00e9l\u00e9charger une version PDF."],"Bummer!":["C'est la poisse !"],"Download now":["T\u00e9l\u00e9charger maintenant"],"In a hurry? Save this article as a PDF.":["Vous \u00eates press\u00e9 ? Enregistrez cet article en PDF."],"Tired of scrolling? Download a PDF version for easier offline reading and sharing with coworkers.":["Fatigu\u00e9 de faire d\u00e9filer les pages ? T\u00e9l\u00e9chargez une version PDF pour faciliter la lecture hors ligne et partager avec vos coll\u00e8gues."],"Download":["T\u00e9l\u00e9charger"],"Download the article":["T\u00e9l\u00e9charger l'article"]}}} );
+</script>
+<script id="9405-js-translations">
+( function( domain, translations ) {
+    let localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+    localeData[""].domain = domain;
+    wp.i18n.setLocaleData( localeData, domain );
+} )( "DownloadPostForm", {"translation-revision-date":"2024-01-22 20:01","generator":"WP-CLI\/2.6.0","source":"9405.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"fr_FR","plural-forms":"nplurals=2; plural=(n > 1);"},"The download has started. If you have any problems downloading the PDF from your browser, click the download button to save the file.":["Le t\u00e9l\u00e9chargement a commenc\u00e9. Si vous avez des probl\u00e8mes pour t\u00e9l\u00e9charger le PDF \u00e0 partir de votre navigateur, cliquez sur le bouton de t\u00e9l\u00e9chargement pour enregistrer le fichier."],"Download PDF":["T\u00e9l\u00e9charger la PDF"],"An unexpected error has occured":["Une erreur inattendue s'est produite"],"Download a PDF version.":["T\u00e9l\u00e9charger une version PDF."],"Bummer!":["C'est la poisse !"],"Download now":["T\u00e9l\u00e9charger maintenant"],"In a hurry? Save this article as a PDF.":["Vous \u00eates press\u00e9 ? Enregistrez cet article en PDF."],"Tired of scrolling? Download a PDF version for easier offline reading and sharing with coworkers.":["Fatigu\u00e9 de faire d\u00e9filer les pages ? T\u00e9l\u00e9chargez une version PDF pour faciliter la lecture hors ligne et partager avec vos coll\u00e8gues."],"Download":["T\u00e9l\u00e9charger"],"Download article as PDF":["T\u00e9l\u00e9charger l'article en PDF"]}}} );
+</script>
+<script id="622-js-translations">
+( function( domain, translations ) {
+    let localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+    localeData[""].domain = domain;
+    wp.i18n.setLocaleData( localeData, domain );
+} )( "ContactOptions", {"translation-revision-date":"2024-01-22 20:01","generator":"WP-CLI\/2.6.0","source":"622.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"fr_FR","plural-forms":"nplurals=2; plural=(n > 1);"},"Call Sales <SalesNumber \/>":["Appeler le service commercial <SalesNumber \/>"],"Use live chat":["Utilisez le tchat en direct"],"Send us a message":["Envoyez-nous un message"],"An unexpected error occured when submitting your message.":["Une erreur inattendue s'est produite lors de l'envoi de votre message."],"Please tell us (using at least 50 characters) what would you like to learn about.":["Veuillez nous dire (en utilisant au moins 50 caract\u00e8res) ce que vous souhaitez apprendre sur notre programme d'affiliation."],"Book an online appointment":["R\u00e9server un rendez-vous en ligne"],"There was an error loading the calendar":["Une erreur s'est produite lors du chargement du calendrier"],"You can always send us a message and let us know you would like an appointment, and we'll get back to you as soon as we can.":["Vous pouvez toujours nous envoyer un message pour nous faire savoir que vous souhaitez un rendez-vous, et nous vous r\u00e9pondrons d\u00e8s que possible."],"Text us (US only)":["Envoyez-nous un SMS (aux \u00c9tats-Unis uniquement)"],"Send us a text from your mobile device on <SalesNumber \/>":["Envoyez-nous un texte depuis votre appareil mobile au <SalesNumber \/>"],"WhatsApp us":["Nous joindre sur WhatsApp"],"Pricing or plans":["Tarifs ou plans"],"Please tell us (using at least 50 characters) what would you like to learn about our Plans and Pricing.":["Veuillez nous dire (en utilisant au moins 50 caract\u00e8res) ce que vous souhaitez savoir sur nos plans et nos tarifs."],"MyKinsta Support Requests":["Demandes de support MyKinsta"],"To contact the Kinsta support team, log in to your MyKinsta account and send us a message with the chat box. If you are unable to access MyKinsta, you can contact our support team by sending an email to <Email \/> from the email address associated with your MyKinsta account.":["Pour contacter l'\u00e9quipe de support de Kinsta, connectez-vous \u00e0 votre compte MyKinsta et envoyez-nous un message avec la bo\u00eete de discussion. Si vous ne pouvez pas acc\u00e9der \u00e0 MyKinsta, vous pouvez contacter notre \u00e9quipe de support en envoyant un e-mail \u00e0 <Email \/> \u00e0 partir de l'adresse e-mail associ\u00e9e \u00e0 votre compte MyKinsta."],"Affiliate Marketing Program":["Programme de marketing d'affiliation"],"Please tell us (using at least 50 characters) what would you like to learn about our Affiliate Program.":["Veuillez nous dire (en utilisant au moins 50 caract\u00e8res) ce que vous souhaitez apprendre sur notre programme d'affiliation."],"Are you interested in Kinsta Hosting?":["\u00cates-vous int\u00e9ress\u00e9 par l'h\u00e9bergement Kinsta ?"],"Are you interested in something else?":["\u00cates-vous int\u00e9ress\u00e9 par quelque chose d'autre ?"],"Back to contact options":["Retour aux options de contact"]}}} );
+</script>
+<script id="5156-js-translations">
+( function( domain, translations ) {
+    let localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+    localeData[""].domain = domain;
+    wp.i18n.setLocaleData( localeData, domain );
+} )( "ContactOptions", {"translation-revision-date":"2024-01-22 20:01","generator":"WP-CLI\/2.6.0","source":"5156.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"fr_FR","plural-forms":"nplurals=2; plural=(n > 1);"},"Call Sales <SalesNumber \/>":["Appeler le service commercial <SalesNumber \/>"],"Use live chat":["Utilisez le tchat en direct"],"Send us a message":["Envoyez-nous un message"],"An unexpected error occured when submitting your message.":["Une erreur inattendue s'est produite lors de l'envoi de votre message."],"Please tell us (using at least 50 characters) what would you like to learn about.":["Veuillez nous dire (en utilisant au moins 50 caract\u00e8res) ce que vous souhaitez apprendre sur notre programme d'affiliation."],"Book an online appointment":["R\u00e9server un rendez-vous en ligne"],"There was an error loading the calendar":["Une erreur s'est produite lors du chargement du calendrier"],"You can always send us a message and let us know you would like an appointment, and we'll get back to you as soon as we can.":["Vous pouvez toujours nous envoyer un message pour nous faire savoir que vous souhaitez un rendez-vous, et nous vous r\u00e9pondrons d\u00e8s que possible."],"Text us (US only)":["Envoyez-nous un SMS (aux \u00c9tats-Unis uniquement)"],"Send us a text from your mobile device on <SalesNumber \/>":["Envoyez-nous un texte depuis votre appareil mobile au <SalesNumber \/>"],"WhatsApp us":["Nous joindre sur WhatsApp"],"Pricing or plans":["Tarifs ou plans"],"Please tell us (using at least 50 characters) what would you like to learn about our Plans and Pricing.":["Veuillez nous dire (en utilisant au moins 50 caract\u00e8res) ce que vous souhaitez savoir sur nos plans et nos tarifs."],"MyKinsta Support Requests":["Demandes de support MyKinsta"],"To contact the Kinsta support team, log in to your MyKinsta account and send us a message with the chat box. If you are unable to access MyKinsta, you can contact our support team by sending an email to <Email \/> from the email address associated with your MyKinsta account.":["Pour contacter l'\u00e9quipe de support de Kinsta, connectez-vous \u00e0 votre compte MyKinsta et envoyez-nous un message avec la bo\u00eete de discussion. Si vous ne pouvez pas acc\u00e9der \u00e0 MyKinsta, vous pouvez contacter notre \u00e9quipe de support en envoyant un e-mail \u00e0 <Email \/> \u00e0 partir de l'adresse e-mail associ\u00e9e \u00e0 votre compte MyKinsta."],"Affiliate Marketing Program":["Programme de marketing d'affiliation"],"Please tell us (using at least 50 characters) what would you like to learn about our Affiliate Program.":["Veuillez nous dire (en utilisant au moins 50 caract\u00e8res) ce que vous souhaitez apprendre sur notre programme d'affiliation."],"Are you interested in Kinsta Hosting?":["\u00cates-vous int\u00e9ress\u00e9 par l'h\u00e9bergement Kinsta ?"],"Are you interested in something else?":["\u00cates-vous int\u00e9ress\u00e9 par quelque chose d'autre ?"],"Back to contact options":["Retour aux options de contact"]}}} );
+</script>
+<script id="2654-js-translations">
+( function( domain, translations ) {
+    let localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+    localeData[""].domain = domain;
+    wp.i18n.setLocaleData( localeData, domain );
+} )( "ContactOptions", {"translation-revision-date":"2023-05-19 20:00","generator":"WP-CLI\/2.6.0","source":"2654.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"fr_FR","plural-forms":"nplurals=2; plural=(n > 1);"},"Tax Rate":["Taux de taxes"]}}} );
+</script>
+</body>
+</html>

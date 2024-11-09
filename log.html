@@ -1,0 +1,1030 @@
+<!doctype html>
+<html class="no-js h-100 w-100" lang="">
+   <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+
+<title>ISL Conference Proxy</title>
+
+
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+
+		<link rel="stylesheet" type="text/css" href="/staticpool/d001c2cb/static/core/2200/web_template/opensans.css" />
+		<link rel="stylesheet" href="/staticpool/d001c2cb/static/core/2200/e/bootstrap-4.6.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/staticpool/d001c2cb/static/core/2200/web_template/styles.css">
+		<link rel="shortcut icon" href="/favicon.ico" />
+		
+		
+	<link rel="stylesheet" href="/webspace/account/cp_styles.css">
+	
+
+		
+             <script src="/staticpool/d001c2cb/static/core/2200/error-handler.js" type="text/javascript"></script>
+        
+		<script src="/staticpool/d001c2cb/static/core/2200/jquery-3.6.0.min.js" type="text/javascript"></script>
+		<script src="/staticpool/d001c2cb/static/core/2200/e/bootstrap-4.6.0/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/staticpool/d001c2cb/core/webutils_v2.js"></script>
+		
+		
+<script type="text/javascript" src="/webspace/account/myutils.js"></script>
+
+		
+	</head>
+	<body class=" webversion- h-100 w-100">
+		
+		
+		<script type="text/javascript">
+		
+			var ISLWebVersion = '';
+			var ISLWebVersions = [];
+			var ISLWebVersionCurrent;
+			var ISLWebVersionDefault;
+			
+			
+			var bootstrapTooltip = $.fn.tooltip.noConflict();
+			function markActiveInNav(tag) {
+				$(".sidebar-nav").find(".sidebar-nav-option").removeClass("active").filter("."+tag).addClass("active");
+				$(".navbar .dropdown-menu").find(".dropdown-item").removeClass("active").filter("."+tag).addClass("active");
+			};
+			var sidebar, listBottom, container;
+			
+			
+			function toggleSidebar() {
+				if ($(".sidebar-nav").hasClass("collapsed")) {
+					window.localStorage.setItem("icp-sidebar-collapsed", "false");
+					$(".sidebar-nav").removeClass("collapsed").find(".sidebar-nav-option").tooltip("disable").first().removeClass("mt-4");
+				} else {
+					window.localStorage.setItem("icp-sidebar-collapsed", "true");
+					$(".sidebar-nav").addClass("collapsed").find(".sidebar-nav-option").tooltip("enable").first().addClass("mt-4");
+				}
+				
+				
+			};
+			$(function(){
+				$.fn.tooltip = bootstrapTooltip;
+				$(".tooltip").tooltip({ boundary: "viewport", animation: false, html: true, placement: "bottom" });
+				$(".sidebar-nav").removeClass("loading").find(".sidebar-nav-option").tooltip({ boundary: "viewport", animation: false, placement: "left", template: "<div class=\"tooltip sidebar-nav-tooltip\" role=\"tooltip\"><div class=\"arrow\"></div><div class=\"tooltip-inner font-weight-semibold\"></div></div>" }).tooltip("disable");
+				if (window.localStorage.getItem("icp-sidebar-collapsed") === "true" || !window.matchMedia("(min-width: 480px)").matches) {
+					toggleSidebar();
+				} else {
+					window.localStorage.setItem("icp-sidebar-collapsed", "false");
+				}
+				sidebar = $(".sidebar-nav");
+				container = $(".sidebar-nav-expand-collapse-container");
+				
+				sidebar.on("click", function (e) {
+					if ($(e.target).is($(this))) {
+						toggleSidebar();
+					}
+				});
+				
+			});
+			
+		</script>
+		
+		
+		<div class="d-inline-flex flex-column" style="min-width: 100%; min-height: 100%;">
+		
+		
+	
+
+		
+		<nav class="navbar navbar-light navbar-expand">
+			<div id="navbar" class="icp-navbar navbar-collapse collapse d-none d-lg-block">
+
+				<div class="navbar-brand">
+					<div class="vertical-align-container">
+						
+						<a class="d-inline-block h-100" href="https://www.islonline.com/?hl=fr"><img class="mh-100" src="/webspace/account/islonline-logo.png" alt="ISL Online"/></a>
+						
+					</div>
+				</div>
+
+				<ul class="nav navbar-nav ml-auto d-flex navbar-right">
+					<li class="nav-item"><a href="/users/main/join.html">Rejoindre</a></li>
+					<li class="nav-item"><a href="/users/main/downloads.html">Téléchargements</a></li>
+					
+						<li class=""><a href="/users/isllight/start.html">Connexion</a></li>
+					
+				</ul>
+			</div>
+		</nav>
+		
+		
+		
+		<div class="d-flex flex-grow-1">
+			
+			
+			<div class="d-flex flex-column mt-2" style="flex: 1 1;">
+			
+		
+		<div class="container doc">
+		
+			<div class="margin-top"></div>
+		
+			
+	<link rel="stylesheet" href="/staticpool/d001c2cb/static/main/2200/styles-login.css">
+	
+		<div class="container-narrower center-content margin-top-40">
+		<div class="content-title" id="content-title">Se connecter</div>
+		
+		<div class="icon-loader" id="icon-loader"><span class="icon-loader"></span></div>
+		<form id="login-form" action="login_html_invalid_post" method="post" >
+		
+			<div id="login-form-inner">
+			</div>
+			<div id="recaptcha" class="g-recaptcha" data-sitekey="6LcgsZEUAAAAAIgADP0hw_jLGzV7pHWQ_4U194_E" data-size="invisible"></div>
+		
+		</form>
+		<form id="login-finish-form" action="login2" method="post">
+			<input type="hidden" name="post_token" value="cf1o7ehqtuk2n++Dj+83+A==">
+			
+			<input type="hidden" name="redirect" value="2_9ZFBH015n9uwpwlHqGezFMop95cDmjtgHK0yvn4WEWrdn9TzBHzO2Oud5kAHhW.BufXHcy9ML0WM9jXk7W4b1UO0E3hVBNhKpO2M5aCFmPW9H67zlG_K8udWKaf8n5pTG1pFmzlDBkEdg0zzWrZNjtc4_X2IJWdvqI0OZgQBAaAB">
+			<input type="hidden" name="urlwebsid" value="">
+			
+			
+			<input id="login-finish-form-invalidate" type="hidden" name="invalidate">
+			
+			<input id="login-finish-form-sessionid" type="hidden" name="sessionid">
+		</form>
+	</div>
+	<script type="text/html" id="template-login-top">
+	</script>
+	<script type="text/html" id="template-login-input-row">
+		<div class="icp-input">@BODY@</div>
+	</script>
+	<script type="text/html" id="template-login-text-row">
+		<div class="icp-text">@BODY@</div>
+	</script>
+	<script type="text/html" id="template-login-input-label-row">
+		<label class="icp-label">@LABEL@</label><div class="icp-input">@BODY@</div>
+	</script>
+
+	<script type="text/html" id="template-login-input-labelid-row">
+		<div class="float-label margin-bottom-10">
+			<label class="icp-label" id="@LABELID@">@LABEL@</label><div class="icp-input icp-input-large m-0">@BODY@</div>
+		</div>
+	</script>
+
+	<script type="text/html" id="template-login-action-row">
+		
+		<div class="row m-n2 pt-2 clearfix">@BODY@</div>
+		
+	</script>
+	<script type="text/html" id="template-login-chooser">
+		<div class="row">@CHOICES@</div>
+	</script>
+	<script type="text/html" id="template-login-chooser-row">
+		<div class="col-md-6"><h3>@TITLE@</h3><div class="margin-after-xxs">@DESCRIPTION@</div><div class="margin-after">@BUTTON@</div></div>
+	</script>
+	<script type="text/html" id="template-login-chooser-vertical">
+		<div class="table-responsive"><table class="chooser-vertical">@CHOICES@</table></div>
+	</script>
+	<script type="text/html" id="template-login-chooser-vertical-row">
+		<tr class="chooser-vertical-row" id="@ID@"><td class="chooser-vertical-desc">@DESCRIPTION@</td><td class="chooser-vertical-icon"><span class="glyphicon glyphicon-menu-right"></span></td></tr>
+	</script>
+
+
+
+<script type="text/javascript">
+var isl_captcha = {
+	// keys	
+	
+	site_key_v2: '',
+	site_key_v3: '',
+	
+	// functions
+	errors: '',
+	add_err: function(e) {
+		if(this.errors.length > 30) this.errors = '';
+		if(this.errors.length > 0) this.errors += ',';
+		this.errors += e;
+	},
+	scripts: [{}, {}, {'loaded':0, 'cbs':[], 'error' : false}, {'loaded':0, 'cbs':[], 'error' : false}],
+	uri_args: '',
+	v2_cb: function(v2_resp) {		
+		throw "reCaptcha should not have been invoked";
+	},	
+	call_loaded: function(ver, cb) {
+		if (this.scripts[ver].loaded === 2) {
+			cb();
+			return;
+		}
+			
+		if (this.scripts[ver].loaded === 1) {
+			this.scripts[ver].cbs.push(cb);
+			return;
+		}
+				
+		this.scripts[ver].loaded = 1
+		this.scripts[ver].cbs.push(cb)
+		var ld = function() {
+			isl_captcha.scripts[ver].loaded = 2;
+			var cbs = isl_captcha.scripts[ver].cbs;
+			isl_captcha.scripts[ver].cbs = [];
+			for (var i = 0; i < cbs.length; i++) { 
+				cbs[i]();
+			}			
+		}
+		window['isl_grecaptcha_loaded_' + ver] = ld;
+		
+		var s = document.createElement("script");
+		s.type = "text/javascript";
+		s.onerror = function(e) {
+			isl_captcha.add_err('v' + ver + '_load');
+			isl_captcha.scripts[ver].error = true;
+			ld();
+		}
+		s.src = "https://www.google.com/recaptcha/api.js?onload=" + encodeURIComponent('isl_grecaptcha_loaded_' + ver) + "&hl=fr&render=" + encodeURIComponent(ver == 3 ? this.site_key_v3 : 'explicit');
+		document.head.appendChild(s)		
+	},
+	last_hints:{},
+	v2_rendered: false,	
+	get_uri_args:function() {
+		var ret = this.uri_args;
+		this.uri_args = '';
+		if (this.errors.length > 0) {
+			ret += '&captcha_e=' + $urlEncode(this.errors);
+		}
+		return ret;
+	},
+	prepare_start:function(gui_, start_form) {
+		$('div#recaptcha').html('');
+		$('div#recaptcha').attr('data-size', 'invisible');		
+		
+		var gui = gui_;
+		this.last_hints = gui.hints;
+		var cnt = 1;
+		
+		var chk = function() {
+			cnt --;
+			if (cnt) return;
+			
+			if (isl_captcha.v2_rendered) {
+				isl_captcha.v2_rendered = false;
+				isl_captcha.v2_cb = function (v2_resp) { 
+					throw "reCaptcha should not have been invoked"; 
+				};
+				grecaptcha.reset();
+			}
+						
+			start_form(gui);
+		};
+		
+		var v2re = false;
+		if (gui.hints["custom-show-captcha-v2"] === 1) {
+			v2re = true;
+			this.last_hints["custom-show-captcha-v3v2"] = 0;
+		} else if (gui.hints["custom-show-captcha-v3v2"] === 1) {
+			v2re = true;
+			$('div#recaptcha').removeAttr('data-size');
+			gui.interface = [];
+		}		
+		if (gui.hints["custom-show-captcha-v3"] === 1) {
+			cnt++;
+			isl_captcha.call_loaded(3, chk);
+		}		
+		if (v2re) {
+			cnt++;
+			isl_captcha.call_loaded(2, chk);
+		}
+	
+		chk();
+	},
+	prepare_finished: function(resend_form) {
+		var rdr2 = false;
+		if (this.last_hints["custom-show-captcha-v2"] === 1) {
+			rdr2 = true;
+		}
+		if (this.last_hints["custom-show-captcha-v3v2"] === 1) {
+			rdr2 = true;
+		}					
+		if (rdr2) {
+			if (isl_captcha.scripts[2].error) return;
+			
+			if (this.last_hints["custom-show-captcha-v3v2"] === 1) {
+				isl_captcha.v2_cb = function(v2_resp) {
+					isl_captcha.v2_rendered = false;
+					if (v2_resp.length > 0) {
+						isl_captcha.uri_args += '&captcha_v2=' + $urlEncode(v2_resp);
+						resend_form();
+					} // dont resend error/timeout stuff
+				};
+			}
+			isl_captcha.v2_rendered = true;
+			try {
+				grecaptcha.render('recaptcha', {
+					'sitekey' : isl_captcha.site_key_v2,
+					'callback': function(v2_resp) {
+						isl_captcha.v2_cb(v2_resp);
+					},
+					'expired-callback': function() {
+						isl_captcha.add_err('v2_err');
+						isl_captcha.v2_cb(v2_resp);
+					},
+					'error-callback':  function() {
+						isl_captcha.add_err('v2_err');
+					},
+					'lang': 'fr'
+				});
+			} catch(e) {
+				isl_captcha.v2_rendered = false;
+				isl_captcha.add_err('v2_ex')
+				isl_captcha.v2_cb('');
+			}
+		}
+	},
+	check:function(cb) {		
+		var chain = function() {
+			cb();
+		}
+				
+		if (this.last_hints["custom-show-captcha-v2"] === 1) {
+			if (!isl_captcha.scripts[2].error) {
+				var c_v2 = chain;
+				chain = function() {
+					isl_captcha.v2_cb = function(v2_resp) {
+						if (v2_resp.length > 0) {
+							isl_captcha.uri_args += '&captcha_v2=' + $urlEncode(v2_resp);
+						}
+						c_v2();
+					};
+					try {
+						grecaptcha.execute();
+						return;
+					} catch(e) {
+					}
+					isl_captcha.add_err('v2_ex');
+					c_v2();
+				}
+			}
+		}
+		if (this.last_hints["custom-show-captcha-v3"] === 1) {
+			if (!isl_captcha.scripts[3].error) {
+				try {
+					grecaptcha.execute(isl_captcha.site_key_v3, {action:'login'}).then(function(v3_resp) {
+						if (v3_resp.length > 0) {
+							isl_captcha.uri_args += '&captcha_v3=' + $urlEncode(v3_resp);
+						}
+						chain();
+					});
+					return;
+				} catch(e) {					
+				}
+				isl_captcha.add_err('v3_ex');
+			}
+		}
+		
+		chain();		
+	}
+}
+</script>
+
+
+
+
+
+
+
+
+
+<script src="/staticpool/d001c2cb/static/core/2200/timezone_detect.js" type="text/javascript"></script>
+<script src="/staticpool/d001c2cb/static/core/2200/timezone_detect_fallback.js" type="text/javascript"></script>
+
+
+
+<script src="/staticpool/d001c2cb/static/core/2200/float-label.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+var LoginDialogPlaceholders = true;
+</script>
+<!--[if lte IE 9]>
+<script type="text/javascript">
+LoginDialogPlaceholders = false;
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+
+	var LoginDialogLang = 'fr';
+
+
+	var LoginDialogOriginalTitle;
+
+
+
+$(function() {
+	page_ready();
+});
+
+
+function page_ready() {
+	
+		LoginDialogOriginalTitle = $('#content-title').html();
+	
+	LoginDialogStart();
+}
+
+function LoginDialogErrorText(txt, e) {
+	if(e == 'object' && typeof(e.message) == 'string') {
+		e = e.message;
+	}
+	return txt + (typeof(e) == 'string' && e.length > 0 ? ': ' + e : '');
+}
+
+function LoginDialogLogError(txt, e) {
+	if(console.log) {
+		console.log(LoginDialogErrorText(txt, e));
+	}
+}
+
+function LoginDialogGUIError(txt, e) {
+	LoginDialogLogError(txt, e);
+	LoginDialogGUI({state:'', hints:{}, interface:[
+		{type:'text', style:'error', text:LoginDialogErrorText(txt, e)},
+		{type:'buttonrow', buttons:[
+			{action:'cancel', text:'R\u00e9essayer', styleHighlight: 1 }
+		]}
+	]})
+}
+
+function LoginDialogGUIRoot() { return $('#login-form-inner'); }
+LoginDialogGUIRoot().html($('#template-login-top').html());
+
+function LoginDialogGetClientStorage() {
+	var ret; try { ret = sessionStorage["login-dialog-client-storage"]; } catch(e) { LoginDialogLogError('read sessionStorage error', e); }
+	if(typeof(ret) != 'string' || ret == '') try { ret = localStorage["login-dialog-client-storage"]; } catch(e) { LoginDialogLogError('read localStorage error', e); }
+	return typeof(ret) != 'string' ? '' : ret;
+}
+
+function LoginDialogSetClientStorage(cs) {
+	if(typeof(cs) == 'string' && cs.length <= 8192) {
+		try { sessionStorage["login-dialog-client-storage"] = cs; } catch(e) { LoginDialogLogError('set sessionStorage error', e); }
+		try { localStorage["login-dialog-client-storage"] = cs; } catch(e) { LoginDialogLogError('set localStorage error', e); }
+	}
+}
+
+
+function LoginDialog(data, callback) {
+	if(typeof(callback) == 'undefined') callback = LoginDialogGUI;
+
+	$('#login-form').off('submit').on('submit', function(event) { event.preventDefault(); });
+	
+	var method = "utils/login/dialog/2";
+	
+	var req_url = '/webapi2?he=JSON1&method='+method+'&hl=';
+	
+		req_url += $urlEncode(LoginDialogLang)
+	
+	
+		req_url += isl_captcha.get_uri_args();
+	
+
+	if (typeof(WebAPI2hsrv) === 'function') {
+		req_url += '&hsrv=' + encodeURIComponent(WebAPI2hsrv({'method': method}));
+	}
+
+	
+	var checkNavigating = (function() {
+		var isNavigating = false;
+		var eventId =  "beforeunload.chk-nav-" + Math.round(new Date().getTime() + (Math.random() * 100000));
+		$(window).on(eventId, function() {
+			isNavigating = true;
+		});
+		return function() {
+			$(window).off(eventId);
+			return isNavigating;
+		}
+	}());
+	
+
+	$.ajax({
+		url: req_url,
+		dataType: 'json',
+		jsonp: false,
+		type: 'POST',
+		data: JSON.stringify(data),
+		success: function(data) {
+			
+			var inNav = checkNavigating();
+			
+			try {
+				if (typeof(WebAPI2resphook) === 'function') {
+					WebAPI2resphook({'method':method}, data);
+				}
+				
+				if(typeof(data.result.captcha) === 'object') {
+					if(typeof(data.result.captcha.v2) === 'string') {
+						isl_captcha.site_key_v2 = data.result.captcha.v2;
+					}
+					if(typeof(data.result.captcha.v3) === 'string') {
+						isl_captcha.site_key_v3 = data.result.captcha.v3;
+					}
+				}
+				
+				if(data.result.code === 'OK') {
+					LoginDialogSetClientStorage(data.data.clientStorage);
+					if(typeof(data.data.challenge) == 'object') {
+						
+							callback(data.data.challenge);
+						
+					} else if(typeof(data.data.sid) != 'string') {
+						throw new Error('Missing session ID');
+					} else {
+						
+						$('#login-finish-form-invalidate').val(data.data.invalidate === 'true' ? data.data.invalidate : '');
+						
+						$('#login-finish-form-sessionid').val(data.data.sid);
+						$('#login-finish-form').trigger('submit');
+					}
+				} else {
+					if(typeof(data.result.description) == 'string') {
+						LoginDialogGUIError(data.result.description);
+					} else {
+						throw new Error('Error description is missing');
+					}
+				}
+			} catch(e) {
+				
+				if (inNav) return;
+				
+				LoginDialogGUIError('ajax response error', e);
+			}
+		},
+		error: function () {
+			
+			if (checkNavigating()) return;
+			
+			LoginDialogGUIError('Aucune donn\u00e9e de l\u0027API');
+		}
+	});
+}
+
+var LoginDialogGUIv = 2;
+
+
+function LoginDialogData() {
+	var data = {interface_version: LoginDialogGUIv, userAgent: navigator.userAgent, clientStorage: LoginDialogGetClientStorage(), webBrowser: 1 , relativeURLs: 1 };
+	if(typeof(ISLTimezoneDetected) == 'string') data.tz = ISLTimezoneDetected;
+	return data;
+}
+
+
+function LoginDialogStart() {
+	
+		$('#content-title').html(LoginDialogOriginalTitle);
+	
+	
+		var data = LoginDialogData();
+	
+	
+		var args;
+		try {
+			args = JSON.stringify(JSON.parse(""));
+		} catch(e) {
+			if(typeof(LoginDialogArgs) == 'object') {
+				args = JSON.stringify(LoginDialogArgs);
+			}
+		}
+		if(typeof(args) != 'undefined') {
+			data["initState"] = "1";
+			LoginDialog(data, function(gui) {
+				delete data["initState"];
+				data.trusted_args = $arg('args');
+				data.args = args;
+				data.state = gui.state;
+				LoginDialog(data);
+			});
+		} else {
+			LoginDialog(data);
+		}
+	
+}
+
+
+function LoginDialogGUI(gui) {
+	isl_captcha.prepare_start(gui, function(gui_){
+		LoginDialogGUI_step2(gui_);
+	})
+}
+	
+
+function LoginDialogGUI_step2(gui) {
+	var invalidId = function(id) {
+		if(typeof(id) == 'string' && /^[_a-zA-Z][_a-zA-Z0-9]*$/.test(id)) { return false; }
+		LoginDialogGUIError('invalid ID', id);
+		return true;
+	};
+	var invalidIdEmpty = function(id) {
+		if(id === '') { return false; }
+		return invalidId(id);
+	};
+	var stripTagsRaw = function(html) {
+		try { html = $($.parseXML('<xml>' + html + '</xml>')).text(); } catch(e) { LoginDialogLogError('invalid XML', e); }
+		return html;
+	};
+	var stripTags = function(html) {
+		return $htmlEscape(stripTagsRaw(html));
+	};
+	
+
+	
+	var html = $('#template-login-top').html();
+	var args = {};
+	var extra = [];
+	for(var el_ in gui.interface) {
+		var el = gui.interface[el_];
+		if(el.type === 'text') {
+			var out = $('#template-login-text-row').html();
+			var body = '';
+			var stylemap = { 'error':'alert alert-danger', 'warning':'alert alert-warning' };
+			if(el.style === 'error' || el.style === 'warning') {
+				body = '<div class="'; body += stylemap[el.style]; body += '">';
+				body += el.text;
+				body += '</div>';
+			} else if(el.style === 'link') {
+				body = '<a href="';
+				body += $htmlEscape(el.link);
+				body += '"';
+				if(el.newpage) {
+					body += ' target="_blank"';
+				}
+				
+				body += " class=\"font-size-small\"";
+				
+				body += '>';
+				body += el.text;
+				body += '</a>';
+			} else if(el.style === 'normal') {
+				body = el.text;
+			}
+			
+				html += out.replace('@BODY@', $replaceEscape(body));
+			
+		} else if(el.type === 'combo') {
+			if(invalidId(el.name) || invalidIdEmpty(el.default)) { return; }
+			var eln = 'loginarg_' + el.name;
+			args[el.name] = (function(eln) { return function() { return $('#'+eln).val(); }; })(eln);
+			
+				var out = $('#template-login-input-label-row').html().replace('@LABEL@', $replaceEscape(el.description));
+			
+			var body = '<select';
+			body += ' id="' + eln + '"';
+			body += ' name="' + el.name + '"';
+			body += '>';
+			for(var val_ in el.values) {
+				var val = el.values[val_];
+				if(invalidId(val.value)) { return; }
+				body += '<option';
+				body += ' value="' + val.value + '"';
+				if(val.value === el.default) {
+					body += ' selected';
+				}
+				body += '>';
+				body += val.text;
+				body += '</option>';
+			}
+			body += '</select>';
+			
+				html += out.replace('@BODY@', $replaceEscape(body));
+			
+		} else if(el.type === 'radio') {
+			if(invalidId(el.name) || invalidIdEmpty(el.default)) { return; }
+			var eln = 'loginarg_' + el.name;
+			args[el.name] = (function(eln) { return function() { return $('#'+eln+':checked').val(); }; })(eln);
+			
+				var out = $('#template-login-input-label-row').html().replace('@LABEL@', $replaceEscape(el.description));
+			
+			var body = '';
+			for(var val_ in el.values) {
+				var val = el.values[val_];
+				if(invalidId(val.value)) { return; }
+				body += '<div><input type="radio"';
+				body += ' id="' + eln + '"';
+				body += ' name="' + el.name + '"';
+				body += ' value="' + val.value + '"';
+				if(val.value === el.default) {
+					body += ' checked';
+				}
+				body += '><span class="radio-text">';
+				body += val.text;
+				body += '</span></div>';
+			}
+			
+				html += out.replace('@BODY@', $replaceEscape(body));
+			
+		} else if(el.type === 'check') {
+			if(invalidId(el.name)) { return; }
+			var eln = 'loginarg_' + el.name;
+			args[el.name] = (function(eln) { return function() { return $('#'+eln).is(':checked') ? '1' : '0'; }; })(eln);
+			var out = $('#template-login-text-row').html();
+			var body = '<input type="checkbox"';
+			body += ' id="' + eln + '"';
+			body += ' name="' + el.name + '"';
+			if(el.checked) {
+				body += ' checked';
+			}
+			body += '><span class="checkbox-text">';
+			body += el.text;
+			body += '</span>';
+			
+				html += out.replace('@BODY@', $replaceEscape(body));
+			
+		} else if(el.type === 'input') {
+			if(invalidId(el.name)) { return; }
+			var eln = 'loginarg_' + el.name;
+			var elnl = 'loginlabel_' + el.name;
+			var body = '<input type=';
+			var invalid = false;
+			if(el.style === 'password') {
+				body += '"password"';
+				args['__secret_' + el.name] = function() { return '1'; };
+			} else if(el.style === 'normal') {
+				body += '"text"';
+			} else {
+				invalid = true;
+			}
+			if(!invalid) {
+				args[el.name] = (function(eln) { return function() { return $('#'+eln).val(); }; })(eln);
+				body += ' id="' + eln + '"';
+				body += ' name="' + el.name + '"';
+				body += ' value="' + $htmlEscape(el.default) + '"';
+				
+					extra.push((function(name, eln, elnl, placeholder) { return function(args) {
+						var input = $('#'+eln);
+						var label = $('#'+elnl);
+
+						if(name == 'username' || name == 'password') {
+							input.addClass('login-input-' + name);
+						}
+						
+						label.addClass("icp-label toggled");
+						input.addClass("float-label-input");
+						
+
+						if(!LoginDialogPlaceholders) {
+							label.addClass('active');
+						} else {
+							input.attr('placeholder', placeholder);
+
+						}
+					};})(el.name, eln, elnl, stripTagsRaw(el.description)));
+				
+				body += '>';
+				
+					
+						html += $('#template-login-input-labelid-row').html().replace('@LABEL@', $replaceEscape(el.description)).replace('@LABELID@', $replaceEscape(elnl)).replace('@BODY@', $replaceEscape(body));
+					
+				
+			}
+		} else if(el.type === 'buttonrow') {
+			var out = $('#template-login-action-row').html();
+			var body = '';
+			
+			
+			for(var btn_ = el.buttons.length-1; btn_ >= 0; btn_--) {
+			
+				var btn = el.buttons[btn_];
+				
+					
+						var btnstyle = ' class="';
+						if(btn.styleLink) {
+							btnstyle += 'btn btn-link font-weight-semibold';
+						} else {
+							btnstyle += 'button button-main button-xxl';
+							if(btn.styleHighlight) {
+								btnstyle += ' scta';
+							}
+						}
+						
+						if(btn.styleExpand) {
+							btnstyle += ' btn-block m-2';
+						} else {
+							btnstyle += ' col m-2';
+						}
+						
+						btnstyle += '"';
+					
+				
+				if(btn.name != null) {
+					if(invalidId(btn.name) || invalidId(btn.value)) { return; }
+					var eln = 'loginarg_' + btn.name + '_' + btn.value;
+					body += '<input'+btnstyle+' type="button" id="'+eln+'" value="'+stripTags(btn.text)+'">';
+					extra.push((function(eln, name, value) { return function(args) {
+						$('#'+eln).on('click', function() {
+							args[name] = function() { return value; };
+							$('#login-form').trigger('submit');
+						});
+					};})(eln, btn.name, btn.value));
+				} else {
+					if(btn.action === 'cancel') {
+						body += '<input'+btnstyle+' type="button" value="'+stripTags(btn.text)+'" onclick="LoginDialogStart();">';
+					} else if(btn.action === 'continue'){
+						body += '<input'+btnstyle+' type="submit" value="'+stripTags(btn.text)+'">';
+					}
+				}
+			}
+			
+				html += out.replace('@BODY@', $replaceEscape(body));
+			
+		} else if(el.type === 'hidden') {
+			if(invalidId(el.name)) { return; }
+			var eln = 'loginarg_' + el.name;
+			args[el.name] = (function(eln) { return function() { return $('#'+eln).val(); }; })(eln);
+			var body = '<input type="hidden"';
+			body += ' id="' + eln + '"';
+			body += ' name="' + el.name + '"';
+			body += ' value="' + $htmlEscape(el.value) + '"';
+			body += '>';
+			html += body;
+		} else if(el.type === 'title') {
+			$('#content-title').html(el.text);
+		} else if(el.type === 'script') {
+			if(el.language === 'javascript') {
+				extra.push((function(body) { return function(args) { eval(body);}; })(el.body));
+			}
+		} else if(el.type === 'chooser') {
+			var vertical = el.vertical;
+			var out = '';
+			for(var ch_ in el.choices) {
+				var ch = el.choices[ch_];
+				if(invalidId(ch.name) || invalidId(ch.value)) { return; }
+				var buttoneln = 'loginarg_' + ch.name + '_' + ch.value;
+				extra.push((function(eln, name, value) { return function(args) {
+					$('#'+eln).on('click', function() {
+						args[name] = function() { return value; };
+						$('#login-form').trigger('submit');
+					});
+				};})(buttoneln, ch.name, ch.value));
+				
+					if(vertical) {
+						out += $('#template-login-chooser-vertical-row').html().replace('@DESCRIPTION@', $replaceEscape(ch.description)).replace('@ID@', $replaceEscape(buttoneln));
+					} else {
+						var button = '<input class="button button-main" type="button" id="'+buttoneln+'" value="'+stripTags(ch.button)+'">';
+						out += $('#template-login-chooser-row').html().replace('@TITLE@', $replaceEscape(ch.title)).replace('@DESCRIPTION@', $replaceEscape(ch.description)).replace('@BUTTON@', $replaceEscape(button));
+					}
+				
+			}
+			
+				html += $(vertical ? '#template-login-chooser-vertical' : '#template-login-chooser').html().replace('@CHOICES@', $replaceEscape(out));
+			
+		} else if(el.type === 'separator') {
+			html += '<hr class="separator"/>';
+	
+		} else {
+			LoginDialogLogError('unimplemented element', el.type);
+		}
+	}
+	LoginDialogGUIRoot().html(html);
+
+	function finish_login_form(with_prev_args) {
+
+		var se = $('#session-expired');
+		if(se != null) {
+			se.remove();
+		}
+
+		
+		var data = LoginDialogData();
+		var args_ = {};
+		for(var a in args) { args_[a] = args[a](); }
+		
+		data.args = JSON.stringify(args_);
+		
+		if (with_prev_args === true) {
+			if (LoginDialogCaptchaLastArgs === '') throw "LoginDialogCaptchaLastArgs are empty";
+			data.args = LoginDialogCaptchaLastArgs;
+			LoginDialogCaptchaLastArgs = '';
+		} else {
+			LoginDialogCaptchaLastArgs = data.args
+		}
+		
+		data.state = gui.state;
+		LoginDialog(data);
+		
+		$('#icon-loader').show(); LoginDialogGUIRoot().css('visibility', 'hidden');
+	}
+	
+	$('#icon-loader').hide(); LoginDialogGUIRoot().css('visibility', 'visible');
+	$('#login-form').off('submit').on('submit', function(form) {
+		
+		isl_captcha.check(finish_login_form);
+		
+
+		form.preventDefault();
+	});
+	for(var e in extra) { extra[e](args); }
+	
+	initAllFloatLabels();
+	$(".float-label-input").first().trigger("focus");
+	
+	
+	isl_captcha.prepare_finished(function() { finish_login_form(true) });
+	
+}
+</script>
+
+			<noscript><div class="js-hint alert alert-warning margin-top">Veuillez activer JavaScript pour une expérience optimale.</div></noscript>
+		
+	
+		<!-- Live chat -->
+		
+	
+	<!-- Cookie Law -->
+	<div class="cookie-warning" style="display:none;">
+        <div class="cookie-warning-body">
+            <h2 class="m-b-40">Consentement aux cookies</h2>
+            <p>
+                Nous utilisons des cookies pour fournir et maintenir les services ISL Online, ainsi que pour garantir la meilleure expérience de navigation à nos utilisateurs. Trois types de cookies sont utilisés :
+            </p>
+            <ul class="list-cookie-warning">
+                <li>Cookies essentiels : Nécessaires au bon fonctionnement du site Internet. Ne peut pas être désactivé.</li>
+                <li>Cookies fonctionnels : utilisés pour mémoriser vos préférences et sélections pour une expérience fluide lors de votre prochaine visite sur le site Web.</li>
+                <li>Autres cookies : utilisés pour comprendre nos efforts de marketing, la manière dont les utilisateurs interagissent avec notre site Web et la provenance de notre trafic afin que nous puissions offrir la meilleure expérience utilisateur.</li>
+            </ul>
+            <p>
+                Des informations détaillées sur les cookies, leur objectif, leur durée de vie, leur date d'expiration et bien plus encore sont disponibles dans notre <a href="https://www.islonline.com/legal/cookies.htm">Politique en matière de cookies</a> et notre <a href="https://www.islonline.com/legal/privacy-policy.htm">Politique de confidentialité</a>. Vous pouvez mettre à jour vos préférences en matière de cookies à tout moment.
+            </p>
+            <div class="text-center">
+                <ul class="list-actions list-unstyled list-inline">
+                    <li><a href="javascript:void(0);" class="btn btn-cta" onclick="setCookiesConsent('.cookie-warning',true);">Accepter tous</a></li>
+                    <li><a href="javascript:void(0);" class="btn btn-primary" onclick="setCookiesConsent('.cookie-warning',false);">Cookies essentiels uniquement</a></li>
+                    <li ><a href="https://www.islonline.com/legal/cookies.htm#manage-settings" class="btn btn-primary" onclick="setCookiesConsent('.cookie-warning',false);">Gérer les cookies</a></li>
+                </ul>
+                <ul class="list-bottom-links list-unstyled list-inline">
+                    <li>
+                        <a href="https://www.islonline.com/join/" class="gray-text-link">Rejoigndre une session</a>
+                    </li>
+                    <li>
+                        <a href="https://www.islonline.net/start/ISLLight?branch=any&amp;stable_since=2014-01-01" class="gray-text-link" rel="nofollow">Télécharger ISL Light</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+		
+        <footer class="clear">
+            <div class="footer wrapper ">
+				<p class="copyright">
+					<span class="footer-left">&copy; 2003-2024 <a target="_blank" href="https://www.islonline.com">ISL Online</a></span>
+					<span class="footer-right">
+						
+						<a target="_blank" href="https://www.islonline.com/help/?hl=fr">Manuels</a>
+						&#x7c;
+						<a href="/users/main/change_language.html">Français</a>
+						
+					</span>
+				</p>
+            </div>
+        </footer>
+		
+			</div>
+		
+		</div>
+		
+		</div>
+		
+		
+		
+	<script>
+        
+            var loggedIn = false;
+        
+
+        var detectedGeoipCountry = 'FR';
+        var langVariant = 'fr';
+        var langCode = 'fr';
+        var mytoken = 'cf1o7ehqtuk2n++Dj+83+A==';
+        var secureRedir = '2_hyJj1rcB4Ec5gdQIkAqNoNc_CVzDGzu20JLqjZza2CumfJKzT4w3axeDZjxWIuJh1Ce25kOnH37xdmE8AFQXQCDB_dF6uHMAtXdW3rhRwLFmjr3er_3PvhqqXL26Dvrncg4w6x8mOhdEccwSNfCk2UpyCe_Ecu.ivJWgN.sc.RmdqGcXReGrlvuJmETKj1g3FdmBKiM5HK5Xj.oLqepAZY9LTW_oaqDkRYrXYJbswF3wdw0Uhd1IrXT887RexhwbKOvxO5WLXDEa_LqDTn6AdixtpaBgI0UtH.4iyrfaJbxcajI9Fup2X8erqKP2s3LJjIE2g.pVEs8ggwTEy8Q6cinNh6OeatNDu3wE2DM8ld.ojQ5mBAEB9AEC';
+        function setVersion(setNew) {
+        	if(setNew) {
+        		setComVersionCookie('flag_enable').done(function() {
+	                location.reload();
+	            });
+        	} else {
+        		document.location.href = 'https://www.islonline.com/set-cookies.htm?flag_disable=www_5288&flag_expiry=60&redir=' + encodeURIComponent(document.location.href.replace('account','islv61'));
+        	}
+        }
+        function setComVersionCookie(queryParamKey) {
+        	var URL = 'https://www.islonline.com/set-cookies.htm';
+	        return ajax = $.ajax({
+	            url:URL + '?' + queryParamKey + '=www_5288', 
+	            method : "GET",
+	            xhrFields: {
+	                withCredentials: true
+	            }
+	        });
+        }
+	</script>
+	<script type="text/javascript" src="/webspace/account/notifications.js"></script>
+	<script type="text/javascript" src="/webspace/account/scripts.js"></script>
+	<!-- detected country code: FR -->
+	
+	</body>
+</html>

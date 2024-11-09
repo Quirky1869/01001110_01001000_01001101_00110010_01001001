@@ -1,0 +1,1354 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="iso-8859-1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="verify-v1" content="JEWEAwu3H2WZFhofIkSSwReRLX3LKXx8vS893JY3xVw=" />
+
+<title>GitLab corrige en urgence deux failles critiques - Le Monde Informatique</title>
+
+<meta name="description" content="Intrusion, Hacking et Pare-feu : Le spécialiste en dépôt de code open source et solutions devops GitLab a publié des mises à jour de sécurité pour corriger deux vulnérabilités..." />
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,600,700" rel="stylesheet"> 
+<link href="/styles/normalize-min.css" rel="stylesheet">
+<link href="/styles/grille-min.css" rel="stylesheet">
+<link href="/styles/pictos-min.css" rel="stylesheet">
+<link href="/styles/template.css?v=9" rel="stylesheet">
+<link href="/styles/template-lg.css" rel="stylesheet">
+<link href="/styles/template-xl.css" rel="stylesheet">
+<link href="/styles/template-print.css" rel="stylesheet" media="print" />	
+<link rel="shortcut icon" href="https://www.lemondeinformatique.fr/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" href="https://www.lemondeinformatique.fr/favicon-16.ico" sizes="16x16">
+<link rel="icon" type="image/png" href="https://www.lemondeinformatique.fr/favicon-32.ico" sizes="32x32">
+<link rel="icon" type="image/png" href="https://www.lemondeinformatique.fr/favicon-96.ico" sizes="96x96">
+<link rel="apple-touch-icon" sizes="60x60" href="https://www.lemondeinformatique.fr/apple-60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://www.lemondeinformatique.fr/apple-76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://www.lemondeinformatique.fr/apple-114.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://www.lemondeinformatique.fr/apple-144.png">
+<meta name="msapplication-TileImage" content="https://www.lemondeinformatique.fr/apple-144.png">
+<meta name="msapplication-TileColor" content="#FFFFFF"> 
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- didomi -->
+<!-- Didomi -->
+<script type="text/javascript">window.gdprAppliesGlobally=true;(function(){function n(e){if(!window.frames[e]){if(document.body&&document.body.firstChild){var t=document.body;var r=document.createElement("iframe");r.style.display="none";r.name=e;r.title=e;t.insertBefore(r,t.firstChild)}else{setTimeout(function(){n(e)},5)}}}function e(r,a,o,s,c){function e(e,t,r,n){if(typeof r!=="function"){return}if(!window[a]){window[a]=[]}var i=false;if(c){i=c(e,n,r)}if(!i){window[a].push({command:e,version:t,callback:r,parameter:n})}}e.stub=true;e.stubVersion=2;function t(n){if(!window[r]||window[r].stub!==true){return}if(!n.data){return}var i=typeof n.data==="string";var e;try{e=i?JSON.parse(n.data):n.data}catch(t){return}if(e[o]){var a=e[o];window[r](a.command,a.version,function(e,t){var r={};r[s]={returnValue:e,success:t,callId:a.callId};if(n.source){n.source.postMessage(i?JSON.stringify(r):r,"*")}},a.parameter)}}if(typeof window[r]!=="function"){window[r]=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}}e("__uspapi","__uspapiBuffer","__uspapiCall","__uspapiReturn");n("__uspapiLocator");e("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn");n("__tcfapiLocator");(function(e){var t=document.createElement("link");t.rel="preconnect";t.as="script";var r=document.createElement("link");r.rel="dns-prefetch";r.as="script";var n=document.createElement("link");n.rel="preload";n.as="script";var i=document.createElement("script");i.id="spcloader";i.type="text/javascript";i["async"]=true;i.charset="utf-8";var a="https://sdk.privacy-center.org/"+e+"/loader.js?target="+document.location.hostname;if(window.didomiConfig&&window.didomiConfig.user){var o=window.didomiConfig.user;var s=o.country;var c=o.region;if(s){a=a+"&country="+s;if(c){a=a+"&region="+c}}}t.href="https://sdk.privacy-center.org/";r.href="https://sdk.privacy-center.org/";n.href=a;i.src=a;var d=document.getElementsByTagName("script")[0];d.parentNode.insertBefore(t,d);d.parentNode.insertBefore(r,d);d.parentNode.insertBefore(n,d);d.parentNode.insertBefore(i,d)})("f0c52c20-b8cf-485b-a4b4-c222da28676d")})();</script>
+<!-- gav3 -->
+<script>
+dataLayer = [{
+    'page': 'securite_actualite_single-article',
+    'themes' : ["securite","intrusion,-hacking-et-pare-feu"],
+    'sponsor' : 'ASid-0-'
+}];
+console.log('page: securite_actualite_single-article');
+console.log('themes: ["securite","intrusion,-hacking-et-pare-feu"]');
+console.log('sponsor: ASid-0-');
+</script>
+
+    <script type="didomi/javascript">
+
+        $.ajax('https://www.lemondeinformatique.fr/tracking/adtech.php?id='+'UNKNOW'+'&ip='+'624984026' ).done(function(data)
+        {
+            cookieVal = JSON.parse(data);
+            var now = new Date();
+            now.setTime(now.getTime() + 1209600000);
+            document.cookie = "adcomp="+cookieVal.company+";expires="+now.toGMTString()+";path=/";
+            dataLayer.push({'customer_company': cookieVal.company});
+            // cookieVal.themes
+        }).fail(function() {
+            var now = new Date();
+            now.setTime(now.getTime() + 172800000);
+            document.cookie = "adcomp=NONE;expires="+now.toGMTString()+";path=/";
+            dataLayer.push({'customer_company': 'NONE'});
+        });
+
+    </script>
+    
+<!-- Google Tag Manager -->
+<script type="didomi/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KJCQ767');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Matomo -->
+<script type="didomi/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  
+  _paq.push(['HeatmapSessionRecording::disable']);
+  
+  (function() {
+    var u="https://lemondeinformatique.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='//cdn.matomo.cloud/lemondeinformatique.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+<script type="didomi/javascript">
+    var idsessionidg = "42e85a8f1ade9b32f97949d4edfd637f";
+    var urlDestTrackIdg = "https://www.lemondeinformatique.fr/";
+</script>
+
+<link rel="image_src" href="https://images.itnewsinfo.com/lmi/articles/grande/000000095554.png"/>
+	<link rel="canonical" href="https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-en-urgence-deux-failles-critiques-92663.html" />	<link rel="amphtml" href="https://www.lemondeinformatique.fr/actualites/lireamp-gitlab-corrige-en-urgence-deux-failles-critiques-92663.html"> 
+<meta name="twitter:card" 		 content="summary" />
+<meta name="twitter:site" 		 content="@MondeInformatiq" />
+<meta property="og:url"          content="https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-en-urgence-deux-failles-critiques-92663.html" />
+<meta property="og:site_name"    content="LeMondeInformatique" />
+<meta property="og:type"         content="article" />
+<meta property="og:title"        content="GitLab corrige en urgence deux failles critiques - Le Monde Informatique" />
+<meta property="og:description"  content="Le sp&eacute;cialiste en d&eacute;p&ocirc;t de code open source et solutions devops GitLab a publi&eacute; des mises &agrave; jour de s&eacute;curit&eacute; pour corriger deux vuln&eacute;rabilit&eacute;s..." />
+<meta property="og:image"        content="https://images.itnewsinfo.com/lmi/articles/grande/000000095554.png" /><script type="text/javascript">
+/* Chargement des PUB Adtech */
+function loadPub(sectionNom)
+{
+	$.getJSON("https://www.lemondeinformatique.fr/ajax/recuperation-pub.php", {page: sectionNom}, function(data) {
+
+		$(".pub-Adtech").not( ".loaded" ).each(function(index, content) {
+
+			var attr = $(this).attr('id');
+
+			if (typeof attr === typeof undefined || attr === false)
+			{
+
+				var dimension 	= $(this).data('dimension');
+				var position 	= $(this).data('position');
+				var theme 		= $(this).data('theme');
+
+				if((typeof dimension === typeof undefined || dimension === false) || (typeof position === typeof undefined || position === false) ) return true;
+				if(typeof theme === typeof undefined || theme === false)	theme = 0;
+
+				if(	typeof data[sectionNom] === typeof undefined || data[sectionNom] === false ||
+					typeof data[sectionNom][theme] === typeof undefined || data[sectionNom][theme] === false ||
+					typeof data[sectionNom][theme][dimension] === typeof undefined || data[sectionNom][theme][dimension] === false ||
+					typeof data[sectionNom][theme][dimension][position] === typeof undefined || data[sectionNom][theme][dimension][position] === false
+				)
+				{
+					if(typeof data['divers_autre'] === typeof undefined || data['divers_autre'] === false ||
+						typeof data['divers_autre'][theme] === typeof undefined || data['divers_autre'][theme] === false ||
+						typeof data['divers_autre'][theme][dimension] === typeof undefined || data['divers_autre'][theme][dimension] === false ||
+						typeof data['divers_autre'][theme][dimension][position] === typeof undefined || data['divers_autre'][theme][dimension][position] === false)
+						return true;
+					else
+						var id 	= parseInt(data['divers_autre'][0][dimension][position]);
+				}
+				else
+					var id 	= parseInt(data[sectionNom][theme][dimension][position]);
+
+				var containerId 	= id+'-'+index+parseInt($(this).offset().top);
+
+				$(this).attr('id', containerId);
+
+                //console.log(containerId + ' : not-loaded');
+
+                $(this).addClass( "not-loaded" );
+				displayPub($(this));
+
+			}
+		});
+	});
+}
+
+function displayPub(pub)
+{
+    if(pub.length == 1) {
+        var firstPub = pub;
+        var positionPub = firstPub.offset();
+        var scrollTop = $(window).scrollTop();
+        var scrollBottom = scrollTop + window.innerHeight;
+        //console.log(firstPub.attr('id') + ' : ' + scrollTop + ' ' + scrollBottom + ' ' + positionPub.top);
+
+        if (positionPub.top <= scrollBottom && positionPub.top >= scrollTop) {
+
+            firstPub.removeClass("not-loaded");
+            firstPub.addClass("loaded");
+
+            //console.log(firstPub.attr('id') + ' : loaded');
+
+            var dimension = firstPub.data('dimension');
+            var containerId = firstPub.attr('id');
+            var id = parseInt(containerId.split('-')[0]);
+
+            ADTECH.config.placements[id] = {sizeid: dimension, params: {alias: '', target: '_blank'}};
+            ADTECH.config.placements[id].adContainerId = containerId;
+            ADTECH.getFinalConfigProperty(id, "gtsTime");
+
+            ADTECH.loadAd(id);
+        }
+    }
+}
+
+/*
+	Gestion des blocs qui restent fixe grace aux toboggans
+*/
+function loadToboggan()
+{
+	if(document.querySelector(".toboggan") != 'null')
+	{
+		if(window.innerWidth > 992)
+		{
+			window.onscroll = function()
+			{	
+				var screen_top = window.pageYOffset;
+				var toboggans = document.querySelectorAll('.toboggan');
+
+				[].forEach.call(toboggans, function(toboggan) {
+
+					var bloc 				= $('.bloc',toboggan);
+					var bloc_width	 		= $(bloc).outerWidth()
+					var bloc_height 		= $(bloc).outerHeight();
+					var position_top  		= getElemDistance(toboggan) - 20;	// toboggan top - 20px de marge
+					var toboggan_height 	= $(toboggan).height();
+					var position_bottom 	= position_top + toboggan_height - bloc_height; 
+
+					if((screen_top >= position_top) && (screen_top <= position_bottom) && $(bloc).hasClass("fixed-bloc") == false)
+					{
+						if($(bloc).hasClass("bottom") == true)	$(bloc).removeClass("bottom");
+						$(bloc).addClass("fixed-bloc");
+						$(bloc).css('width',bloc_width+'px');
+					}
+					else if(screen_top > position_bottom && $(bloc).hasClass("fixed-bloc") == true)
+					{
+						$(bloc).removeClass("fixed-bloc").addClass("bottom");
+					}
+					else if(screen_top < position_top && $(bloc).hasClass("fixed-bloc") == true)
+					{
+						$(bloc).removeClass("fixed-bloc");
+					}
+
+				});
+			}
+			//console.log(screen_top+' '+position_top+' '+position_bottom);
+		}
+		else
+		{
+
+		}
+	}
+}
+
+/* Calcul hauteur col droite et toboggan */
+function loadDimensionContentRightAndToboggan()
+{
+	$(".content > div").each(function(index, content) {
+		
+		var attr = $('.content-right',content).attr('style');
+		if (typeof attr === typeof undefined || attr === false)
+		{
+			if(window.innerWidth > 992)
+			{
+				var height = $(content).height();
+				$('.content-right',content).css("height",height+"px");
+
+				var blocs_height = 0;
+				var bloc_fix = 1;
+				var bloc_move = 0;
+
+				$(".content-right .bloc",content).each(function(index, bloc) {
+
+					if(! $(bloc).closest(".toboggan").length )
+					{
+						blocs_height = blocs_height + $(bloc).outerHeight();
+						bloc_fix = bloc_fix + 1;
+					}
+					else
+					{
+						bloc_move = bloc_move + 1;
+					}
+				});
+				var toboggan_height 	= ((height - blocs_height)/bloc_move) - (bloc_fix*40); // 40px de marge par bloc
+				$('.content-right .toboggan',content).css("height",toboggan_height+"px");
+			}
+			else
+			{
+				$('.content-right',content).css("height","auto");
+				$('.content-right .toboggan',content).css("height","auto");
+			}
+		}
+	});
+}
+
+var getElemDistance = function ( elem ) {
+	var location = 0;
+	if (elem.offsetParent) {
+		do {
+			location += elem.offsetTop;
+			elem = elem.offsetParent;
+		} while (elem);
+	}
+	return location >= 0 ? location : 0;
+};
+
+
+/* RECHERCHE */
+function lookup(inputString)
+{
+	var suggestions;
+	var timer;
+
+	if(inputString.length <= 2){
+
+		$('#suggestContainer').fadeOut();
+	}
+
+	if(inputString.length > 2){
+
+		$.post("https://www.lemondeinformatique.fr/recherche/requeteElasticHeader2.php", {queryString: inputString}, function(data) {
+
+			data = JSON.parse(data);
+
+			$('#suggestHeaderAllSearch').html(data.all);
+			$('#headerThemeSearch').html(data.theme);
+			$('#headerSponsorSearch').html(data.sponsor);
+			$('#suggestContainer').fadeIn();
+
+			if(data.sponsor == '')
+			{
+				$('#title-sponsor').hide();
+			}
+				
+		});
+	}
+}
+/*
+	Gestion du sondage express
+*/
+function affiche_sondage_express(div,reponse)
+{
+	jQuery.ajax(
+	{
+		url: "https://www.lemondeinformatique.fr/blocs/sondage_express.php",
+		type:"post",
+		data:
+		{
+			code:jQuery(div).data("code"),
+			reponse:reponse
+		},
+		success: function(data) 
+		{
+			jQuery(div).css('background','none');
+			jQuery(div).html(data);
+		}
+	});
+}
+
+function loadSondageExpress()
+{
+	jQuery(".sondage_question_affiche").each(function()
+	{
+		var code = jQuery(this).data("code");
+		var div = this;
+		var reponse = "";
+		
+		affiche_sondage_express(div,reponse);
+	});
+
+	$(".sondage_question_affiche").on( "click", ".sondage_question_voter" ,function(){
+
+		var div = jQuery(this).parents(".sondage_question_affiche");
+		
+		tab_reponse = new Array();
+		jQuery("input:checked",div).each(function()
+		{
+			tab_reponse.push(jQuery(this).val());
+		});			
+		var reponse = tab_reponse.join(",");
+					
+		affiche_sondage_express(div,reponse);
+	});
+}	
+
+
+/*
+	Gestion popup (connexion, inscription..)
+*/
+function loadPopup()
+{
+	$('body').on( 'click', '.link-popup', function() {   
+
+		if($("body").hasClass("overflow-hidden"))
+		{
+			$(".popup").remove();
+		}
+		else
+		{
+			$("body").addClass("overflow-hidden");
+			$('body').prepend('<section class="overlay"><img width="80px" height="80px" src="https://images.itnewsinfo.com/lmi/site/loader.gif" class="loader" /></section>');
+		}
+		
+		var urlPopup = 	$(this).attr('href');
+		var pattern = /\.(gif|jpg|jpeg|tiff|png)$/i;
+		if( pattern.test(urlPopup) )
+		{
+		    $('.overlay').prepend('<div class="popup popup-image"><div class="close close-popup icon-cancel"></div><img src="'+urlPopup+'" /></div>');
+		}
+		else
+		{
+			var popup = $(this);
+			$.ajax({
+			   type: "GET",
+			   url: urlPopup,
+			   data: "redirect="+popup.data('redirect'),
+			   success: function(msg){
+
+			   		if(msg == 'refresh')	
+			   		{
+			   			location.reload(); 
+			   		}
+			   		else if(msg == 'compte')	
+			   		{
+			   			document.location.href = "https://www.lemondeinformatique.fr/compte_utilisateur/private/profil.php";
+			   		}
+				   	else
+				   	{
+				   		$('.overlay').prepend('<div class="popup"><div class="close close-popup icon-cancel"></div>'+msg+'</div>');
+				   	}
+			   }
+			 });
+		}
+		return false;
+	});
+
+	$('body').on( 'click', '.popup input.submit', function() {   
+        var string 	= $(this).closest('form').serialize();   
+        var url 	= $(this).closest('form').attr('action');
+        $.ajax({
+           type: "GET",
+           url: url,
+           data: string,
+           success: function(msg){
+
+                if(msg == 'refresh')   
+                {
+                    location.reload(); 
+                }
+                else if(msg == 'compte')    
+                {
+                    document.location.href = "https://www.lemondeinformatique.fr/compte_utilisateur/private/profil.php";
+                }
+                else
+                {
+                    $(".popup-content").remove();
+                    $(".popup").prepend(msg);
+                }
+           }
+         });
+    
+    });
+
+	$('body').on( 'click', '.popup .close-popup', function() {       
+        $(".overlay").remove();
+        $("body").removeClass("overflow-hidden");
+    });
+
+
+    var hashtag = window.location.hash.substr(1);
+    if(hashtag == 'inscriptionCompteLMI')
+    {
+        history.pushState({ path: this.path }, '', document.location.protocol +"//"+ document.location.hostname + document.location.pathname);
+        $('body').append('<a id="subscribeDisplay" class="link-popup" href="https://www.lemondeinformatique.fr/compte_utilisateur/popup/inscription.php"></a>');
+        $('#subscribeDisplay').click();
+    }
+}
+
+/*
+	Gestion cookie validation
+*/
+function loadCookie()
+{
+	$("#infos_cookie div.fermer_cookie").click( function() {
+		jQuery.ajax({
+			url: 'https://www.lemondeinformatique.fr//ajax/fermer_popup.php?param=cookie',
+			success: function(data) {
+				jQuery('#infos_cookie').css('display','none');
+			}
+		});
+	});
+}
+
+/*
+	Gestion animation ancre
+*/
+function loadAnchor()
+{
+	$(function() {
+		$('a[href*="#"]:not([href="#"])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+					$('html, body').animate({
+						scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
+			}
+		});
+	});
+}
+
+
+/*
+	Gestion article parallax
+*/
+function loadParallaxArticle()
+{
+	if(document.querySelector(".next-actu") != null)
+	{
+		if(window.innerWidth > 992)
+		{
+			
+			var widthActu = $('.next-actu .container').outerWidth();
+			$('.next-actu').css('width',widthActu+'px');
+
+			var topActuScreen = $(".next-actu").offset().top;
+			var ratio 	= window.innerHeight * (4/5);
+
+			$(window).scroll(function() {
+		    	var scrolled = $(window).scrollTop(); 
+			    var margeDefault = 400;
+			    var shadowDefault = 30; 
+
+			    var topActu = topActuScreen - margeDefault;
+
+			    var rupture = ratio + scrolled;
+			    if(rupture >= topActu)
+				{
+					if($('.next-actu').attr('data-view') == 0)
+					{
+						// Page vue Analytics
+						ga('send', 'pageview', $('.next-actu').data('url'));
+						ga('send', 'event', 'Article_suivant', 'Lecture');
+						$('.next-actu').attr('data-view', 1);
+					}
+
+					margin = (rupture - topActu)*0.6 - margeDefault;
+					shadow = shadowDefault - Math.round((rupture - topActu)/20);
+					if(margin >= 0)	margin = 0;
+					if(shadow <= 0)	shadow = 0;
+				}
+				else
+				{
+					var margin = -margeDefault;
+					var shadow = shadowDefault;
+				}
+			    
+				if(margin != 0 || shadow != 0)
+				{
+				    $('.next-actu').css('margin-top',margin+'px');
+				    $('.next-actu').css('box-shadow','0 -9px '+shadow+'px -9px #000');
+				}
+			    
+			    //console.log(scrolled+' '+margin+' '+((rupture - topActu)*0.6)+' '+topActu+' '+rupture);
+			});
+		}
+		else
+		{
+			$('.next-actu').css('margin-top','0px');
+		    $('.next-actu').css('box-shadow','none');
+		    $('.next-actu').css('width','auto');
+		}
+	}
+}
+
+
+/*
+	Gestion du menu
+*/
+function loadMenu()
+{
+	// Masquer suggestions de recherche quand click en dehors
+	$('body').on( "click", function(screen) {
+
+		$('.hideSugest').on( "click", function(screen) {
+			screen.stopPropagation();
+		});
+
+		$('#suggestContainer').fadeOut();
+	});
+
+
+	var stateMenu = 0;
+	//Gestion interaction header
+	$(window).resize(function() {
+
+		if( $(window).width() > 1230 ) // Annulation effet et affichage du menu mobile
+		{
+			//console.log($(window).width());
+			$('#menu').removeClass('selected');
+			$('.icon-menu').removeClass("selected");
+			$('#menu > li').removeClass("selected").removeClass("notSelected");
+			stateMenu = 0;
+		}
+	});
+
+	$('.icon-menu').on("click", function () {	// Affichage menu et animation du burger
+
+		if (stateMenu == 0) {
+		stateMenu = 1;
+			$('#menu').addClass('selected');
+			$('.icon-menu').addClass("selected");
+		}
+		else {
+			stateMenu = 0;
+			$('#menu').removeClass('selected');
+			$('.icon-menu').removeClass("selected");
+		}
+	});
+
+	$('.openNav').on("click", function () {		// Effet de transparence et affichage des sous menu en mode mobile
+
+		if( $(window).width() < 1230 )
+		{
+			$('.openNav,.item-nav').addClass("notSelected");
+			$(this).removeClass("notSelected");
+
+			if ($(this).hasClass("selected"))
+			{
+				$(this).removeClass("selected");
+				$('.openNav,.item-nav').removeClass("notSelected");
+			}
+			else 
+			{
+				$(this).addClass("selected");
+			}
+		}
+	});
+}
+
+/* Adtech */
+function myCallback ()
+{
+    console.log(arguments);
+}
+
+/* Bloc inscription NL */
+function sendParamForPopupNL(inputString)
+{
+    $('.submit-bloc-nl').attr('href', 'https://www.lemondeinformatique.fr/compte_utilisateur/popup/newsletter.php?preselect=1&email='+inputString);
+}
+</script></head>
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJCQ767" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="pub-Adtech pixel" data-dimension="16" data-theme="36" data-position="Footer"></div>
+<div id="Habillage" class="bloc-pub Habillage"></div><div id="Notification" class="bloc-pub Notification"></div><div id="Interstitiel" class="bloc-pub Interstitiel"></div>    <div id="dialogueBox" class="box-question">
+        <div onclick="ga(\'send\', \'event\', \'Contextualisation\', \'Clics\', \'box_question_etude\');" class="close"></div>
+        <div class="contenu">
+                            <div class="sous-titre">La question du moment</div>
+                <div class="question">Avez-vous mis en place des formations à l’IA générative ?</div>
+
+                <form id="form_question" method="get" action="">
+                    <ul class="choix">
+                                                    <li>
+                                <input type="radio" class="radio" value="1" name="question[1417]" id="box_choix14171" />
+                                <label for="box_choix14171">Oui</label>
+                            </li>
+                                                        <li>
+                                <input type="radio" class="radio" value="2" name="question[1417]" id="box_choix14172" />
+                                <label for="box_choix14172">En cours de mise en place</label>
+                            </li>
+                                                        <li>
+                                <input type="radio" class="radio" value="3" name="question[1417]" id="box_choix14173" />
+                                <label for="box_choix14173">En cours de réflexion</label>
+                            </li>
+                                                        <li>
+                                <input type="radio" class="radio" value="4" name="question[1417]" id="box_choix14174" />
+                                <label for="box_choix14174">J'aimerais bien</label>
+                            </li>
+                                                        <li>
+                                <input type="radio" class="radio" value="5" name="question[1417]" id="box_choix14175" />
+                                <label for="box_choix14175">Non</label>
+                            </li>
+                                                </ul>
+                    <input type="hidden" name="etude" value="118" />
+                    <input type="hidden" name="etqu" value="1417" />
+                    <input type="hidden" name="site" value="lmi" />
+                </form>
+                <a target="_blank" class="logo" href="https://www.cio-online.com/etudes/"></a>
+                        </div>
+    </div>
+    
+    <script>
+        jQuery('#dialogueBox input').click( function() {	
+            var string = $(this).closest('#form_question').serialize();	
+            $.ajax({
+               type: "GET",
+               url: "https://www.lemondeinformatique.fr/ajax/reponse_etude.php",
+               data: string,
+               success: function(msg){
+                    $("#form_question").remove();
+                    $("#dialogueBox .close").remove();
+                    $("#dialogueBox .question").after(msg);
+               }
+             });
+        
+        });
+        
+        // Gestion fermeture Box Popup Dialogue
+        jQuery("#dialogueBox .close").click( function() {
+            affichageBox = 'jamais';
+    
+            jQuery.ajax
+            ({
+                url: 'https://www.lemondeinformatique.fr/ajax/fermer_popup.php?param=etude',
+                success: function(data) 
+                {
+                    dialogueBox.animate({ 
+                        opacity:0 
+                      }, 300 , function() { dialogueBox.css('display','none'); });
+                }
+            });
+        });
+        
+        var dialogueBox = $('#dialogueBox'),
+        affichageBox = 'non',
+        hauteurBox = dialogueBox.height();
+            
+        $(document).on('scroll', function (evt) {
+            var newScroll = $(document).scrollTop();
+            // Box popup dialogue
+            if(newScroll > 900 && affichageBox == 'non')
+            {
+                dialogueBox.css('bottom','-'+hauteurBox+'px');
+                dialogueBox.css('opacity','0');
+                dialogueBox.css('display','block');
+                dialogueBox.animate({ 
+                    bottom: "0px",
+                    opacity:1 
+                  }, 1000 );
+                affichageBox = 'oui';
+            }
+            else if(newScroll <= 400 && affichageBox == 'oui')
+            {
+                dialogueBox.animate({ 
+                    bottom: '-'+hauteurBox+'px',
+                    opacity:0 
+                  }, 1000 );
+                affichageBox = 'non';
+            }
+        
+        });
+    </script>
+    
+<header id="header">
+	<div class="container-fluid">
+		<div id="logoHeadLMI">
+			<a href="https://www.lemondeinformatique.fr/">
+				<figure></figure>
+			</a>
+		</div>
+		<div id="nav-mobil">
+			<ul>
+				<li class="iconNavMob loupe"><a href="https://www.lemondeinformatique.fr/recherche/index.html" class="icon-search"></a></li>
+									<li class="iconNavMob paper"><a href="https://www.lemondeinformatique.fr/compte_utilisateur/newsletter.php" class="icon-mail"></a></li>
+					<li class="iconNavMob iconAccountHead"><a href="https://www.lemondeinformatique.fr/compte_utilisateur/popup/connexion.php" class="icon-user link-popup" data-redirect="compte"></a></li>
+									<li class="iconNavMob"><span class="icon-menu"></span></li>
+			</ul>
+		</div>
+		<nav>
+			<ul id="menu">
+				<li id="actuNav" class="openNav">Actualités <span class="icon-down-open"></span>
+					<ul>
+						<div class="containerTheme">
+															<li><a class="title" href="https://www.lemondeinformatique.fr/big-data-139.html">/ BIG DATA</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/business-informatique-internet-et-nouvelles-technologies-13.html">/ BUSINESS</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/le-monde-du-cloud-computing-8.html">/ CLOUD</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/datacenter-5.html">/ DATACENTER</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/emploi-informatique-internet-et-nouvelles-technologies-12.html">/ EMPLOI</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/hardware-et-materiel-informatique-9.html">/ HARDWARE</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/internet-et-e-business-11.html">/ INTERNET</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/internet-des-objets-143.html">/ IOT</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/logiciel-6.html">/ LOGICIEL</a></li>
+													</div>
+						<div class="containerTheme">
+															<li><a class="title" href="https://www.lemondeinformatique.fr/internet-sans-fil-et-mobilite-2.html">/ MOBILITÉ</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/systeme-d-exploitation-windows-macos-linux-10.html">/ OS</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/pme-informatique-web-et-nouvelles-technologies-14.html">/ PME</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/reseau-1.html">/ RÉSEAU</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/securite-informatique-3.html">/ SÉCURITÉ</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/gestion-et-stockage-des-donnees-4.html">/ STOCKAGE</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/transformation-numerique-146.html">/ TRANSFORM. NUMÉRIQUE</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/virtualisation-informatique-7.html">/ VIRTUALISATION</a></li>
+															<li><a class="title" href="https://www.lemondeinformatique.fr/voiture-connectee-151.html">/ VOITURE CONNECTÉE</a></li>
+														<li class="read-more-nav"><a href="https://www.lemondeinformatique.fr/actualites/toute-l-actualite.html">Toute l'actualité <span class="icon-right-open"></span></a></li>
+						</div>
+					</ul>
+				</li>
+				<li class="item-nav"><a href="https://www.lemondeinformatique.fr/les-dossiers/tous-les-dossiers-page-1.html">Dossiers</a></li>
+                <li class="item-nav"><a href="https://www.lemondeinformatique.fr/evenements/">événements</a>
+				<!--<li class="item-nav"><a href="https://www.lemondeinformatique.fr/actualites/chroniques.html">Chroniques</a></li>-->
+				<li id="serviceNav" class="openNav">Services <span class="icon-down-open"></span>
+					<ul>
+												<li><a class="title" href="https://www.lemondeinformatique.fr//actualites/chroniques.html"><span class="icon-pencil"></span>chroniques</a></li>
+												<li><a class="title" href="https://www.lemondeinformatique.fr/agenda/"><span class="icon-table"></span> agenda</a></li>
+												<li><a class="title" href="https://www.lemondeinformatique.fr/salaires-informatique/"><span class="icon-chart-bar"></span> comparateur de salaires</a></li>
+												<li><a class="title" href="https://www.lemondeinformatique.fr/couvertures/index.html"><span class="icon-newspaper"></span> couvertures LMI</a></li>
+											</ul>
+				</li>
+				<li class="item-nav sponsor-Nav"><a href="https://www.lemondeinformatique.fr/livre-blanc/">Livres-Blancs</a></li>
+				<li class="item-nav sponsor-Nav lastIconNav"><a href="https://www.lemondeinformatique.fr/espace-partenaire/centre-de-documentation.html">Partenaires</a></li>
+									<li id="iconPaperHead" class="iconNav"><a href="https://www.lemondeinformatique.fr/compte_utilisateur/newsletter.php" class="icon-mail"></a></li>
+					<li class="notifWonder">
+						<div id="wonderpush-subscription-switch" data-sentence="" data-on=" " data-off=" "></div>
+						<div id="activateNotification" class="infoNotification"><span>Cliquez ici pour activer les notifications</span></div>
+						<div id="desactivateNotification" class="infoNotification"><span>Cliquez ici pour désactiver les notifications</span></div>
+					</li>
+					<li class="iconNav iconAccountHead"><a href="https://www.lemondeinformatique.fr/compte_utilisateur/popup/connexion.php" class="icon-user link-popup" data-redirect="compte"></a></li>
+								</ul>
+		</nav>
+		<div id="searchContainer">
+			<form id="searchFormHeader" class="hideSugest" action="https://www.lemondeinformatique.fr/recherche/index.html">
+				<button type="submit" id="searchGlass" form="searchFormHeader"><span class="icon-search"></span></button>
+				<div id="container-input-search">
+					<input type="text" value="" id="inputSearchHeader" class="inputSearch" name="search" autocomplete="off" onkeyup="lookup(this.value);" />
+				</div>
+			</form>
+			<div id="suggestContainer">
+				<div id="suggestHeaderThemeSponsor" class="suggestStyle hideSugest">
+					<div id="containerThemeSearch">
+						<div class="section-title">
+							<h3 class="title">Sur le même thème</h3>
+						</div>
+						<ul id="headerThemeSearch"></ul>
+					</div>
+					<div id="containerSponsorSearch">
+						<div class="section-title">
+							<h3 class="title">Partenaires</h3>
+						</div>
+						<ul id="headerSponsorSearch"></ul>
+					</div>
+				</div>
+				<div id="suggestHeaderAllSearch" class="suggestStyle hideSugest"></div>
+			</div>
+		</div>
+	</div>
+			<aside class="currently gradient-content hidden-xs">
+			<div class="container">
+				<ul>
+					<li class="title">En ce moment :</li>
+					<!--
+					
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'IT TOUR 2022');" href="https://www.it-tour.fr/">IT TOUR 2022</a></li>
+					
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'PERSONNALITE IT 2021');" href="http://pubads.g.doubleclick.net/gampad/clk?id=5834786592&iu=/21821884434/lmi">Sondage: Personnalité IT 2021</a></li>
+					-->
+					<!--
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'EMPLOI 2022');" href="http://pubads.g.doubleclick.net/gampad/clk?id=5795147716&iu=/21821884434/lmi">Enquête Emploi IT 2022</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'BE READY');" href="http://pubads.g.doubleclick.net/gampad/clk?id=5700645252&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">Be Ready</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'HYBRID WORKPLACE');" href="http://pubads.g.doubleclick.net/gampad/clk?id=5702307071&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">Hybrid Workplace</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'UNIS DANS LA TECH');" href="http://pubads.g.doubleclick.net/gampad/clk?id=5700646473&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">Unis dans la Tech</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'HYBRID WORKPLACE');" href="http://pubads.g.doubleclick.net/gampad/clk?id=5786450092&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">Hybrid Workplace</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'HP WOLF SECURITY');" href="http://pubads.g.doubleclick.net/gampad/clk?id=5785079934&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">HP Wolf Security</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'IT TOUR DIGITAL 2022');" href="http://pubads.g.doubleclick.net/gampad/clk?id=5916119993&iu=/21821884434/lmi">IT Tour Digital 2022</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'BTE SD-WAN');" href="http://pubads.g.doubleclick.net/gampad/clk?id=6036493337&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">BOUYGUES TELECOM ENTREPRISES SD-WAN</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Bouygues Telecom Entreprises DAAS');" href="http://pubads.g.doubleclick.net/gampad/clk?id=6034351167&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">Bouygues Telecom Entreprises DAAS</a></li>
+					
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Bouygues Telecom Entreprises SD-WAN');" href="http://pubads.g.doubleclick.net/gampad/clk?id=6036493337&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">Bouygues Telecom Entreprises SD-WAN</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'LOCATION DE FLOTTE MOBILE');" href="http://pubads.g.doubleclick.net/gampad/clk?id=6034351167&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">LOCATION DE FLOTTE MOBILE</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'BTE SD-WAN');" href="http://pubads.g.doubleclick.net/gampad/clk?id=6036493337&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">BOUYGUES TELECOM ENTREPRISES SD-WAN</a></li>
+					
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'PERSONNALITE2022');" href="https://www.lemondeinformatique.fr/sondage-personnalite-it-2022/?tr=443">VOTEZ POUR LA PERSONNALITE IT 2022</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'CYBERSECURITE 2022');" href="https://www.lemondeinformatique.fr/cybersecurite/index.html"  style="background-color:#fff;color:#0FBE83!important">CyberSécurité 2022</a></li>
+					
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'HP Wolf Security');" href="http://pubads.g.doubleclick.net/gampad/clk?id=5842916107&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">HP Wolf Security</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Grands Thémas | Digital workspace');" href="https://themas.lemondeinformatique.fr/digital-workspace-le-travail-augmente/">Grands Thémas | Digital workspace</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Grands Thémas | CloudOps');" href="https://themas.lemondeinformatique.fr/thema/cloudops-cap-sur-le-multicloud/">Grands Thémas | CloudOps</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Grands Thémas | DataOps');" href="https://themas.lemondeinformatique.fr/thema/dataops-optimiser-la-chaine-data/">Grands Thémas | DataOps</a></li>
+
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Grands Thémas | Piloter l'entreprise en full SaaS');" href="https://themas.lemondeinformatique.fr/thema/piloter-lentreprise-en-full-saas/">Grands Thémas | Piloter l'entreprise en full SaaS</a></li>
+
+      <li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Cybersécurité digitale 2023');" href="https://www.lemondeinformatique.fr/cybersecurite-2023/">Cybersécurité digitale 2023</a></li>
+-->      
+
+<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Cybermatinées Sécurité 2024');" href="https://www.cybermatinees.fr/?bandeau-lmi">Cybermatinées Sécurité 2024</a></li>
+
+<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Grands Thémas | La DSI Ecoresponsable');" href="https://themas.lemondeinformatique.fr/thema/dsi-ecoresponsable/">Grands Thémas | La DSI Ecoresponsable</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Bflex-Webex : communications unifiées');" href="http://pubads.g.doubleclick.net/gampad/clk?id=6699891514&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">Bflex-Webex : communications unifiées</a></li>
+<!--
+<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Conférence data annuelle');" href="https://www.lemondeinformatique.fr/conferences/lire-conference-%7C-la-dsi-architecte-de-l-entreprise-data-driven-121.html">Conférence data annuelle LMI / CIO</a></li>
+<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Grands Thémas | Cyber Resilience');" href="https://themas.lemondeinformatique.fr/thema/cyber-resilience-preparer-le-jour-dapres/">Grands Thémas | Cyber Resilience</a></li>
+<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Trophée Personnalité IT');" href="https://www.lemondeinformatique.fr/sondage-personnalite-it-2023/">Trophée Personnalité IT</a></li>				 
+<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Trophée Innovation Startup');" href="https://www.lemondeinformatique.fr/sondage-innovation-startup-2023/">Trophée Startup</a></li>
+						-->	
+					<!--
+
+
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'PROTECTION DONNEES');" href="http://pubads.g.doubleclick.net/gampad/clk?id=5843588876&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">Protection des données</a></li>
+					
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Maîtrisez les coûts de votre flotte mobile');" href="http://pubads.g.doubleclick.net/gampad/clk?id=6335139584&iu=/21821884434" style="background-color:#fff;color:#0FBE83!important">Maîtrisez les coûts de votre flotte mobile</a></li>
+					
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'PROTECTION DONNEES');" href="http://pubads.g.doubleclick.net/gampad/clk?id=5843588876&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">Protection des données</a></li>
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'PROTECTION DONNEES');" href="http://pubads.g.doubleclick.net/gampad/clk?id=5843588876&iu=/21821884434/lmi" style="background-color:#fff;color:#0FBE83!important">Protection des données</a></li>
+					
+					
+					<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'CINUM LYON');" href="https://cinum-lyon2023.lemondeinformatique.fr/">CINUM LYON</a></li>
+          
+          <li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'IT Tour Paris');" href="https://www.it-tour.fr/programme-paris-2023-fl/?bandeaulmi">IT Tour Paris</a></li>
+
+<li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'Maîtrisez les coûts de votre flotte mobile');" href="http://pubads.g.doubleclick.net/gampad/clk?id=6335139584&iu=/21821884434"  style="background-color:#fff;color:#0FBE83!important">Maîtrisez les coûts de votre flotte mobile</a></li>
+-->
+
+
+
+
+
+						                    <li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'IA');" href="https://www.lemondeinformatique.fr/actualites/speciale-ia-306.html">IA</a></li>
+	                    	                    <li><a onclick="ga('send', 'event', 'Header_Moment', 'Clics', 'LMI Mag');" href="https://www.lemondeinformatique.fr/tout-savoir-sur-lmimag.html">LMI Mag</a></li>
+	                    
+                </ul>
+			</div>
+		</aside>
+		<div class="border gradient-content visible-xs"></div>
+		</header>
+
+<script>
+
+    // Gestion Boutton Wonderpush
+
+	var targetNode = document.getElementById('wonderpush-subscription-switch');
+	var config = { attributes: true, childList: true };
+
+	var callback = function(mutationsList)
+	{
+		for(var mutation of mutationsList)
+		{
+			if (mutation.type == 'childList')
+			{
+                if($( window ).width() >= 1260)
+                {
+                    $( "#wonderpush-subscription-switch" ).on( "mouseover", function()
+                    {
+                        if($('#wonderpush-subscription-switch-input').prop('checked'))
+                        {
+                            $('#desactivateNotification').show();
+                            $('#activateNotification').hide();
+                        }
+                        else
+                        {
+                            $('#desactivateNotification').hide();
+                            $('#activateNotification').show();
+                        }
+                    });
+
+                    $( "#wonderpush-subscription-switch" ).on( "mouseout", function()
+                    {
+                        $('#desactivateNotification').hide();
+                        $('#activateNotification').hide();
+                    });
+                }
+			}
+		}
+	};
+
+    var observer = new MutationObserver(callback);
+    observer.observe(targetNode, config);
+
+    $(window).scroll(function (event)
+    {
+        var scroll = $(window).scrollTop();
+
+        if(scroll > 500 && $( window ).width() < 1260)
+        {
+            $(".notifWonder").hide();
+        }
+    });
+
+</script>
+
+<div id="main">
+	<section class="pub-ban top">
+	    <div class="container">
+	        <div id="BanTop" class="pub-Adtech bloc-pub BanTop" data-dimension="225" data-theme="36" data-position="BanTop"></div>	    </div>
+	</section>
+<script>
+	themesLaraTrack = "Intrusion, Hacking et Pare-feu|Sécurité#Développement et Tests|Logiciel#Open Source|Logiciel";
+</script>
+<!-- getTexteArticle(Array,,36, true); --><!-- IsReserved:0 iIsConnected:--><!---->
+<article id="article0" class="article" data-next="true" data-count="0" data-view="1" data-url="/actualites/lire-gitlab-corrige-en-urgence-deux-failles-critiques-92663.html" itemscope itemtype="http://schema.org/NewsArticle">
+	
+<meta itemprop="datePublished" content="2024-01-12T16:22:57+0100"/>
+
+<header class="header-article">
+<div class="container gradient-content">
+<div class="breadcrumb mb-small">
+<a class="hidden-xs" href="https://www.lemondeinformatique.fr/actualites/toute-l-actualite.html">Toute l'actualité</a> <span class="separator hidden-xs">/</span> 
+<a rel="category tag" itemprop="articleSection" href="https://www.lemondeinformatique.fr/securite-informatique-3.html">Sécurité</a> <span class="separator">/</span> <a rel="category tag" itemprop="articleSection" href="https://www.lemondeinformatique.fr/intrusion-hacking-et-pare-feu-36.html"><b>Intrusion, Hacking et Pare-feu</b></a>
+</div>
+<h1 itemprop="headline" class="mb-small">GitLab corrige en urgence deux failles critiques</h1>
+<aside class="author">
+
+<div class="author-infos" itemprop="author" itemscope itemtype="http://schema.org/Person">
+<a itemprop="name" class="name" href="https://www.lemondeinformatique.fr/actualites/auteur-dominique-filippone-484.html"><b itemprop="name">Dominique Filippone</b></a>,
+<time class="date" content="2024-01-12" itemprop="datePublished" datetime="2024-01-12">
+publié le 12 Janvier 2024</time>
+
+</div>
+
+</aside>
+</div>
+</header>
+
+<div class="content">
+<div class="container relative">
+<div class="content-left">
+
+<div class="col-secondary visible-lg-block">
+<div class="toboggan mb-small">
+<div class="bloc bloc-share">
+<div class="infos">
+<div class="comment">
+<a href="#form_comment">0<span class="icon-chat-empty"></span></a>
+<small>Réaction</small>
+</div>
+<!--
+<div class="count">
+<a href="#share-section">0</a>
+<small>Partage</small>
+</div>
+-->
+</div>
+    <ul class="share">
+        <li><a onclick="ga('send', 'event', 'Partage', 'Clics', 'Facebook');"  target="_blank" class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-en-urgence-deux-failles-critiques-92663.html"></a></li>
+        <li><a onclick="ga('send', 'event', 'Partage', 'Clics', 'Twitter');" target="_blank" class="icon-twitter" href="https://twitter.com/intent/tweet?url=https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-en-urgence-deux-failles-critiques-92663.html"></a></li>
+        <!--  <li><a onclick="ga('send', 'event', 'Partage', 'Clics', 'GooglePlus');" target="_blank" class="icon-gplus" href="https://plus.google.com/share?url=https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-en-urgence-deux-failles-critiques-92663.html"></a></li> -->
+        <li><a onclick="ga('send', 'event', 'Partage', 'Clics', 'LinkedIn');" target="_blank" class="icon-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-en-urgence-deux-failles-critiques-92663.html"></a></li>
+        <!-- <li><a onclick="ga('send', 'event', 'Partage', 'Clics', 'Email');" class="icon-mail" href="mailto:?subject=Partage sur LMI&body=https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-en-urgence-deux-failles-critiques-92663.html"></a></li> -->
+    </ul>
+    </div>
+</div>
+
+		<div class="bloc-border-top">
+			<div class="gradient-sponsor border"></div>
+			<div class="bloc-container">
+				<h3>Livres blancs</h3>
+				<ul>
+									<li><a class="title sponsor" href="https://www.lemondeinformatique.fr/livre-blanc/l-active-directory-dimension-peu-visible-mais-critique-de-la-cybersecurite-comment-le-proteger-8377-tag-10.html">L'Active Directory, dimension peu visible mais critique de la cybersécurité : comment le protéger ?</a></li>
+										<li><a class="title sponsor" href="https://www.lemondeinformatique.fr/livre-blanc/les-grands-defis-de-la-cybersecurite-2023-2024-8259-tag-10.html">Les grands défis de la cybersécurité 2023-2024</a></li>
+										<li><a class="title sponsor" href="https://www.lemondeinformatique.fr/livre-blanc/perte-de-donnees -5-conseils-pour-y-faire-face-8319-tag-10.html">Perte de données : 5 conseils pour y faire face</a></li>
+									</ul>
+			</div>
+		</div>
+					
+</div>
+
+<div class="col-primary">
+<!-- getChapeauArticle -->
+<p class="description mb-small" itemprop="description">Le spécialiste en dépôt de code open source et solutions devops GitLab a publié des mises à jour de sécurité pour corriger deux vulnérabilités critiques. L'une d'elles au score CVSS de 10 pourrait être exploitée débouchant sur de la prise de contrôle de comptes sans interaction utilisateur.</p>
+<!-- getInfographieArticle -->
+<figure class="article-image mb-small"><img itemprop="image" src="https://images.itnewsinfo.com/lmi/articles/grande/000000095554.png" alt="GitLab a indiqué que la faille critique CVE-2023-2825 était présente depuis la version 16.1.0 de sa solution du 1er mai dernier. (crédit : Wikipedia)" title="GitLab a indiqué que la faille critique CVE-2023-2825 était présente depuis la version 16.1.0 de sa solution du 1er mai dernier. (crédit : Wikipedia)" /><figcaption>GitLab a indiqué que la faille critique CVE-2023-2825 était présente depuis la version 16.1.0 de sa solution du 1er mai dernier. (crédit : Wikipedia)</figcaption></figure>
+<!-- getPagination -->
+<div class="article-body" itemprop="articlebody">
+<p>Les failles de s&eacute;curit&eacute; au score CVSS de 10 ne courent pas les rues tant que cela. Apr&egrave;s <a href="https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-une-faille-critique-au-score-cvss-de-10-90543.html">la CVE-2023-2825 de mai dernier</a>, le sp&eacute;cialiste en d&eacute;p&ocirc;t de code open source et solutions devops Gitlab vient d'en corriger une autre.&nbsp;R&eacute;pertori&eacute; en tant que CVE-2023-7028, ce trou de s&eacute;curit&eacute; combl&eacute; par l'&eacute;diteur pourrait faciliter la prise de contr&ocirc;le d'un compte en envoyant des courriels de r&eacute;initialisation de mot de passe &agrave; une adresse &eacute;lectronique non v&eacute;rifi&eacute;e. Il faut donc appliquer sans tarder le correctif de cette vuln&eacute;rabilit&eacute;.</p>
+<p>GitLab a indiqu&eacute; avoir r&eacute;solu le probl&egrave;me dans les versions 16.5.6, 16.6.4 et 16.7.2 de ses offres Community et Enterprise, ainsi que dans les mises &agrave; jour 16.1.6, 16.2.9, 16.3.7 et 16.4.5. La soci&eacute;t&eacute; a &eacute;galement indiqu&eacute; que cette faille &eacute;tait pr&eacute;sente depuis la version 16.1.0 de sa solution du 1er mai dernier. &laquo;&nbsp;Dans ces versions, tous les m&eacute;canismes d'authentification sont concern&eacute;s. En outre, les utilisateurs dont l'authentification &agrave; deux facteurs est activ&eacute;e sont vuln&eacute;rables &agrave; la r&eacute;initialisation du mot de passe, mais pas &agrave; la prise de contr&ocirc;le du compte, car leur deuxi&egrave;me facteur d'authentification est n&eacute;cessaire pour se connecter &raquo;,&nbsp;<a href="https://about.gitlab.com/releases/2024/01/11/critical-security-release-gitlab-16-7-2-released/" target="_blank">a expliqu&eacute;</a> GitLab.</p>
+<p>La vuln&eacute;rabilit&eacute; a &eacute;t&eacute; signal&eacute;e dans le cadre du programme de bug bounty de GitLab.&nbsp;<a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-002/" target="_blank">Le Cert.fr a &eacute;galement donn&eacute; l'alerte dans une notification.</a></p>
+<p>GitLab a &eacute;galement corrig&eacute; une autre faille critique (CVE-2023-5356, CVSS score : 9.6) par laquelle un utilisateur peut d&eacute;tourner des int&eacute;grations Slack/Mattermost afin d'ex&eacute;cuter des commandes slash en tant qu'autre utilisateur.</p><div id="Inread" class="pub-Adtech bloc-pub Inread" data-dimension="16" data-theme="36" data-position="Inread"></div></div>
+
+<p class="contact-error mb-medium hidden-xs">Une erreur dans l'article? <a class="link-popup" href="https://www.lemondeinformatique.fr/divers/formulaire_contact_lmi.php?id=1&type=lmi&arti=92663">Proposez-nous une correction</a></p><aside class="author mb-medium">
+  <figure class="hidden-xs"><img src="https://images.itnewsinfo.com/idg/auteur/moyen/000000006958.jpg" /></figure>
+  <div class="author-infos" itemprop="author" itemscope itemtype="http://schema.org/Person">
+<div class="label">Article rédigé par</div>
+<a itemprop="name" class="name" href="https://www.lemondeinformatique.fr/actualites/auteur-dominique-filippone-484.html">Dominique Filippone</a><div class="job">Chef des actualités LMI </div>
+</div>
+</aside>
+
+<section id="share-section" class="share-section mb-medium">
+<p>Cet article vous a plu? <b>Partagez le !</b></p>
+    <ul class="share">
+        <li><a onclick="ga('send', 'event', 'Partage', 'Clics', 'Facebook');"  target="_blank" class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-en-urgence-deux-failles-critiques-92663.html"></a></li>
+        <li><a onclick="ga('send', 'event', 'Partage', 'Clics', 'Twitter');" target="_blank" class="icon-twitter" href="https://twitter.com/intent/tweet?url=https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-en-urgence-deux-failles-critiques-92663.html"></a></li>
+        <!--  <li><a onclick="ga('send', 'event', 'Partage', 'Clics', 'GooglePlus');" target="_blank" class="icon-gplus" href="https://plus.google.com/share?url=https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-en-urgence-deux-failles-critiques-92663.html"></a></li> -->
+        <li><a onclick="ga('send', 'event', 'Partage', 'Clics', 'LinkedIn');" target="_blank" class="icon-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-en-urgence-deux-failles-critiques-92663.html"></a></li>
+        <!-- <li><a onclick="ga('send', 'event', 'Partage', 'Clics', 'Email');" class="icon-mail" href="mailto:?subject=Partage sur LMI&body=https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-en-urgence-deux-failles-critiques-92663.html"></a></li> -->
+    </ul>
+    </section>
+
+    <div class="bloc-promo-nl gradient-account mb-medium">
+        <div class="row">
+            <div class="col-lg-7">
+                <h3>Newsletter LMI</h3>
+                <p>Recevez notre newsletter comme plus de 50000 abonnés</p>
+            </div>
+            <div class="col-lg-5">
+                <form class="form-nl" method="get" action="">
+                    <a href="https://www.lemondeinformatique.fr/compte_utilisateur/popup/newsletter.php" onclick="ga('send', 'pageview', 'compte_utilisateur/newsletter.php?utm_source=lmiarticle&utm_medium=barre&utm_campaign=inscriptionNL&utm_content=orange');" class="button-border small link-popup submit-bloc-nl" >OK</a>
+                    <div class="container-input">
+                        <input name="email" value="" type="text" placeholder="Votre email" onchange="sendParamForPopupNL(this.value);">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    
+<section class="comment-section close">
+	<h2 class="mb-small">Commentaire <span class="icon-down-open"></span></h2>
+
+	<div class="comment-content">
+					<form id="form_comment" action="#form_comment" method="post">
+				<div class="col-fixed">
+					<figure class="icon-user avatar"></figure>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<p class="subtitle">
+							Commenter cet article en tant que 
+							<b>visiteur</b> ou <a href="https://www.lemondeinformatique.fr/compte_utilisateur/popup/connexion.php" class="link-popup account"><b>connectez-vous</b></a>						</p>
+											</div>
+
+											<div class="col-sm-7 field">
+			                <input placeholder="Votre email" type="text" name="email" id="email" value="" />
+			                <i class="asterisk">Renseignez votre email pour être prévenu d'un nouveau commentaire</i>
+                            <i class="asterisk" style="margin-top: 10px;">Pour tout savoir sur la manière dont nous traitons vos données personnelles, consultez notre <a href="https://www.lemondeinformatique.fr/divers/charte-confidentialite.html" style="color: #a2a2a2;">Charte de Confidentialité.</a></i>
+						</div>
+											<div class="col-xs-12 field">
+						<textarea name="texte" placeholder="Votre commentaire" id="texte"></textarea>
+						<i class="asterisk">Le code HTML est interdit dans les commentaires</i>
+					</div>
+					<div class="col-xs-12 mb-medium">
+		                <input type="hidden" name="type_document" value="article" />
+						<input type="hidden" name="id_document" value="92663" />
+						<input id="bouton_commentaire" class="button submit small" type="submit" value="Envoyer" name="validateCommVisiteur" />
+		            </div>
+				</div>
+			</form>
+			
+			</div>
+</section>
+
+
+
+
+
+
+
+
+
+	</div>
+</div>
+<div class="content-right hidden-xs hidden-sm">
+
+<div class="bloc advice mb-large">
+    <h3 style="margin-bottom: 20px;">Suivre toute l'actualité</h3>
+
+    <h4 style="margin-bottom: 8px; position: relative; right: 3px;" class="icon-mail">Newsletter</h4>
+    <p style="margin-bottom: 15px;">Recevez notre newsletter comme plus de 50 000 professionnels de l'IT!</p>
+    <a href="https://www.lemondeinformatique.fr/compte_utilisateur/newsletter.php" class="button account small">Je m'abonne</a>
+
+    <!-- 
+    <h4 style="margin-top: 25px; margin-bottom: 8px; position: relative; right: 3px;" class="icon-flag-empty">Notification</h4>
+    <p style="margin-bottom: 15px;">Recevez en direct nos dernières actualités grâce aux notifications.</p>
+    <div id="wonderpush-subscription-switch" data-sentence="" data-on=" " data-off=" "></div>
+    -->
+</div><div class="toboggan mb-small">
+<div id="MPUTop" class="bloc pub-Adtech bloc-pub MPUTop" data-dimension="170" data-theme="36" data-position="MPUTop"></div>
+<!-- MPU2Top bs --> <div id="MPU2Top" class="bloc pub-Adtech bloc-pub MPU2Top" data-dimension="170" data-theme="36" data-position="MPU2Top" style="display: contents;"></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$(window).scroll(function() {
+
+		var lastArticle 	= $(".article").last();
+		var lastArticleBody = $(".article-body").last();
+		var offsetBottom 	= lastArticleBody.offset().top + lastArticleBody.height() - 150;
+    	var scrollTop 		= $(window).scrollTop(); 
+		var scrollBottom 	= scrollTop + window.innerHeight;
+
+	    if(offsetBottom <= scrollBottom && lastArticle.data( "next") === true)
+		{
+			lastArticle.data( "next", false );
+			$.ajax({
+			  url: "ajax_scroll.php",
+			  type: "get",
+			  data: { 
+			    articles: '{"scroll":[{"note":27.35,"id":"93387"},{"note":26.36,"id":"93386"},{"note":26.36,"id":"93380"},{"note":26.36,"id":"93378"},{"note":26.36,"id":"93377"},{"note":25.61,"id":"93347"},{"note":25.36,"id":"93329"},{"note":25.36,"id":"93321"},{"note":24.61,"id":"93313"},{"note":24.61,"id":"93309"}]}',
+			    count: lastArticle.data("count")
+			  },
+			  success: function(data) {
+			    lastArticle.after( data );
+			    loadPub("actualite_lire");
+			    loadDimensionContentRightAndToboggan();
+			    loadAnchor();
+			    loadSondageExpress();
+			  }
+			});
+			//console.log('YES : '+offsetBottom+' '+scrollBottom+' '+scrollTop+' '+window.innerHeight);
+		}
+		else if((lastArticle.offset().top) <= scrollBottom && lastArticle.attr('data-view') == 0)
+		{
+			$("#next-article-promo").fadeOut( function() { $(this).remove(); });
+
+			if((lastArticle.offset().top+50) <= scrollBottom)
+			{
+				$.ajax({
+				  url: "ajax_view.php",
+				  type: "get",
+				  data: { 
+				    articles: '{"scroll":[{"note":27.35,"id":"93387"},{"note":26.36,"id":"93386"},{"note":26.36,"id":"93380"},{"note":26.36,"id":"93378"},{"note":26.36,"id":"93377"},{"note":25.61,"id":"93347"},{"note":25.36,"id":"93329"},{"note":25.36,"id":"93321"},{"note":24.61,"id":"93313"},{"note":24.61,"id":"93309"}]}',
+				    count: lastArticle.data("count")
+				  },
+				  success: function(data) {
+				  }
+				});
+
+
+				history.pushState(null, $('.header-article h1',lastArticle).html(), lastArticle.data('url'));
+				document.title = $('.header-article h1',lastArticle).html();
+
+				// Page vue Analytics
+				// ga('send', 'pageview', lastArticle.data('url'));
+				// ga('send', 'event', 'Article_suivant_'+lastArticle.data("count"), 'Lecture');
+				lastArticle.attr('data-view', 1);
+				//console.log('VUE : '+lastArticle.data('url'));
+
+				dataLayer.push({
+					'event':'load-follow-article'
+				});
+
+			}
+		}
+		
+	    
+
+	});
+
+	$('body').on( 'click', '.comment-section.close h2', function() { 
+		var parent = $(this).parent();
+		$('.comment-content',parent).css('display','block');
+		$(this).css('cursor','auto');
+		$('span',this).remove();
+	});
+});
+
+</script>
+
+
+	<section class="pub-ban">
+		<div class="container">
+			<div id="BanBottom" class="pub-Adtech bloc-pub BanBottom" data-dimension="225" data-theme="36" data-position="BanBottom"></div>		</div>
+	</section>
+
+</div> <!-- #main -->
+
+
+<footer id="footer">
+	<div class="container mb-large">
+		<div class="row gridPartFoot pattern-column-1">
+			<div class="col-lg-7 mb-large logoFirstFoot">
+				<figure id="logo-foot-lmi"></figure>
+				<p>Le site le plus consulté par les informaticiens en France</p>
+				<p>LeMondeInformatique.fr est une marque de <a href="https://www.itnewsinfo.com/" target="_blank">IT News Info</a>, 1er groupe d'information	et de services dédié aux professionnels de l'informatique en France.</p>
+			</div>
+			<div class="col-lg-5 mb-large">
+				<div class="social">
+					<p>Suivez-nous sur les réseaux</p>
+					<ul>
+						<li><a target="_blank" href="https://www.facebook.com/Le-Monde-Informatique-103373896380515/?ref=sgm" class="icon-facebook"></a></li>
+						<li><a target="_blank" href="https://twitter.com/MondeInformatiq" class="icon-twitter"></a></li>
+						<li><a target="_blank" href="https://plus.google.com/103357175701322909730" class="icon-gplus"></a></li>
+						<li><a target="_blank" href="https://www.linkedin.com/company/le-monde-informatique?trk=company_name" class="icon-linkedin"></a></li>
+						<li><a target="_blank" href="https://www.instagram.com/lemondeinformatique/" class="icon-instagram"></a></li>
+						<li><a href="https://www.lemondeinformatique.fr/flux-rss/" class="icon-rss hidden-xs"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row pattern-column-1">
+			<div class="col-md-12 ungridPartFoot">
+				<ul class="navFoot mb-small">
+					<li><a href="https://www.lemondeinformatique.fr/divers/contacts.html">Nous contacter</a></li>
+                    <!--
+					<li><a href="https://www.lemondeinformatique.fr/compte_utilisateur/newsletter.php">Newsletters</a></li>
+					-->
+					<li><a href="https://www.lemondeinformatique.fr/divers/apropos.html">Mentions Légales</a></li>
+          <!--
+					<li><a href="https://www.itnewsinfo.com/recrutement/">Recrutement</a></li>
+					-->
+					<li><a href="https://www.lemondeinformatique.fr/divers/charte-confidentialite.html">Charte de confidentialité</a></li>
+                    <li><a href="https://www.lemondeinformatique.fr/divers/condition-generales-vente.html">Conditions générales de vente</a></li>
+                    <li><a href="javascript:Didomi.preferences.show()">Paramètres de gestion de la confidentialité</a></li>
+				</ul>
+				<div class="copyrightFoot mb-small">
+					<p> Copyright © LeMondeInformatique.fr 1997-2024</p>
+					<p class="mb-medium">Toute reproduction ou représentation intégrale ou partielle, par quelque procédé que ce soit, des pages publiées sur ce site, faite sans l'autorisation de l'éditeur ou du webmaster du site LeMondeInformatique.fr est illicite et constitue une contrefaçon.</p>
+				</div>
+				<ul class="logoFoot">
+					<li><a target="_blank" href="https://www.lemondeinformatique.fr/" id="logo-lmi" ></a></li>
+					<li><a target="_blank" href="https://www.cio-online.com/" id="logo-cio" ></a></li>
+					<li><a target="_blank" href="https://www.distributique.com/" id="logo-distri" ></a></li>
+          <li><a target="_blank" href="https://www.it-tour.fr/" id="logo-it-tour" ></a></li>
+					<li><a target="_blank" href="https://www.france-entreprise-digital.fr/" id="logo-fed" ></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+    <!-- Lazy load images-->
+	<script src="/javascript/unveil.js"></script>
+	<script type="didomi/javascript">
+	$(window).on('load resize', function() {
+		loadDimensionContentRightAndToboggan();
+		loadToboggan();
+		//loadParallaxArticle();
+	});
+
+	$(document).ready(function() {
+		$("figure img").unveil(150);
+		loadSondageExpress();
+		loadPopup();
+		loadCookie();
+		loadAnchor();
+		loadMenu();
+    });
+
+    $(window).scroll(function() {
+        $(".pub-Adtech.not-loaded").each(function(index, content) {
+            displayPub($(this));
+        });
+    });
+
+	// Gestion Border WhitePaper
+	$('.item-wp .button-border').hover(
+		function() { $( this ).parent().addClass( "hover" ); },
+		function() { $( this ).parent().removeClass( "hover" ); }
+	);
+	</script>
+
+		    <script type="didomi/javascript">
+            $(window).on('load', function() {
+				if (jQuery('.pub-ban.top').height() < 101 && window.innerWidth > 992) {	
+					 
+				}
+			});
+		</script>
+	    </footer>
+
+
+
+
+
+</body>
+</html>
